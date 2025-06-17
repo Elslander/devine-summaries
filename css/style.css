@@ -1,16 +1,16 @@
-/* ===== Root variables ===== */
+/* ===== Root variables for light mode ===== */
 :root {
-  --bg: #121212;                 /* very dark background */
-  --bg-alt: #1e1e1e;             /* slightly lighter bg for cards */
-  --text-primary: #e0e0e0;       /* light gray text */
-  --text-secondary: #a0a0a0;     /* muted gray */
-  --accent: #00d8ff;             /* bright cyan accent */
-  --border: #333;                /* subtle border */
+  --bg: #fafafa;              /* very light background */
+  --bg-alt: #ffffff;          /* white cards */
+  --text-primary: #222222;    /* dark text */
+  --text-secondary: #555555;  /* medium gray text */
+  --accent: #0077cc;          /* bright blue accent */
+  --border: #ddd;             /* light border */
   --radius: 8px;
   --spacing: 1.5rem;
   --font-sans: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --font-mono: 'Fira Mono', monospace;
-  --transition: 0.3s ease;
+  --transition: 0.25s ease;
 }
 
 /* ===== Global reset and base styles ===== */
@@ -36,24 +36,26 @@ body {
   width: 100%;
   max-width: 900px;
   text-align: center;
-  margin-bottom: calc(var(--spacing) * 1.2);
+  margin-bottom: calc(var(--spacing) * 1.5);
 }
 .header__title {
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: 800;
   color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   user-select: none;
+  text-transform: uppercase;
 }
 
 /* ===== Navigation ===== */
+.header__navigation {
+  margin-top: 1rem;
+}
 .navigation__menu {
-  margin-top: 0.7rem;
+  list-style: none;
   display: flex;
   justify-content: center;
   gap: 2rem;
-  list-style: none;
 }
 .menu__item a {
   color: var(--accent);
@@ -66,7 +68,7 @@ body {
 .menu__item a:hover,
 .menu__item a:focus-visible {
   background-color: var(--accent);
-  color: var(--bg);
+  color: var(--bg-alt);
   outline: none;
 }
 
@@ -77,33 +79,34 @@ body {
   background: var(--bg-alt);
   padding: calc(var(--spacing) * 1.5);
   border-radius: var(--radius);
-  box-shadow: 0 0 20px rgb(0 216 255 / 0.25);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   font-size: 1rem;
+  color: var(--text-primary);
 }
 
-/* ===== Details collapsible ===== */
+/* ===== Collapsible details ===== */
 details {
   margin: 2rem 0;
-  background: #222;
-  padding: 1.2rem 1.6rem;
+  background: #f5f5f5;
+  padding: 1rem 1.5rem;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   cursor: pointer;
-  color: var(--text-primary);
   transition: background-color var(--transition), box-shadow var(--transition);
+  color: var(--text-primary);
 }
 details:hover {
-  background-color: #333;
+  background-color: #e8f0fe;
   box-shadow: 0 0 15px var(--accent);
 }
 details[open] {
-  background-color: #2a2a2a;
+  background-color: #dbeafe;
   box-shadow: 0 0 25px var(--accent);
 }
 details details {
   margin-top: 1rem;
   padding-left: 1.5rem;
-  background: #1a1a1a;
+  background: #f0f6ff;
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
@@ -136,7 +139,7 @@ details[open] summary::after {
   color: var(--accent);
 }
 
-/* ===== Markdown styling scoped to #note-content ===== */
+/* ===== Markdown styles scoped to #note-content ===== */
 #note-content h1,
 #note-content h2,
 #note-content h3,
@@ -145,11 +148,11 @@ details[open] summary::after {
 #note-content h6 {
   margin-top: 2rem;
   margin-bottom: 0.8rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--accent);
   user-select: text;
 }
-#note-content h1 { font-size: 2.8rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.4rem; }
+#note-content h1 { font-size: 2.8rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.3rem; }
 #note-content h2 { font-size: 2.2rem; }
 #note-content h3 { font-size: 1.8rem; }
 #note-content h4 { font-size: 1.4rem; }
@@ -164,7 +167,7 @@ details[open] summary::after {
 #note-content p {
   margin: 1rem 0 0.6rem 0;
   color: var(--text-primary);
-  line-height: 1.7;
+  line-height: 1.6;
   font-weight: 500;
 }
 
@@ -172,7 +175,7 @@ details[open] summary::after {
 #note-content strong { font-weight: 700; color: var(--accent); }
 #note-content em     { font-style: italic; color: var(--text-secondary); }
 #note-content del    { text-decoration: line-through; }
-#note-content mark   { background: var(--accent); color: var(--bg); padding: 0 0.2em; }
+#note-content mark   { background: var(--accent); color: var(--bg-alt); padding: 0 0.2em; }
 #note-content ins    { text-decoration: underline; }
 
 /* Links */
@@ -180,11 +183,11 @@ details[open] summary::after {
   color: var(--accent);
   text-decoration: underline;
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: color 0.25s ease;
 }
 #note-content a:hover,
 #note-content a:focus-visible {
-  color: #00fff7;
+  color: #004c99;
   text-decoration: none;
   outline: none;
 }
@@ -209,7 +212,7 @@ details[open] summary::after {
   border-left: 4px solid var(--accent);
   padding: 1rem 1.5rem;
   margin: 2rem 0;
-  background: #222;
+  background: #f0f6ff;
   color: var(--text-primary);
   font-style: italic;
   border-radius: var(--radius);
@@ -217,7 +220,7 @@ details[open] summary::after {
 
 /* Code */
 #note-content code {
-  background: #222;
+  background: #eaeff6;
   padding: 0.2em 0.5em;
   border-radius: var(--radius);
   font-family: var(--font-mono);
@@ -225,7 +228,7 @@ details[open] summary::after {
   font-weight: 700;
 }
 #note-content pre {
-  background: #1a1a1a;
+  background: #d6e1ff;
   border-left: 4px solid var(--accent);
   padding: 1rem 1.5rem;
   margin: 2rem 0;
@@ -252,7 +255,7 @@ details[open] summary::after {
 }
 #note-content thead {
   background: var(--accent);
-  color: var(--bg);
+  color: var(--bg-alt);
 }
 
 /* Horizontal rule */
@@ -269,7 +272,7 @@ details[open] summary::after {
   margin: 1.5rem 0;
   border-radius: var(--radius);
   user-select: none;
-  box-shadow: 0 0 15px var(--accent);
+  box-shadow: 0 2px 10px rgb(0 119 204 / 0.4);
 }
 
 /* Abbreviations */
@@ -283,7 +286,7 @@ details[open] summary::after {
 #note-content .note,
 #note-content .tip {
   border-left: 4px solid var(--accent);
-  background: #222;
+  background: #f0f6ff;
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
   font-style: italic;
