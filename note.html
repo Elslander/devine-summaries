@@ -29,7 +29,7 @@
       if (!file) {
         main.textContent = "No note specified.";
       } else {
-        fetch(`notes/${file}`)
+        fetch(`assets/notes/${file}`)
           .then((res) => {
             if (!res.ok) throw new Error("Note not found");
             return res.text();
