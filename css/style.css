@@ -126,7 +126,7 @@ ol {
 }
 
 li {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 0.2rem 0;
   line-height: 1.6;
 }
 
@@ -249,9 +249,10 @@ sup {
 }
 
 .header__title {
-  color: white;
+  color: white !important;
   font-size: var(--space--1);
-  border: none;
+  border: none !important;
+  border-bottom: none;
   margin: 0;
 }
 
@@ -318,10 +319,13 @@ sup {
 
 .summaries__item {
   background-color: var(--colour-white);
-  color: var(--colour-black);
+  color: var(--colour-black) !important;
+  border: none !important;
   list-style: none;
   padding: 0.5rem 1rem;
 }
+
+.
 
 /* ---- Notes main ---- */
 #note-content {
