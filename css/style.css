@@ -313,9 +313,11 @@ a {
 }
 
 .art__history {
-    max-width: 80%;
     background-color: var(--colour-white);
     color: var(--colour-black);
+    
+    max-width: 80%;
+    padding: 1rem;
 }
 
 .history__summaries {
@@ -330,7 +332,10 @@ a {
 .history__item {
     background-color: var(--colour-blue);
     color: var(--colour-white);
-    
+
+    border: none;
+    list-style: none;
+    padding: 0.5rem 1rem;
 }
 
 /* ---- Notes main ---- */
