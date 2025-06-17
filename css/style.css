@@ -117,6 +117,14 @@ ol {
   margin: 1rem 0;
 }
 
+ul {
+    list-style: circle;
+}
+
+ol {
+    list-style: decimal;
+}
+
 li {
   margin: 0.5rem 0;
   line-height: 1.6;
@@ -127,7 +135,7 @@ blockquote {
   border-left: 4px solid var(--colour-blue);
   margin: 1rem 0;
   padding: 0.5rem 1rem;
-  background-color: #f9f9f9;
+  background-color: var(--colour-white);
   color: #333;
   font-style: italic;
 }
@@ -138,7 +146,7 @@ blockquote blockquote {
 
 /* Code blocks and inline code */
 code {
-  background-color: #f4f4f4;
+  background-color: var(--colour-white);
   padding: 0.2em 0.4em;
   border-radius: 4px;
   font-family: monospace;
@@ -147,7 +155,7 @@ code {
 }
 
 pre {
-  background-color: #fefefe;
+  background-color: var(--colour-white);
   border-left: 3px solid var(--colour-blue);
   padding: 1rem;
   overflow-x: auto;
@@ -177,14 +185,14 @@ td {
 }
 
 thead {
-  background-color: #f0f8ff;
+  background-color: var(--colour-white);
   font-weight: bold;
 }
 
 /* Horizontal Rule */
 hr {
   border: none;
-  border-top: 1px solid var(--colour-black);
+  /* border-top: 1px solid var(--colour-black); */
   margin: 2rem 0;
 }
 
@@ -207,7 +215,7 @@ abbr[title] {
 .note,
 .tip {
   border-left: 4px solid orange;
-  background-color: #fff8e1;
+  background-color: var(--colour-white);
   padding: 1rem;
   margin: 1rem 0;
   font-style: italic;
@@ -222,7 +230,7 @@ sup {
 .footnotes {
   font-size: 0.9em;
   margin-top: 2rem;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--colour-blue);
   padding-top: 1rem;
 }
 
