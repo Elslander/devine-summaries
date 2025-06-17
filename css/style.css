@@ -85,10 +85,12 @@ html {
 }
 
 .subject__title {
-    margin-bottom: 1rem;
+    font-size: var(--space--1-5);
 }
 
 .subject__summaries {
+    margin-top: 1.5rem;
+
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
