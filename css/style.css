@@ -1,225 +1,239 @@
 :root {
-    /* ! Colours */
-    --colour-black: #0F111A;
-    --colour-white: #F8FBFF;
-    --colour-blue: #4A6A9C;
+  /* ! Colours */
+  --colour-black: #0f111a;
+  --colour-white: #f8fbff;
+  --colour-blue: #4a6a9c;
 
-    /* ! Spacing */
-    --space--0-5: 0.5rem;
-    --space--1: 1rem;
-    --space--1-5: 1.5rem;
-    --space--2: 2rem;
-    --space--3: 3rem;
-    --space--4: 4rem;
+  /* ! Spacing */
+  --space--0-5: 0.5rem;
+  --space--1: 1rem;
+  --space--1-5: 1.5rem;
+  --space--2: 2rem;
+  --space--3: 3rem;
+  --space--4: 4rem;
 }
 
 /* ------ Fonts ------ */
 @font-face {
-    font-family: 'space-mono';
-    src: url('../assets/fonts/SpaceMono-Regular.woff2') format('woff2');
+  font-family: "space-mono";
+  src: url("../assets/fonts/SpaceMono-Regular.woff2") format("woff2");
 }
 
 /* ------ General / Md files ------ */
 * {
-    color: var(--colour-black);
+  color: var(--colour-black);
 }
 
 html {
-    font-family: 'space-mono';
-    font-size: 1.2rem;
+  font-family: "space-mono";
+  font-size: 1.2rem;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 
-    transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 h1 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 h2 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 h3 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
-p, li {
-    margin: 0.5rem 0;
+p,
+li {
+  margin: 0.5rem 0;
 }
 
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 em {
-    font-style: italic;
+  font-style: italic;
 }
 
 ul {
-    list-style: square;
+  list-style: square;
 }
 
 ol {
-    list-style: decimal;
+  list-style: decimal;
 }
 
 li {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 pre {
-    background-color: var(--colour-white);
+  background-color: var(--colour-white);
 
-    padding: 1rem;
-    border: 1px solid var(--colour-blue);
-    margin: 0.5rem 0;
+  padding: 1rem;
+  border: 1px solid var(--colour-blue);
+  margin: 0.5rem 0;
 }
 
 table {
-    display: table;
-    border-collapse: collapse;
-    border-spacing: 2px;       /* default spacing between cells */
-    text-indent: initial;
-    unicode-bidi: isolate;
-  }
-  
-  caption {
-    display: table-caption;
-    text-align: center;
-  }
-  
-  thead, tbody, tfoot {
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit;
-  }
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 2px;
+  /* default spacing between cells */
+  text-indent: initial;
+  unicode-bidi: isolate;
+}
 
-  thead {
-    font-weight: bold;
-  }
-  
-  tr {
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
-  }
-  
-  td, th {
-    display: table-cell;
-    padding: 0.2rem;              /* often 1px or 2px depending on browser */
-    border: 1px solid var(--colour-black);
-    text-align: inherit;       /* usually left for td, center for th */
-    vertical-align: inherit;
-  }
-  
+caption {
+  display: table-caption;
+  text-align: center;
+}
+
+thead,
+tbody,
+tfoot {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+thead {
+  font-weight: bold;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+td,
+th {
+  display: table-cell;
+  padding: 0.3rem;
+  /* often 1px or 2px depending on browser */
+  border: 1px solid var(--colour-black);
+  text-align: inherit;
+  /* usually left for td, center for th */
+  vertical-align: inherit;
+}
 
 a:hover {
-    transform: scale(110%);
+  transform: scale(110%);
 }
 
 /* ------ Header ------ */
 .body__header {
-    background-color: var(--colour-black);
-    color: var(--colour-white);
-    
-    height: 5vw;
-    padding-left: var(--space--2);
-    padding-right: var(--space--2);
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: var(--colour-black);
+  color: var(--colour-white);
+
+  height: 5vw;
+  padding-left: var(--space--2);
+  padding-right: var(--space--2);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__title {
-    font-size: var(--space--1);
-    margin: 0;
+  color: white;
+  font-size: var(--space--1);
+  margin: 0;
 }
 
 .navigation__menu {
-    list-style: none;
-    
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: var(--space--1);
+  list-style: none;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: var(--space--1);
 }
 
 .menu__item {
-    list-style: none;
+  color: white;
+  list-style: none;
 }
 
 /* ------ Main ------ */
 .body__main {
-    max-width: 80vw;
-    margin: var(--space--3) auto;
+  max-width: 80vw;
+  margin: var(--space--3) auto;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main__semester {
-    width: 100%;
+  width: 100%;
 }
 
 .semester__title {
-    font-size: var(--space--3);
-    margin: 0.5rem 0 1.5rem 0;
+  font-size: var(--space--3);
+  margin: 0.5rem 0 1.5rem 0;
 }
 
 .semester__subjects {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .subjects__subject {
-    background-color: var(--colour-blue);
-    color: var(--colour-white);
+  background-color: var(--colour-blue);
+  color: var(--colour-white);
 
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .subject__title {
-    font-size: var(--space--1-5);
+  color: var(--colour-white);
+  font-size: var(--space--1-5);
 }
 
 .subject__summaries {
-    list-style: none;
+  list-style: none;
 
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .summaries__item {
-    background-color: var(--colour-white);
-    color: var(--colour-black);
-    list-style: none;
-    padding: 0.5rem 1rem;
+  background-color: var(--colour-white);
+  color: var(--colour-black);
+  list-style: none;
+  padding: 0.5rem 1rem;
 }
 
 /* ---- Notes main ---- */
 #note-content {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
-    max-width: 80vw;
+  max-width: 80vw;
 
-    padding: 2rem;
-    border: 2px solid var(--colour-blue);
-    margin: var(--space--2) auto;
+  padding: 2rem;
+  border: 2px solid var(--colour-blue);
+  margin: var(--space--2) auto;
 }
