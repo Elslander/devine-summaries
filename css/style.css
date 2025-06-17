@@ -256,10 +256,11 @@ sup {
   margin: 0;
 }
 
-.header__title > a {
+.header__title a {
     font-family: 'space-mono';
     color: white !important;
     border-bottom: none;
+    text-decoration: none !important;
     text-transform: uppercase;
 }
 
@@ -332,8 +333,9 @@ sup {
   padding: 0.5rem 1rem;
 }
 
-.summaries__item > a {
+.summaries__item a {
     color: var(--colour-black) !important;
+    text-decoration: none !important;
     border: none !important;
 }
 
