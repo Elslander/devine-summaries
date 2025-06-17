@@ -104,7 +104,7 @@ a:hover {
     margin: 0;
 }
 
-.navigation__list {
+.navigation__menu {
     list-style: none;
     
     display: flex;
@@ -113,7 +113,7 @@ a:hover {
     gap: var(--space--1);
 }
 
-.list__item {
+.menu__item {
     list-style: none;
 }
 
