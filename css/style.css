@@ -231,6 +231,10 @@ a {
     text-transform: uppercase;
 }
 
+.header__navigation {
+    position: sticky;
+}
+
 .navigation__menu {
   list-style: none;
 
