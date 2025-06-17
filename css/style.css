@@ -121,4 +121,24 @@ a:hover {
     border: 2px solid var(--colour-blue);
     margin: var(--space--2) auto;
 
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    em {
+        font-weight: bold;
+    }
 }
