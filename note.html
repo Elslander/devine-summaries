@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="body__header">
-        <h1 class="header__title">Devine Summaries</h1>
-        <nav class="header__navigation">
-          <ul class="navigation__menu">
-            <li class="menu__item"><a href="index.html">Home</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        loading...
-      </main>
-      <footer></footer>
-</body>
+      <h1 class="header__title">Devine Summaries</h1>
+      <nav class="header__navigation">
+        <ul class="navigation__menu">
+          <li class="menu__item"><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>loading...</main>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      // Get file from query string: ?file=path/to/file.md
+      const params = new URLSearchParams(window.location.search);
+      const file = params.get("file");
+
+      const main = document.getElementById("note-content");
+
+      if (!file) {
+        main.textContent = "No note specified.";
+      } else {
+        fetch(`notes/${file}`)
+          .then((res) => {
+            if (!res.ok) throw new Error("Note not found");
+            return res.text();
+          })
+          .then((md) => {
+            main.innerHTML = marked.parse(md);
+          })
+          .catch((err) => {
+            main.textContent = "Sorry, this note could not be loaded.";
+            console.error(err);
+          });
+      }
+    </script>
+  </body>
 </html>
