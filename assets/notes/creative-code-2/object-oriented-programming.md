@@ -1,6 +1,3 @@
----
-tags: creative-code
----
 # Programming
 - **Variables**: small pieces of data.
 - **Control flow**: if, if else, switch, loops,...
