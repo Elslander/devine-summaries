@@ -20,6 +20,10 @@
 }
 
 /* ------ General / Md files ------ */
+* {
+    color: var(--colour-black);
+}
+
 html {
     font-family: 'space-mono';
     font-size: 1.2rem;
@@ -110,6 +114,7 @@ table {
   td, th {
     display: table-cell;
     padding: 1px;              /* often 1px or 2px depending on browser */
+    border: 1px solid var(--colour-black);
     text-align: inherit;       /* usually left for td, center for th */
     vertical-align: inherit;
   }
