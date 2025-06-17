@@ -112,3 +112,13 @@ a:hover {
     color: var(--colour-black);
     padding: 0.5rem 1rem;
 }
+
+/* ---- Notes main ---- */
+#note-content {
+    max-width: 80vw;
+
+    padding: 2rem;
+    border: 2px solid var(--colour-blue);
+    margin: var(--space--2) auto;
+
+}
