@@ -78,7 +78,7 @@ h6 {
 
 /* Paragraphs */
 p {
-  margin: 1rem 0;
+  margin: 1rem 0 0.5rem 0;
   line-height: 1.7;
   color: var(--colour-black);
 }
@@ -146,7 +146,7 @@ blockquote blockquote {
 
 /* Code blocks and inline code */
 code {
-  background-color: var(--colour-white);
+  background-color: rgba(248, 251, 255, 0.75);
   padding: 0.2em 0.4em;
   border-radius: 4px;
   font-family: monospace;
