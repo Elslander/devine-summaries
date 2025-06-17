@@ -20,17 +20,19 @@ html {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 /* ------ Header ------ */
 .body__header {
     background-color: var(--colour-black);
     color: var(--colour-white);
+
+    padding: 0.5rem 2rem;
     
     display: flex;
     justify-content: space-between;
