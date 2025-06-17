@@ -31,6 +31,7 @@ h1 {
 
 h2 {
     font-size: var(--space--3);
+    margin: 0.5rem 0 1.5rem 0;
 }
 
 /* ------ Header ------ */
@@ -39,8 +40,8 @@ h2 {
     color: var(--colour-white);
     
     height: 5vw;
-    padding-left: var(--space--1);
-    padding-right: var(--space--1);
+    padding-left: var(--space--2);
+    padding-right: var(--space--2);
     
     display: flex;
     justify-content: space-between;
@@ -59,7 +60,7 @@ h2 {
 /* ------ Main ------ */
 .body__main {
     max-width: 80vw;
-    margin: var(--space--4) auto;
+    margin: var(--space--3) auto;
 
     display: flex;
     flex-direction: column;
@@ -68,6 +69,12 @@ h2 {
 
 .main__semester {
     width: 100%;
+}
+
+.semester__subjects {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .subjects__subject {
