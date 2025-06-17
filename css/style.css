@@ -50,6 +50,10 @@ h3 {
     font-size: 2rem;
 }
 
+p {
+    margin: 0.5rem 0;
+}
+
 strong {
     font-weight: bold;
 }
@@ -66,8 +70,14 @@ ol {
     list-style: decimal;
 }
 
+li {
+    text-indent: 1rem;
+}
+
 pre {
     background-color: var(--colour-white);
+
+    padding: 1rem;
     border: 1px solid var(--colour-blue);
 }
 
