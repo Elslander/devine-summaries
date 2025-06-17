@@ -1,190 +1,192 @@
-/* ================= Global Variables ================= */
+/* ================ Root variables ================ */
 :root {
-  --bg: #1e1e28;               /* dark slate */
-  --bg-alt: #2c2c3a;           /* slightly lighter bg */
-  --text: #dcdce6;             /* soft off-white */
-  --accent: #a18aff;           /* pastel lavender */
-  --accent-alt: #ffb48f;       /* pastel peach */
-  --border: #3a3a4e;
-  --radius: 8px;
-  --spacing: 1.25rem;
-  --transition: 0.3s ease;
+  --bg: #fafafa; /* very light background */
+  --bg-alt: #ffffff; /* white for cards */
+  --text-primary: #222222; /* dark charcoal */
+  --text-secondary: #555555; /* medium gray */
+  --accent: #ff6f61; /* warm coral */
+  --accent-light: #ffd9d4; /* soft coral light */
+  --border: #e0e0e0; /* light gray border */
+  --radius: 10px;
+  --spacing: 1.5rem;
+  --font-sans: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+  --transition: 0.25s ease-in-out;
 }
 
-/* ================= Base ================= */
+/* ================ Global resets and base ================ */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: 'Space Mono', monospace;
-  background: var(--bg);
-  color: var(--text);
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text-primary);
   line-height: 1.6;
   padding: var(--spacing);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-a {
-  color: var(--accent);
-  text-decoration: underline;
-  transition: color var(--transition);
-}
-a:hover {
-  color: var(--accent-alt);
-  text-decoration: none;
+  align-items: center;
 }
 
-/* ================= Header ================= */
+/* ================ Header ================ */
 .body__header {
-  padding-bottom: var(--spacing);
-  border-bottom: 1px solid var(--border);
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: var(--spacing);
   text-align: center;
-  user-select: none;
+  border-bottom: 2px solid var(--accent-light);
+  padding-bottom: 1rem;
 }
 .header__title {
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  color: var(--accent-alt);
-  margin-bottom: 0.3rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 2px;
+  user-select: none;
 }
 .navigation__menu {
   list-style: none;
+  margin-top: 0.5rem;
   display: inline-flex;
   gap: var(--spacing);
 }
 .menu__item a {
-  font-weight: 500;
-  font-size: 1rem;
-  color: var(--text);
-  padding: 0.25rem 0.5rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
   border-radius: var(--radius);
   transition: background-color var(--transition), color var(--transition);
 }
-.menu__item a:hover {
-  background-color: var(--accent-alt);
-  color: var(--bg);
+.menu__item a:hover,
+.menu__item a:focus {
+  background-color: var(--accent);
+  color: var(--bg-alt);
+  outline: none;
 }
 
-/* ================= Main & Semester ================= */
-.body__main {
-  max-width: 720px;
-  margin: var(--spacing) auto 0 auto;
-  flex-grow: 1;
-}
-.main__semester + .main__semester {
-  margin-top: calc(var(--spacing) * 1.5);
-}
-.semester__title {
-  font-size: 1.75rem;
-  font-weight: 600;
-  padding-left: 0.5rem;
-  border-left: 4px solid var(--accent);
-  margin-bottom: 0.8rem;
-  color: var(--accent-alt);
-}
-
-/* ================= Details / Subjects ================= */
-details {
-  background: var(--bg-alt);
+/* ================ Main note content container ================ */
+#note-content {
+  max-width: 900px;
+  width: 100%;
+  background-color: var(--bg-alt);
+  padding: calc(var(--spacing) * 1.2);
   border-radius: var(--radius);
-  box-shadow: 0 1px 5px rgba(0,0,0,0.3);
-  margin-bottom: var(--spacing);
-  padding: 0.75rem 1rem;
-  transition: background-color var(--transition), box-shadow var(--transition);
+  box-shadow: 0 5px 20px rgba(255 111 97 / 0.15);
+  color: var(--text-primary);
+  font-size: 1rem;
+  line-height: 1.7;
+  user-select: text;
+}
+
+/* ================ Collapsible details - centered and 50% width ================ */
+details {
+  width: 50%;
+  min-width: 320px;
+  margin: 1.5rem auto;
+  background: var(--bg-alt);
+  border: 2px solid var(--accent-light);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  box-shadow: 0 3px 7px rgba(255 111 97 / 0.1);
+  transition: border-color var(--transition), box-shadow var(--transition);
   cursor: pointer;
 }
 details[open] {
-  background: var(--bg);
-  box-shadow: 0 4px 15px rgba(161, 138, 255, 0.5);
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(255 111 97 / 0.25);
 }
 summary {
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: var(--accent);
   list-style: none;
+  outline-offset: 3px;
   user-select: none;
-  outline-offset: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-details summary::-webkit-details-marker {
+summary::-webkit-details-marker {
   display: none;
 }
 summary::after {
-  content: '+';
-  float: right;
-  font-weight: bold;
+  content: "+";
+  font-weight: 900;
+  font-size: 1.3rem;
+  color: var(--accent-light);
   transition: transform var(--transition);
-  color: var(--accent-alt);
 }
 details[open] summary::after {
-  content: '−';
+  content: "−";
   transform: rotate(0deg);
 }
 
 /* Lists inside details */
 .subject__summaries,
 .history__summaries {
-  margin-top: var(--spacing);
+  margin-top: 1rem;
   padding-left: 1.5rem;
+  color: var(--text-secondary);
   list-style: disc;
 }
 .summaries__link {
-  color: var(--accent-alt);
+  color: var(--accent);
   text-decoration: underline dotted;
+  transition: color var(--transition);
 }
 .summaries__link:hover {
-  color: var(--accent);
+  color: var(--accent-light);
   text-decoration: none;
 }
 
-/* ================= Summary Page Container ================= */
-#note-content {
-  max-width: 720px;
-  margin: var(--spacing) auto;
-  padding: var(--spacing);
-  background: var(--bg-alt);
-  border-radius: var(--radius);
-  box-shadow: 0 3px 12px rgba(161, 138, 255, 0.3);
-  color: var(--text);
-}
-
-/* ================= Markdown Styling ================= */
-/* Headings */
-#note-content h1 {
-  font-size: 2.5rem;
+/* ================ Markdown styles scoped to #note-content ================ */
+#note-content h1,
+#note-content h2,
+#note-content h3,
+#note-content h4,
+#note-content h5,
+#note-content h6 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
   font-weight: 700;
-  margin-bottom: 0.4rem;
-  color: var(--accent-alt);
-  border-bottom: 3px solid var(--accent);
-  padding-bottom: 0.3rem;
+  line-height: 1.2;
+  color: var(--accent);
+  user-select: text;
+}
+#note-content h1 {
+  font-size: 2.8rem;
+  border-bottom: 3px solid var(--accent-light);
+  padding-bottom: 0.4rem;
+  color: var(--accent);
 }
 #note-content h2 {
   font-size: 2rem;
-  margin-top: 1.6rem;
-  margin-bottom: 0.5rem;
   color: var(--accent);
 }
 #note-content h3 {
   font-size: 1.5rem;
-  margin-top: 1.4rem;
-  color: var(--accent-alt);
+  color: var(--accent);
 }
 #note-content h4,
 #note-content h5,
 #note-content h6 {
-  margin-top: 1.2rem;
-  color: var(--accent-alt);
-  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--accent-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 /* Paragraphs */
 #note-content p {
-  margin: 1rem 0;
+  margin: 1rem 0 1rem 0;
+  color: var(--text-primary);
   line-height: 1.7;
-  color: var(--text);
 }
 
 /* Emphasis */
@@ -194,7 +196,7 @@ details[open] summary::after {
 }
 #note-content em {
   font-style: italic;
-  color: var(--accent-alt);
+  color: var(--accent-light);
 }
 
 /* Links */
@@ -204,47 +206,57 @@ details[open] summary::after {
   transition: color var(--transition);
 }
 #note-content a:hover {
-  color: var(--accent-alt);
+  color: var(--accent-light);
   text-decoration: none;
 }
 
 /* Lists */
 #note-content ul,
 #note-content ol {
+  padding-left: 2rem;
   margin: 1rem 0;
-  padding-left: 1.75rem;
+}
+#note-content ul {
+  list-style-type: square;
+}
+#note-content ol {
+  list-style-type: decimal;
 }
 #note-content li {
-  margin-bottom: 0.35rem;
+  margin: 0.5rem 0 0.25rem 0;
+  line-height: 1.5;
+  color: var(--text-secondary);
 }
 
 /* Blockquotes */
 #note-content blockquote {
-  border-left: 4px solid var(--accent-alt);
-  background: var(--bg);
-  color: var(--accent-alt);
-  font-style: italic;
-  margin: 1.5rem 0;
+  border-left: 4px solid var(--accent);
   padding: 0.75rem 1rem;
+  margin: 1.5rem 0;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-style: italic;
   border-radius: var(--radius);
 }
 
 /* Code */
 #note-content code {
-  background: rgba(255 180 143 / 0.15);
-  padding: 0.15em 0.4em;
+  background-color: var(--accent-light);
+  padding: 0.2em 0.5em;
   border-radius: var(--radius);
-  font-family: monospace;
-  color: var(--accent-alt);
-  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-weight: 700;
 }
 #note-content pre {
-  background: var(--bg);
-  padding: var(--spacing);
-  border-radius: var(--radius);
-  border-left: 5px solid var(--accent-alt);
+  background: var(--bg-alt);
+  border-left: 5px solid var(--accent);
+  padding: 1rem 1.25rem;
   overflow-x: auto;
+  border-radius: var(--radius);
   margin: 1.5rem 0;
+  font-family: var(--font-mono);
+  color: var(--accent);
 }
 
 /* Tables */
@@ -252,7 +264,7 @@ details[open] summary::after {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
-  color: var(--text);
+  color: var(--text-primary);
 }
 #note-content th,
 #note-content td {
@@ -263,14 +275,14 @@ details[open] summary::after {
 }
 #note-content thead {
   background: var(--accent);
-  color: var(--bg);
+  color: var(--bg-alt);
   font-weight: 700;
 }
 
 /* Horizontal rule */
 #note-content hr {
   border: none;
-  border-top: 1.5px solid var(--border);
+  border-top: 2px solid var(--border);
   margin: 2rem 0;
 }
 
@@ -280,38 +292,32 @@ details[open] summary::after {
   height: auto;
   margin: 1rem 0;
   border-radius: var(--radius);
-  box-shadow: 0 0 8px rgba(255 180 143 / 0.3);
+  box-shadow: 0 2px 10px rgba(255 111 97 / 0.15);
+}
+
+/* Abbreviation */
+#note-content abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
 }
 
 /* Footnotes */
 #note-content sup {
-  font-size: 0.8rem;
-  color: var(--accent-alt);
+  font-size: 0.75rem;
+  vertical-align: super;
+  color: var(--accent-light);
 }
 #note-content .footnotes {
+  font-size: 0.85rem;
   margin-top: 2rem;
-  padding-top: 0.7rem;
+  padding-top: 0.75rem;
   border-top: 1px solid var(--accent);
-  font-size: 0.9rem;
-  color: var(--accent-alt);
+  color: var(--accent);
+  font-style: italic;
 }
 
-/* ================= Footer ================= */
+/* Footer */
 footer {
   height: 2.5rem;
-}
-
-/* ================= Animations ================= */
-@keyframes fadeSlide {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-details[open] > *:not(summary) {
-  animation: fadeSlide 0.3s ease-out;
+  margin-top: auto;
 }
