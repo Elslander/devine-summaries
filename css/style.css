@@ -84,6 +84,10 @@ html {
     padding: 1rem;
 }
 
+.subject__title {
+    margin-bottom: 1rem;
+}
+
 .subject__summaries {
     display: flex;
     flex-direction: column;
@@ -92,5 +96,6 @@ html {
 
 .summaries__item {
     background-color: var(--colour-white);
+    color: var(--colour-black);
     padding: 0.5rem 1rem;
 }
