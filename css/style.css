@@ -243,6 +243,11 @@ a {
 .menu__item {
   color: white;
   list-style: none;
+  transition: all 200ms ease-in-out;
+}
+
+.menu__item:hover {
+    transform: scale(110%);
 }
 
 /* ------ Main ------ */
