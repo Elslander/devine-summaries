@@ -254,8 +254,8 @@ details[open] summary::after {
   text-align: left;
 }
 #note-content thead {
-  background-color: var(--accent);
-  color: var(--bg-alt);
+  background-color: var(--accent) !important;
+  color: var(--bg-alt) !important;
 }
 
 /* Horizontal rule */
