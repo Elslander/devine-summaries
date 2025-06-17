@@ -88,7 +88,7 @@ pre {
 
 table {
     display: table;
-    border-collapse: separate; /* not collapsed by default */
+    border-collapse: collapse;
     border-spacing: 2px;       /* default spacing between cells */
     text-indent: initial;
     unicode-bidi: isolate;
@@ -103,6 +103,10 @@ table {
     display: table-row-group;
     vertical-align: middle;
     border-color: inherit;
+  }
+
+  thead {
+    font-weight: bold;
   }
   
   tr {
