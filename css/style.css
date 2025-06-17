@@ -220,7 +220,7 @@ details[open] summary::after {
 
 /* Code */
 #note-content code {
-  background: #eaeff6;
+  /* background: #eaeff6; */
   padding: 0.2em 0.5em;
   border-radius: var(--radius);
   font-family: var(--font-mono);
