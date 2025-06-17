@@ -102,7 +102,7 @@ ins {
 }
 
 /* Links */
-a {
+main a {
   color: var(--colour-blue);
   text-decoration: underline;
 }
