@@ -256,6 +256,13 @@ sup {
   margin: 0;
 }
 
+.header__title > a {
+    font-family: 'space-mono';
+    color: white !important;
+    border-bottom: none;
+    text-transform: uppercase;
+}
+
 .navigation__menu {
   list-style: none;
 
@@ -325,7 +332,10 @@ sup {
   padding: 0.5rem 1rem;
 }
 
-.
+.summaries__item > a {
+    color: var(--colour-black) !important;
+    border: none !important;
+}
 
 /* ---- Notes main ---- */
 #note-content {
