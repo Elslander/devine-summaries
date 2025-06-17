@@ -316,8 +316,9 @@ a {
     background-color: var(--colour-white);
     color: var(--colour-black);
     
-    max-width: 80%;
+    /* max-width: 80%; */
     padding: 1rem;
+    margin-top: 1.5rem;
 }
 
 .history__summaries {
