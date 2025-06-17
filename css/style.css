@@ -1,0 +1,14 @@
+:root {
+    ---colour-black: ;
+    ---colour-white: ;
+    ---colour-blue: ;
+}
+
+@font-face {
+    font-family: 'space-mono';
+    src: url('../assets/fonts/SpaceMono-Regular.woff2') format('woff2');
+}
+
+html {
+    font-family: 'space-mono';
+}
