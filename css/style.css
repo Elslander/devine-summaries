@@ -159,7 +159,7 @@ a {
 
 /* Horizontal rule */
 #note-content hr {
-  border: none;
+  border: 1px solid var(--colour-black);
   margin: 2rem 0;
 }
 
