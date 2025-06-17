@@ -312,3 +312,7 @@ details[open] summary::after {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
+
+.subjects__subject {
+  min-width: 50vw;
+}
