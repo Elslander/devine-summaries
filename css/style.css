@@ -37,7 +37,7 @@ h2 {
     background-color: var(--colour-black);
     color: var(--colour-white);
     
-    padding: 0.5rem 2rem;
+    height: 10vw;
     
     display: flex;
     justify-content: space-between;
@@ -56,8 +56,20 @@ h2 {
 /* ------ Main ------ */
 .body__main {
     max-width: 80vw;
+    margin: auto;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.main__semester {
+    width: 100%;
+}
+
+.subjects__subject {
+    background-color: var(--colour-blue);
+    color: var(--colour-white);
+    
+    padding: 1rem;
 }
