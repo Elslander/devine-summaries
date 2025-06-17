@@ -254,7 +254,7 @@ details[open] summary::after {
   text-align: left;
 }
 #note-content thead {
-  background-color: var(--accent) !important;
+  background: var(--accent) !important;
   color: var(--bg-alt) !important;
 }
 
