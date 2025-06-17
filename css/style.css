@@ -79,7 +79,41 @@ pre {
 
     padding: 1rem;
     border: 1px solid var(--colour-blue);
+    margin: 0.5rem 0;
 }
+
+table {
+    display: table;
+    border-collapse: separate; /* not collapsed by default */
+    border-spacing: 2px;       /* default spacing between cells */
+    text-indent: initial;
+    unicode-bidi: isolate;
+  }
+  
+  caption {
+    display: table-caption;
+    text-align: center;
+  }
+  
+  thead, tbody, tfoot {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+  
+  tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+  }
+  
+  td, th {
+    display: table-cell;
+    padding: 1px;              /* often 1px or 2px depending on browser */
+    text-align: inherit;       /* usually left for td, center for th */
+    vertical-align: inherit;
+  }
+  
 
 a:hover {
     transform: scale(110%);
