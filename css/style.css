@@ -71,7 +71,7 @@ ol {
 }
 
 li {
-    text-indent: 1rem;
+    margin-left: 1rem;
 }
 
 pre {
@@ -164,6 +164,8 @@ a:hover {
 
 /* ---- Notes main ---- */
 #note-content {
+    font-family: Arial, Helvetica, sans-serif;
+
     max-width: 80vw;
 
     padding: 2rem;
