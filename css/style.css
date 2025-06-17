@@ -117,7 +117,7 @@ table {
   
   td, th {
     display: table-cell;
-    padding: 1px;              /* often 1px or 2px depending on browser */
+    padding: 0.2rem;              /* often 1px or 2px depending on browser */
     border: 1px solid var(--colour-black);
     text-align: inherit;       /* usually left for td, center for th */
     vertical-align: inherit;
