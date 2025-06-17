@@ -206,6 +206,8 @@ a {
   background-color: var(--colour-black);
   color: var(--colour-white);
 
+  position: sticky;
+
   height: 5vw;
   padding-left: var(--space--2);
   padding-right: var(--space--2);
@@ -229,10 +231,6 @@ a {
     border-bottom: none;
     text-decoration: none !important;
     text-transform: uppercase;
-}
-
-.header__navigation {
-    position: sticky;
 }
 
 .navigation__menu {
