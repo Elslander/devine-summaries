@@ -32,6 +32,45 @@ a {
     transition: all 300ms ease-in-out;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+pre {
+    background-color: var(--colour-white);
+    border: 1px solid var(--colour-blue);
+}
+
 a:hover {
     transform: scale(110%);
 }
@@ -120,43 +159,4 @@ a:hover {
     padding: 2rem;
     border: 2px solid var(--colour-blue);
     margin: var(--space--2) auto;
-
-    h1, h2, h3, h4, h5, h6 {
-        margin-top: 1rem;
-        margin-bottom: 0.5rem;
-        font-weight: bold;
-    }
-
-    h1 {
-        font-size: 4rem;
-    }
-
-    h2 {
-        font-size: 3rem;
-    }
-
-    h3 {
-        font-size: 2rem;
-    }
-
-    strong {
-        font-weight: bold;
-    }
-
-    em {
-        font-style: italic;
-    }
-
-    ul {
-        list-style: square;
-    }
-
-    ol {
-        list-style: decimal;
-    }
-
-    pre {
-        background-color: var(--colour-white);
-        border: 1px solid var(--colour-blue);
-    }
 }
