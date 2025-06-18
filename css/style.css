@@ -226,9 +226,11 @@ details summary::-webkit-details-marker {
   line-height: 1.7;
 }
 #note-content strong {
+  color: var(--primary);
   font-weight: bold;
 }
 #note-content em {
+  color: var(--primary-hover);
   font-style: italic;
 }
 #note-content del {
