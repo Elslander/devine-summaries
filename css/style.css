@@ -54,6 +54,19 @@ html {
   text-transform: uppercase;
 }
 
+.body__main {
+  max-width: 80vw;
+
+  padding: 2rem;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+.main__semester {
+  border: 3px solid var(--colour-red);
+  margin-bottom: 2rem;
+}
+
 /* !----- MARKDOWN ----- */
 /* --- Headings --- */
 #note-content h1,
