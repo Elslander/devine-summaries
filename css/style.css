@@ -91,6 +91,12 @@ html {
   font-size: 1.5rem;
 }
 
+#note-content {
+  max-width: 80rem;
+  padding: 2rem;
+  border: 3px solid var(--colour-red);
+}
+
 /* !----- MARKDOWN ----- */
 /* --- Headings --- */
 #note-content h1,
