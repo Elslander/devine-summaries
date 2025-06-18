@@ -101,6 +101,10 @@ body {
   transition: all var(--transition);
 }
 
+.art__history {
+  margin-top: 0.5rem;
+}
+
 .subject__title,
 .history__title {
   font-weight: bold;
