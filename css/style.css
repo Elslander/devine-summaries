@@ -1,8 +1,8 @@
 :root {
-  --colour-black: #1a0b0b;   /* Black with red tint */
-  --colour-white: #fefefe;   /* Soft white */
-  --colour-red:   #b02025;   /* Crimson red */
-  --colour-gold:  #c2a76e;   /* Muted gold accent */
+  --colour-black: #1a0b0b; /* Black with red tint */
+  --colour-white: #fefefe; /* Soft white */
+  --colour-red: #b02025; /* Crimson red */
+  --colour-gold: #c2a76e; /* Muted gold accent */
 
   --text: var(--colour-black);
   --bg: var(--colour-white);
@@ -10,13 +10,13 @@
 }
 
 @font-face {
-  font-family: 'space-mono';
-  src: url('../assets/fonts/SpaceMono-Regular.woff2') format(('woff2'));
+  font-family: "space-mono";
+  src: url("../assets/fonts/SpaceMono-Regular.woff2") format(("woff2"));
 }
 
 /* !----- Styling ----- */
 html {
-  font-family: 'space-mono';
+  font-family: "space-mono";
   font-size: 1.2rem;
 }
 
@@ -27,7 +27,8 @@ html {
   width: 100vw;
   height: 7.5vh;
 
-  border-bottom: 2px solid var(--colour-gold);
+  padding: 1rem;
+  border-bottom: 4px solid var(--colour-gold);
 
   display: flex;
   flex-direction: column;
@@ -45,6 +46,12 @@ html {
 .menu__item:hover {
   columns: var(--colour-red);
   background-color: var(--colour-white);
+}
+
+.menu__link {
+  column-rule-color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 /* !----- MARKDOWN ----- */
