@@ -1,13 +1,14 @@
 :root {
-  --colour-black: #1a0b0b;   /* Black with a red tint */
-  --colour-white: #fefefe;   /* Soft, clean white */
-  --colour-red: #b02025;     /* Bold crimson red */
-  --colour-gold: #c2a76e;    /* Accent - muted gold */
+  --colour-black: #1a0b0b;   /* Black with red tint */
+  --colour-white: #fefefe;   /* Soft white */
+  --colour-red:   #b02025;   /* Crimson red */
+  --colour-gold:  #c2a76e;   /* Muted gold accent */
 
-  --text: var(--colour-white);
-  --bg: var(--colour-black);
+  --text: var(--colour-black);
+  --bg: var(--colour-white);
   --primary: var(--colour-red);
 }
+
 
 /* !----- Styling ----- */
 
@@ -110,8 +111,8 @@
   border-left: 4px solid var(--colour-red);
   margin: 1rem 0;
   padding: 0.5rem 1rem;
-  background: var(--colour-black);
-  color: var(--colour-gold);
+  background: #fff9f9;
+  color: var(--colour-black);
   font-style: italic;
 }
 #note-content blockquote blockquote {
@@ -128,13 +129,13 @@
   font-size: 0.95em;
 }
 #note-content pre {
-  background: var(--colour-black);
+  background: #fff9f0;
   border-left: 3px solid var(--colour-red);
   padding: 1rem;
   overflow-x: auto;
   font-family: monospace;
   margin: 1rem 0;
-  color: var(--colour-gold);
+  color: var(--colour-black);
 }
 #note-content pre code {
   background: none;
@@ -157,8 +158,8 @@
   color: var(--text);
 }
 #note-content thead {
-  background: var(--colour-red);
-  color: var(--colour-white);
+  background: var(--colour-gold);
+  color: var(--colour-black);
   font-weight: bold;
 }
 
@@ -189,11 +190,11 @@
 #note-content .note,
 #note-content .tip {
   border-left: 4px solid var(--colour-gold);
-  background: var(--colour-black);
+  background: #fffdf7;
   padding: 1rem;
   margin: 1rem 0;
   font-style: italic;
-  color: var(--text);
+  color: var(--colour-black);
 }
 
 /* --- Footnotes --- */
