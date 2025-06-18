@@ -25,7 +25,7 @@ html {
   color: var(--colour-white);
 
   width: 100vw;
-  height: 6vh;
+  height: 7.5vh;
 
   border-bottom: 2px solid var(--colour-gold);
 
@@ -34,6 +34,17 @@ html {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+}
+
+.menu__item {
+  color: var(--colour-white);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+
+.menu__item:hover {
+  columns: var(--colour-red);
+  background-color: var(--colour-white);
 }
 
 /* !----- MARKDOWN ----- */
