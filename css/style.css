@@ -10,30 +10,27 @@
 }
 
 @font-face {
-  font-family: "space-mono";
+  font-family: "Space Mono";
   src: url("../assets/fonts/SpaceMono-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
-/* !----- Styling ----- */
 html {
-  font-family: "space-mono";
+  font-family: "Space Mono", monospace;
   font-size: 1.2rem;
+  color: var(--text);
+  background-color: var(--bg);
 }
 
 .body__header {
   background-color: var(--colour-black);
   color: var(--colour-white);
-
   width: 100vw;
   height: 7.5vh;
-
   padding: 1rem;
   border-bottom: 4px solid var(--colour-gold);
-
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
@@ -43,25 +40,24 @@ html {
   color: var(--colour-white);
   padding: 0.5rem 1rem;
   border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 .menu__item:hover {
-  columns: var(--colour-red);
+  color: var(--colour-red);
   background-color: var(--colour-white);
 }
 
 .menu__link {
-  column-rule-color: inherit;
   text-decoration: none;
   text-transform: uppercase;
+  color: inherit;
 }
 
 .body__main {
   max-width: 80vw;
-
   padding: 2rem;
-  margin: auto;
-  margin-top: 4rem;
+  margin: 4rem auto 0;
 }
 
 .main__semester {
@@ -69,10 +65,12 @@ html {
   border: 3px solid var(--colour-red);
   border-radius: 25px;
   margin-bottom: 2rem;
+  background-color: #fffafa;
 }
 
 .semester__title {
   font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .semester__subjects {
@@ -85,20 +83,23 @@ html {
   padding: 1rem;
   border: 2px solid var(--colour-gold);
   border-radius: 15px;
+  background-color: #fffdf7;
 }
 
 .subject__title {
   font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 #note-content {
   max-width: 80rem;
   padding: 2rem;
   border: 3px solid var(--colour-red);
+  background-color: var(--bg);
+  color: var(--text);
 }
 
-/* !----- MARKDOWN ----- */
-/* --- Headings --- */
+/* Markdown Styling */
 #note-content h1,
 #note-content h2,
 #note-content h3,
@@ -117,51 +118,31 @@ html {
   border-bottom: 2px solid var(--colour-red);
   padding-bottom: 0.3rem;
 }
-#note-content h2 {
-  font-size: 2rem;
-  padding-bottom: 0.2rem;
-}
-#note-content h3 {
-  font-size: 1.75rem;
-}
-#note-content h4 {
-  font-size: 1.5rem;
-}
-#note-content h5 {
-  font-size: 1.25rem;
-}
+#note-content h2 { font-size: 2rem; padding-bottom: 0.2rem; }
+#note-content h3 { font-size: 1.75rem; }
+#note-content h4 { font-size: 1.5rem; }
+#note-content h5 { font-size: 1.25rem; }
 #note-content h6 {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-/* --- Paragraphs & Inline --- */
 #note-content p {
-  margin: 1rem 0 0.5rem 0;
+  margin: 1rem 0 0.5rem;
   line-height: 1.7;
-  color: var(--text);
 }
 
-#note-content strong {
-  font-weight: bold;
-}
-#note-content em {
-  font-style: italic;
-}
-#note-content del {
-  text-decoration: line-through;
-}
-#note-content ins {
-  text-decoration: underline;
-}
+#note-content strong { font-weight: bold; }
+#note-content em { font-style: italic; }
+#note-content del { text-decoration: line-through; }
+#note-content ins { text-decoration: underline; }
 #note-content mark {
   background: var(--colour-gold);
   color: var(--colour-black);
   padding: 0 0.2em;
 }
 
-/* --- Links --- */
 #note-content a,
 #note-content a:visited {
   color: var(--colour-red);
@@ -172,38 +153,29 @@ html {
   color: var(--colour-gold);
 }
 
-/* --- Lists --- */
 #note-content ul,
 #note-content ol {
   padding-left: 2rem;
   margin: 1rem 0;
 }
-#note-content ul {
-  list-style: circle;
-}
-#note-content ol {
-  list-style: decimal;
-}
+#note-content ul { list-style: circle; }
+#note-content ol { list-style: decimal; }
 #note-content li {
-  margin: 0.5rem 0 0.2rem 0;
+  margin: 0.5rem 0 0.2rem;
   line-height: 1.6;
-  color: var(--text);
 }
 
-/* --- Blockquotes --- */
 #note-content blockquote {
   border-left: 4px solid var(--colour-red);
   margin: 1rem 0;
   padding: 0.5rem 1rem;
   background: #fff9f9;
-  color: var(--colour-black);
   font-style: italic;
 }
 #note-content blockquote blockquote {
   margin-top: 0.5rem;
 }
 
-/* --- Code & Preformatted --- */
 #note-content code {
   padding: 0.2em 0.4em;
   border-radius: 4px;
@@ -212,6 +184,7 @@ html {
   font-family: monospace;
   font-size: 0.95em;
 }
+
 #note-content pre {
   background: #fff9f0;
   border-left: 3px solid var(--colour-red);
@@ -228,7 +201,6 @@ html {
   color: inherit;
 }
 
-/* --- Tables --- */
 #note-content table {
   width: 100%;
   border-collapse: collapse;
@@ -239,7 +211,6 @@ html {
   border: 1px solid var(--colour-gold);
   padding: 0.75rem;
   text-align: left;
-  color: var(--text);
 }
 #note-content thead {
   background: var(--colour-gold);
@@ -247,13 +218,11 @@ html {
   font-weight: bold;
 }
 
-/* --- Horizontal Rule --- */
 #note-content hr {
   border: 1px solid var(--colour-gold);
   margin: 2rem 0;
 }
 
-/* --- Images --- */
 #note-content img {
   max-width: 100%;
   height: auto;
@@ -262,14 +231,12 @@ html {
   border: 2px solid var(--colour-gold);
 }
 
-/* --- Abbreviations --- */
 #note-content abbr[title] {
   text-decoration: underline dotted;
   cursor: help;
   color: var(--colour-gold);
 }
 
-/* --- Custom Callouts (note / tip / warning) --- */
 #note-content .warning,
 #note-content .note,
 #note-content .tip {
@@ -278,10 +245,8 @@ html {
   padding: 1rem;
   margin: 1rem 0;
   font-style: italic;
-  color: var(--colour-black);
 }
 
-/* --- Footnotes --- */
 #note-content sup {
   font-size: 0.8em;
   vertical-align: super;
@@ -291,5 +256,4 @@ html {
   margin-top: 2rem;
   border-top: 1px solid var(--primary);
   padding-top: 1rem;
-  color: var(--text);
 }
