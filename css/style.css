@@ -1,318 +1,347 @@
-/* ===== Root variables for light mode ===== */
-:root {
-  --bg: #fafafa;              /* very light background */
-  --bg-alt: #ffffff;          /* white cards */
-  --text-primary: #222222;    /* dark text */
-  --text-secondary: #555555;  /* medium gray text */
-  --accent: #0077cc;          /* bright blue accent */
-  --border: #ddd;             /* light border */
-  --radius: 8px;
-  --spacing: 1.5rem;
-  --font-sans: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-mono: 'Fira Mono', monospace;
-  --transition: 0.25s ease;
-}
-
-/* ===== Global reset and base styles ===== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  background: var(--bg);
-  color: var(--text-primary);
-  font-family: var(--font-sans);
-  line-height: 1.6;
-  padding: var(--spacing);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* ===== Header ===== */
-.body__header {
-  width: 100%;
-  max-width: 900px;
-  text-align: center;
-  margin-bottom: calc(var(--spacing) * 1.5);
-}
-.header__title {
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--accent);
-  letter-spacing: 0.1em;
-  user-select: none;
-  text-transform: uppercase;
-}
-
-/* ===== Navigation ===== */
-.header__navigation {
-  margin-top: 1rem;
-}
-.navigation__menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-.menu__item a {
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
-  padding: 0.3rem 1rem;
-  border-radius: var(--radius);
-  transition: background-color var(--transition), color var(--transition);
-}
-.menu__item a:hover,
-.menu__item a:focus-visible {
-  background-color: var(--accent);
-  color: var(--bg-alt);
-  outline: none;
-}
-
-/* ===== Main content ===== */
-#note-content {
-  width: 100%;
-  max-width: 900px;
-  background: var(--bg-alt);
-  padding: calc(var(--spacing) * 1.5);
-  border-radius: var(--radius);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  font-size: 1rem;
-  color: var(--text-primary);
-}
-
-/* ===== Collapsible details ===== */
-details {
-  margin: 2rem 0;
-  background: #f5f5f5;
-  padding: 1rem 1.5rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  cursor: pointer;
-  transition: background-color var(--transition), box-shadow var(--transition);
-  color: var(--text-primary);
-}
-details:hover {
-  background-color: #e8f0fe;
-  box-shadow: 0 0 15px var(--accent);
-}
-details[open] {
-  background-color: #dbeafe;
-  box-shadow: 0 0 25px var(--accent);
-}
-details details {
-  margin-top: 1rem;
-  padding-left: 1.5rem;
-  background: #f0f6ff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
-
-/* Summary styles */
-summary {
-  font-size: 1.3rem;
-  font-weight: 700;
-  user-select: none;
-  list-style: none;
-  outline-offset: 4px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--accent);
-  cursor: pointer;
-}
-summary::-webkit-details-marker {
-  display: none;
-}
-summary::after {
-  content: '▸';
-  font-weight: 900;
-  font-size: 1.3rem;
-  transition: transform var(--transition);
-  color: var(--accent);
-}
-details[open] summary::after {
-  content: '▾';
-  color: var(--accent);
-}
-
-/* ===== Markdown styles scoped to #note-content ===== */
-#note-content h1,
-#note-content h2,
-#note-content h3,
-#note-content h4,
-#note-content h5,
-#note-content h6 {
-  margin-top: 2rem;
-  margin-bottom: 0.8rem;
-  font-weight: 700;
-  color: var(--accent);
-  user-select: text;
-}
-#note-content h1 { font-size: 2.8rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.3rem; }
-#note-content h2 { font-size: 2.2rem; }
-#note-content h3 { font-size: 1.8rem; }
-#note-content h4 { font-size: 1.4rem; }
-#note-content h5 { font-size: 1.2rem; }
-#note-content h6 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Paragraphs */
-#note-content p {
-  margin: 1rem 0 0.6rem 0;
-  color: var(--text-primary);
-  line-height: 1.6;
-  font-weight: 500;
-}
-
-/* Emphasis */
-#note-content strong { font-weight: 700; color: var(--accent); }
-#note-content em     { font-style: italic; color: var(--text-secondary); }
-#note-content del    { text-decoration: line-through; }
-#note-content mark   { background: var(--accent); color: var(--bg-alt); padding: 0 0.2em; }
-#note-content ins    { text-decoration: underline; }
-
-/* Links */
-#note-content a {
-  color: var(--accent);
-  text-decoration: underline;
-  font-weight: 600;
-  transition: color 0.25s ease;
-}
-#note-content a:hover,
-#note-content a:focus-visible {
-  color: #004c99;
-  text-decoration: none;
-  outline: none;
-}
-
-/* Lists */
-#note-content ul,
-#note-content ol {
-  padding-left: 2rem;
-  margin: 1.2rem 0;
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-#note-content ul { list-style: disc; }
-#note-content ol { list-style: decimal; }
-#note-content li {
-  margin: 0.5rem 0;
-  line-height: 1.5;
-}
-
-/* Blockquotes */
-#note-content blockquote {
-  border-left: 4px solid var(--accent);
-  padding: 1rem 1.5rem;
-  margin: 2rem 0;
-  background: #f0f6ff;
-  color: var(--text-primary);
-  font-style: italic;
-  border-radius: var(--radius);
-}
-
-/* Code */
-#note-content code {
-  /* background: #eaeff6; */
-  padding: 0.2em 0.5em;
-  border-radius: var(--radius);
-  font-family: var(--font-mono);
-  color: var(--accent);
-  font-weight: 700;
-}
-#note-content pre {
-  background: #d6e1ff;
-  border-left: 4px solid var(--accent);
-  padding: 1rem 1.5rem;
-  margin: 2rem 0;
-  overflow-x: auto;
-  border-radius: var(--radius);
-  font-family: var(--font-mono);
-  color: var(--accent);
-}
-
-/* Tables */
-#note-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2rem 0;
-  color: var(--text-primary);
-}
-#note-content th,
-#note-content td {
-  border: 1px solid var(--border);
-  padding: 0.75rem 1rem;
-  background: var(--bg-alt);
-  font-weight: 600;
-  text-align: left;
-}
-#note-content thead {
-  background: var(--accent) !important;
-  color: var(--bg-alt) !important;
-}
-
-/* Horizontal rule */
-#note-content hr {
-  border: none;
-  border-top: 2px solid var(--border);
-  margin: 2.5rem 0;
-}
-
-/* Images */
-#note-content img {
-  max-width: 100%;
-  height: auto;
-  margin: 1.5rem 0;
-  border-radius: var(--radius);
-  user-select: none;
-  box-shadow: 0 2px 10px rgb(0 119 204 / 0.4);
-}
-
-/* Abbreviations */
-#note-content abbr[title] {
-  text-decoration: underline dotted;
-  cursor: help;
-}
-
-/* Custom containers */
-#note-content .warning,
-#note-content .note,
-#note-content .tip {
-  border-left: 4px solid var(--accent);
-  background: #f0f6ff;
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
-  font-style: italic;
-  color: var(--text-primary);
-  border-radius: var(--radius);
-}
-
-/* Footnotes */
-#note-content sup {
-  font-size: 0.75rem;
-  vertical-align: super;
-  color: var(--text-secondary);
-}
-#note-content .footnotes {
-  font-size: 0.9rem;
-  margin-top: 2rem;
-  border-top: 1px solid var(--accent);
-  padding-top: 1rem;
-}
-
-/* Accessibility: focus outline for keyboard users */
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-}
-
-.subjects__subject {
-  min-width: 50vw;
-}
+/* ==========================================================
+   Global Variables
+   ========================================================== */
+   :root {
+    --bg: #fdfdfd;
+    --bg-alt: #f3f3f3;
+    --text: #222;
+    --primary: #4b6cc1;
+    --primary-hover: #3f57a0;
+    --border: #ccc;
+    --radius: 0.5rem;
+    --transition: 0.2s ease;
+  }
+  
+  /* ==========================================================
+     Base Reset / Defaults
+     ========================================================== */
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Space Mono', monospace; /* keep the user’s font */
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 0 1rem;
+  }
+  
+  /* ==========================================================
+     Header
+     ========================================================== */
+  .body__header {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .header__title {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  .header__navigation .navigation__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .menu__item a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    transition: color var(--transition);
+  }
+  
+  .menu__item a:hover {
+    color: var(--primary-hover);
+  }
+  
+  /* ==========================================================
+     Main Layout
+     ========================================================== */
+  .body__main {
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+  
+  /* = Semester cards = */
+  .main__semester {
+    margin-bottom: 2rem;
+  }
+  
+  .semester__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--primary);
+    padding-left: 0.5rem;
+  }
+  
+  /* = Subjects (details elements) = */
+  .subjects__subject,
+  .art__history {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--bg-alt);
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    overflow: hidden;
+    transition: all var(--transition);
+  }
+  
+  .subject__title,
+  .history__title {
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /* lists of summaries */
+  .subject__summaries,
+  .history__summaries {
+    list-style: none;
+    margin: 0.5rem 0 0 1rem;
+    padding: 0;
+  }
+  
+  .summaries__item,
+  .history__item {
+    margin: 0.25rem 0;
+  }
+  
+  .summaries__link {
+    text-decoration: none;
+    color: var(--primary);
+    border-bottom: 1px dashed var(--primary);
+    transition: all var(--transition);
+  }
+  
+  .summaries__link:hover {
+    color: var(--primary-hover);
+    border-bottom-style: solid;
+  }
+  
+  /* = Collapsible arrow indicators = */
+  details[open] > summary::after {
+    content: "▲";
+    float: right;
+    font-size: 0.75rem;
+  }
+  
+  details > summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.75rem;
+  }
+  
+  details summary {
+    outline: none;
+  }
+  
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  /* ==========================================================
+     Summary Page Container
+     ========================================================== */
+  #note-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem 1.25rem;
+    background-color: var(--bg-alt);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    word-wrap: break-word;
+  }
+  
+  /* ==========================================================
+     Markdown Styling (scoped to #note-content)
+     ========================================================== */
+  
+  /* --- Headings --- */
+  #note-content h1,
+  #note-content h2,
+  #note-content h3,
+  #note-content h4,
+  #note-content h5,
+  #note-content h6 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text);
+  }
+  
+  #note-content h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.3rem;
+  }
+  #note-content h2 { font-size: 2rem;  padding-bottom: 0.2rem; }
+  #note-content h3 { font-size: 1.75rem; }
+  #note-content h4 { font-size: 1.5rem; }
+  #note-content h5 { font-size: 1.25rem; }
+  #note-content h6 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* --- Paragraphs & Inline --- */
+  #note-content p {
+    margin: 1rem 0 0.5rem 0;
+    line-height: 1.7;
+    color: var(--text);
+  }
+  
+  #note-content strong { font-weight: bold; }
+  #note-content em    { font-style: italic; }
+  #note-content del   { text-decoration: line-through; }
+  #note-content ins   { text-decoration: underline; }
+  #note-content mark  { background: #fff8c7; padding: 0 0.2em; }
+  
+  /* --- Links --- */
+  #note-content a,
+  #note-content a:visited {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+  #note-content a:hover {
+    text-decoration: none;
+    color: var(--primary-hover);
+  }
+  
+  /* --- Lists --- */
+  #note-content ul,
+  #note-content ol {
+    padding-left: 2rem;
+    margin: 1rem 0;
+  }
+  #note-content ul { list-style: circle; }
+  #note-content ol { list-style: decimal; }
+  #note-content li {
+    margin: 0.5rem 0 0.2rem 0;
+    line-height: 1.6;
+  }
+  
+  /* --- Blockquotes --- */
+  #note-content blockquote {
+    border-left: 4px solid var(--primary);
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background: var(--bg);
+    color: var(--text);
+    font-style: italic;
+  }
+  #note-content blockquote blockquote { margin-top: 0.5rem; }
+  
+  /* --- Code & Preformatted --- */
+  #note-content code {
+    background: rgba(75, 108, 193, 0.12); /* primary tint */
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.95em;
+  }
+  #note-content pre {
+    background: var(--bg);
+    border-left: 3px solid var(--primary);
+    padding: 1rem;
+    overflow-x: auto;
+    font-family: monospace;
+    margin: 1rem 0;
+  }
+  #note-content pre code {
+    background: none;
+    padding: 0;
+    border: none;
+    color: inherit;
+  }
+  
+  /* --- Tables --- */
+  #note-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  #note-content th,
+  #note-content td {
+    border: 1px solid var(--border);
+    padding: 0.75rem;
+    text-align: left;
+  }
+  #note-content thead {
+    background: var(--bg-alt);
+    font-weight: bold;
+  }
+  
+  /* --- Horizontal Rule --- */
+  #note-content hr {
+    border: 1px solid var(--border);
+    margin: 2rem 0;
+  }
+  
+  /* --- Images --- */
+  #note-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
+  }
+  
+  /* --- Abbreviations --- */
+  #note-content abbr[title] {
+    text-decoration: underline dotted;
+    cursor: help;
+  }
+  
+  /* --- Custom Callouts (note / tip / warning) --- */
+  #note-content .warning,
+  #note-content .note,
+  #note-content .tip {
+    border-left: 4px solid orange;
+    background: var(--bg);
+    padding: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+  }
+  
+  /* --- Footnotes --- */
+  #note-content sup {
+    font-size: 0.8em;
+    vertical-align: super;
+  }
+  #note-content .footnotes {
+    font-size: 0.9em;
+    margin-top: 2rem;
+    border-top: 1px solid var(--primary);
+    padding-top: 1rem;
+  }
+  
+  /* ==========================================================
+     Footer Placeholder
+     ========================================================== */
+  footer {
+    height: 2rem;
+  }
+  
+  /* ==========================================================
+     Animation (optional flair)
+     ========================================================== */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  details[open] > *:not(summary) {
+    animation: fadeIn 0.3s ease-in;
+  }
+  
