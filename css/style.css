@@ -36,7 +36,8 @@ body {
      ========================================================== */
 .body__header {
   padding: 1.5rem 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid #444; /* darker border for dark mode */
+  background-color: #121212; /* very dark background */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +47,7 @@ body {
 .header__title {
   margin: 0;
   font-size: 1.8rem;
+  color: #eee; /* light text */
 }
 
 .header__navigation .navigation__menu {
@@ -58,12 +60,13 @@ body {
 
 .menu__item a {
   text-decoration: none;
-  color: var(--primary);
+  color: #82aaff; /* soft blue for links in dark mode */
   font-weight: bold;
   transition: color var(--transition);
 }
+
 .menu__item a:hover {
-  color: var(--primary-hover);
+  color: #4c79ff; /* brighter blue on hover */
 }
 
 /* ==========================================================
