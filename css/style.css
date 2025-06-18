@@ -10,13 +10,15 @@
 }
 
 @font-face {
-  font-family: 'space-mono';
-  src: url("../assets/fonts/SpaceMono-Regular.woff2") format(("woff2"));
+  font-family: "space-mono";
+  src: url("../assets/fonts/SpaceMono-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* !----- Styling ----- */
 html {
-  font-family: 'space-mono';
+  font-family: "space-mono";
   font-size: 1.2rem;
 }
 
@@ -80,7 +82,13 @@ html {
 }
 
 .subjects__subject {
+  padding: 1rem;
   border: 2px solid var(--colour-gold);
+  border-radius: 15px;
+}
+
+.subject__title {
+  font-size: 1.5rem;
 }
 
 /* !----- MARKDOWN ----- */
