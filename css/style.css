@@ -28,14 +28,6 @@ body {
   padding: 0 1rem;
 }
 
-details summary::-webkit-details-marker {
-  display: none;
-}
-
-details summary::marker {
-  display: none;
-}
-
 /* ==========================================================
      Header
      ========================================================== */
@@ -373,4 +365,12 @@ footer {
 }
 details[open] > *:not(summary) {
   animation: fadeIn 0.3s ease-in;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::marker {
+  display: none;
 }
