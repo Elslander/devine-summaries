@@ -9,9 +9,32 @@
   --primary: var(--colour-red);
 }
 
+@font-face {
+  font-family: 'space-mono';
+  src: url('../assets/fonts/SpaceMono-Regular.woff2') format(('woff2'));
+}
 
 /* !----- Styling ----- */
+html {
+  font-family: 'space-mono';
+  font-size: 1.2rem;
+}
 
+.body__header {
+  background-color: var(--colour-black);
+  color: var(--colour-white);
+
+  width: 100vw;
+  height: 6vh;
+
+  border-bottom: 2px solid var(--colour-gold);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
 
 /* !----- MARKDOWN ----- */
 /* --- Headings --- */
