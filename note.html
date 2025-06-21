@@ -10,8 +10,8 @@
   </head>
   <body>
     <div class="layout">
-      <!-- Sidebar (same as index.html) -->
       <aside class="sidebar">
+        <button class="menu__toggle">☰</button>
         <h1 class="sidebar__title">Devine Summaries</h1>
         <nav class="sidebar__nav">
           <ul class="nav__menu">
@@ -21,19 +21,18 @@
           </ul>
         </nav>
       </aside>
-
-      <!-- Main content -->
-      <main id="note-content" class="body__main">
-        Loading...
+      <main class="body__main">
+        <div id="note-content">loading...</div>
       </main>
     </div>
-
-    <footer class="body__footer">
-      <p>&copy; 2025 Devine Summaries. All rights reserved.</p>
-    </footer>
+    <footer class="body__footer">© 2025 Devine Summaries</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
+      document.querySelector(".menu__toggle").addEventListener("click", () => {
+        document.querySelector(".sidebar").classList.toggle("open");
+      });
+
       const params = new URLSearchParams(window.location.search);
       const file = params.get("file");
 

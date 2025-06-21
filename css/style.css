@@ -1,4 +1,8 @@
 /* ----------------- Base font ----------------- */
+* {
+  overflow-x: hidden;
+}
+
 html {
   font-family: 'Space Mono', monospace;
 }
