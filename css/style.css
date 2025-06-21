@@ -183,13 +183,13 @@ html {
 /* Responsive Mobile Navigation */
 @media (max-width: 600px) {
   .layout {
-    height: 95vh;
+    height: 100vh;
     flex-direction: column;
     overflow-y: hidden;
   }
 
   .body__main {
-    overflow-y: hidden;
+max-height: 95vh;
   }
 
   .sidebar {
