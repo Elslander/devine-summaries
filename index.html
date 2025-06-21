@@ -5,102 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="icon"
-      href="./assets/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
     <title>D. Summaries</title>
   </head>
   <body>
-    <header class="body__header">
-      <h1 class="header__title">Devine Summaries</h1>
-      <nav class="header__navigation">
-        <ul class="navigation__menu">
-          <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="body__main">
-      <article class="main__semester">
-        <h2 class="semester__title">Semester 1</h2>
-        <section class="semester__subjects">
-          <details class="subjects__subject">
-            <summary class="subject__title">Experience Design 1</summary>
-            <ul class="subject__summaries"></ul>
-          </details>
-          <details class="subjects__subject">
-            <summary class="subject__title">Visual Design 1</summary>
-            <ul class="subject__summaries"></ul>
-          </details>
-          <details class="subjects__subject">
-            <summary class="subject__title">Creative Code 1</summary>
-            <ul class="subject__summaries"></ul>
-          </details>
-          <details class="subjects__subject">
-            <summary class="subject__title">Web 1</summary>
-            <ul class="subject__summaries"></ul>
-          </details>
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h1 class="sidebar__title">Devine Summaries</h1>
+        <nav class="sidebar__nav">
+          <ul class="nav__menu">
+            <li class="menu__item">
+              <a class="menu__link" href="index.html">Home</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="body__main">
+        <section class="main__semester">
+          <h2 class="semester__title">Semester 1</h2>
+          <div class="semester__grid">
+            <article class="subject__card">
+              <h3 class="card__title">Experience Design 1</h3>
+              <ul class="card__summaries"></ul>
+            </article>
+            <article class="subject__card">
+              <h3 class="card__title">Visual Design 1</h3>
+              <ul class="card__summaries"></ul>
+            </article>
+            <article class="subject__card">
+              <h3 class="card__title">Creative Code 1</h3>
+              <ul class="card__summaries"></ul>
+            </article>
+            <article class="subject__card">
+              <h3 class="card__title">Web 1</h3>
+              <ul class="card__summaries"></ul>
+            </article>
+          </div>
         </section>
-      </article>
-      <article class="main__semester">
-        <h2 class="semester__title">Semester 2</h2>
-        <section class="semester__subjects">
-          <details class="subjects__subject">
-            <summary class="subject__title">Experience Design 2</summary>
-            <ul class="subject__summaries"></ul>
-          </details>
-          <details class="subjects__subject">
-            <summary class="subject__title">Visual Design 2</summary>
-            <details class="art__history">
-              <summary class="history__title">Graphic Design History (no images)</summary>
-              <ul class="history__summaries">
-                <li class="history__item">
-                  <a
-                    href="note.html?file=visual-design-2/history/art-nouveau.md"
-                    class="summaries__link"
-                    >Art Nouveau</a
-                  >
-                </li>
-                <li class="history__item">
-                  <a
-                    href="note.html?file=visual-design-2/history/european-poster-design.md"
-                    class="summaries__link"
-                    >European Poster design</a
-                  >
+
+        <section class="main__semester">
+          <h2 class="semester__title">Semester 2</h2>
+          <div class="semester__grid">
+            <article class="subject__card">
+              <h3 class="card__title">Experience Design 2</h3>
+              <ul class="card__summaries"></ul>
+            </article>
+
+            <article class="subject__card">
+              <h3 class="card__title">Visual Design 2</h3>
+              <ul class="card__summaries">
+                <li>
+                  <a href="note.html?file=visual-design-2/storytelling.md" class="summaries__link">Storytelling</a>
                 </li>
               </ul>
-            </details>
-            <ul class="subject__summaries">
-              <li class="summaries__item">
-                <a
-                  href="note.html?file=visual-design-2/storytelling.md"
-                  class="summaries__link"
-                  >Storytelling</a
-                >
-              </li>
-            </ul>
-          </details>
-          <details class="subjects__subject">
-            <summary class="subject__title">Creative Code 2</summary>
-            <ul class="subject__summaries">
-              <li class="summaries__item">
-                <a
-                  href="note.html?file=creative-code-2/object-oriented-programming.md"
-                  class="summaries__link"
-                  >Object Oriented Programming</a
-                >
-              </li>
-            </ul>
-          </details>
-          <details class="subjects__subject">
-            <summary class="subject__title">Web 2</summary>
-            <ul class="subject__summaries"></ul>
-          </details>
+
+              <!-- Nested Card -->
+              <div class="nested__card">
+                <h4 class="card__subtitle">Graphic Design History</h4>
+                <ul class="card__summaries">
+                  <li>
+                    <a href="note.html?file=visual-design-2/history/art-nouveau.md" class="summaries__link">Art Nouveau</a>
+                  </li>
+                  <li>
+                    <a href="note.html?file=visual-design-2/history/european-poster-design.md" class="summaries__link">European Poster Design</a>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="subject__card">
+              <h3 class="card__title">Creative Code 2</h3>
+              <ul class="card__summaries">
+                <li>
+                  <a href="note.html?file=creative-code-2/object-oriented-programming.md" class="summaries__link">Object Oriented Programming</a>
+                </li>
+              </ul>
+            </article>
+
+            <article class="subject__card">
+              <h3 class="card__title">Web 2</h3>
+              <ul class="card__summaries"></ul>
+            </article>
+          </div>
         </section>
-      </article>
-    </main>
-    <footer></footer>
+      </main>
+    </div>
+
+    <footer class="body__footer">
+      <p>&copy; 2025 Devine Summaries. All rights reserved.</p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="./js/script.js"></script>
   </body>

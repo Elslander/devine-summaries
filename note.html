@@ -5,29 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="icon"
-      href="./assets/favicon.ico"
-      type="image/x-icon"
-    />
-    <title>D. Summaries</title>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <title>D. Summaries - Note</title>
   </head>
   <body>
-    <header class="body__header">
-      <h1 class="header__title">Devine Summaries</h1>
-      <nav class="header__navigation">
-        <ul class="navigation__menu">
-          <li class="menu__item">
-            <a href="index.html">Home</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main id="note-content">loading...</main>
-    <footer></footer>
+    <div class="layout">
+      <!-- Sidebar (same as index.html) -->
+      <aside class="sidebar">
+        <h1 class="sidebar__title">Devine Summaries</h1>
+        <nav class="sidebar__nav">
+          <ul class="nav__menu">
+            <li class="menu__item">
+              <a class="menu__link" href="index.html">Home</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main content -->
+      <main id="note-content" class="body__main">
+        Loading...
+      </main>
+    </div>
+
+    <footer class="body__footer">
+      <p>&copy; 2025 Devine Summaries. All rights reserved.</p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-      // Get file from query string: ?file=path/to/file.md
       const params = new URLSearchParams(window.location.search);
       const file = params.get("file");
 

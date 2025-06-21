@@ -1,342 +1,408 @@
-/* ==========================================================
-   Global Variables – crimson / gold palette
-   ========================================================== */
+/* ----------------- Base font ----------------- */
+html {
+  font-family: 'Space Mono', monospace;
+}
+
+/* ----------------- Theme variables ----------------- */
 :root {
-  --bg: #fefefe; /* soft white               */
-  --bg-alt: #fffdf7; /* parchment‑light tint     */
-  --text: #1a0b0b; /* black with red undertone */
-  --primary: #b02025; /* crimson red              */
-  --primary-hover: #8f1b1f; /* darker crimson           */
-  --border: #c2a76e; /* muted gold               */
-  --radius: 0.5rem;
-  --transition: 0.2s ease;
+  --bg: #f4f4f8;
+  --bg-alt: #fff;
+  --border: #ddd;
+  --primary: #4b6cc1;          /* subtle blue */
+  --primary-hover: #3550a1;    /* darker blue */
+  --text: #1a1a1a;
+  --radius: 12px;
 }
 
-/* ==========================================================
-     Base Reset / Defaults
-     ========================================================== */
-* {
-  box-sizing: border-box;
+/* ----------------- Layout wrapper ----------------- */
+.layout {
+  display: flex;
+  height: 95vh;
+  overflow-y: hidden;
 }
 
-body {
-  margin: 0;
-  font-family: "Space Mono", monospace;
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  padding: 0 1rem;
-
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
-
-/* ==========================================================
-     Header
-     ========================================================== */
-.body__header {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid #444; /* darker border for dark mode */
-  background-color: #121212; /* very dark background */
+/* ----------------- Sidebar styles ----------------- */
+.sidebar {
+  width: 240px;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 2rem 1.5rem;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+  gap: 2rem;
 }
 
-.header__title {
-  margin: 0;
-  font-size: 1.8rem;
-  color: #eee; /* light text */
+.sidebar__title {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.header__navigation .navigation__menu {
+.sidebar__nav .nav__menu {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  gap: 1rem;
 }
 
-.menu__item a {
+.menu__link {
+  color: #ddd;
   text-decoration: none;
-  color: #82aaff; /* soft blue for links in dark mode */
-  font-weight: bold;
-  transition: color var(--transition);
+  display: block;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
 }
 
-.menu__item a:hover {
-  color: #4c79ff; /* brighter blue on hover */
+.menu__link:hover {
+  color: white;
 }
 
-/* ==========================================================
-     Main Layout
-     ========================================================== */
+/* ----------------- Main content area ----------------- */
 .body__main {
-  max-width: 800px;
-  margin: 2rem auto;
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: var(--bg);
 }
 
-/* = Semester cards = */
+/* ----------------- Semester section ----------------- */
 .main__semester {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .semester__title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  border-left: 4px solid var(--primary);
-  padding-left: 0.5rem;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
 }
 
-/* = Subjects (details elements) = */
-.subjects__subject,
-.art__history {
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+/* ----------------- Grid of subject cards ----------------- */
+.semester__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* ----------------- Subject card ----------------- */
+.subject__card {
   background-color: var(--bg-alt);
-  margin-bottom: 0.75rem;
-  padding: 0.5rem;
-  overflow: hidden;
-  transition: all var(--transition);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.art__history {
-  margin-top: 0.5rem;
+.subject__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
-.subject__title,
-.history__title {
-  font-weight: bold;
-  cursor: pointer;
-  user-select: none;
-
-  cursor: pointer;
-  transition: color 0.3s ease;
+.card__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-.subject__title.open,
-.history__title.open {
-  color: var(--colour-blue, #007acc);
-}
-
-/* lists of summaries */
-.subject__summaries,
-.history__summaries {
+/* ----------------- Summary list ----------------- */
+.card__summaries {
   list-style: none;
-  margin: 0.5rem 0 0 1rem;
   padding: 0;
+  margin: 0;
 }
 
-.summaries__item,
-.history__item {
-  margin: 0.25rem 0;
+.card__summaries li {
+  margin-bottom: 0.5rem;
 }
 
 .summaries__link {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  color: var(--text);
+  background-color: #e6e6e6;
+  border-radius: 6px;
   text-decoration: none;
-  color: var(--primary);
-  border-bottom: 1px dashed var(--primary);
-  transition: all var(--transition);
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
 }
+
 .summaries__link:hover {
-  color: var(--primary-hover);
-  border-bottom-style: solid;
+  background-color: #d1d1d1;
 }
 
-/* = Collapsible arrow indicators = */
-details[open] > summary::after {
-  content: "▲";
-  float: right;
-  font-size: 0.75rem;
-}
-details > summary::after {
-  content: "▼";
-  float: right;
-  font-size: 0.75rem;
-}
-details summary {
-  outline: none;
-}
-details summary::-webkit-details-marker {
-  display: none;
+/* ----------------- Nested card for history section ----------------- */
+.nested__card {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background-color: #fefefe;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-.menu__item a.active,
-.summaries__link.active {
-  background-color: var(--colour-blue, #d0e8ff);
-  color: black;
-  border-radius: 0.3rem;
-  padding: 0.2rem 0.4rem;
+.card__subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-/* ==========================================================
-     Summary Page Container
-     ========================================================== */
+/* ----------------- Footer ----------------- */
+.body__footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* ----------------- Hamburger menu toggle button ----------------- */
+.menu__toggle {
+  display: none; /* Hidden by default on large screens */
+}
+
+/* ----------------- Responsive Mobile Navigation ----------------- */
+@media (max-width: 600px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 56px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    position: relative;
+  }
+
+  .menu__toggle {
+    display: inline-block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  .sidebar__nav {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
+    display: none;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    gap: 0.5rem;
+  }
+
+  .sidebar.open .sidebar__nav {
+    display: flex;
+  }
+
+  .sidebar__nav .menu__link {
+    padding: 0.75rem 0;
+  }
+
+  .body__main {
+    padding-top: 2rem;
+  }
+}
+
+/* ----------------- Markdown Note Styling ----------------- */
+
 #note-content {
-  font-family: Arial, Helvetica, sans-serif;
-
   max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem 1.25rem;
+  margin: 2rem auto 2rem auto;
+  padding: 1.5rem 2rem;
   background-color: var(--bg-alt);
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   word-wrap: break-word;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+
+  overflow-y: scroll;
 }
 
-/* ==========================================================
-     Markdown Styling (scoped to #note-content)
-     ========================================================== */
+/* Headings */
 #note-content h1,
 #note-content h2,
 #note-content h3,
 #note-content h4,
 #note-content h5,
 #note-content h6 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   font-weight: 700;
   line-height: 1.2;
   color: var(--text);
 }
 
 #note-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
+  border-bottom: 3px solid var(--primary);
+  padding-bottom: 0.4rem;
+}
+
+#note-content h2 {
+  font-size: 2rem;
   border-bottom: 2px solid var(--primary);
   padding-bottom: 0.3rem;
 }
-#note-content h2 {
-  font-size: 2rem;
-  padding-bottom: 0.2rem;
-}
+
 #note-content h3 {
-  font-size: 1.75rem;
-}
-#note-content h4 {
   font-size: 1.5rem;
 }
-#note-content h5 {
+
+#note-content h4 {
   font-size: 1.25rem;
 }
+
+#note-content h5 {
+  font-size: 1.1rem;
+}
+
 #note-content h6 {
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.1em;
 }
 
-/* --- Paragraphs & Inline --- */
+/* Paragraphs */
 #note-content p {
-  margin: 1rem 0 0.5rem;
-  line-height: 1.7;
+  margin: 1rem 0 1rem 0;
+  color: var(--text);
 }
+
+/* Text styles */
 #note-content strong {
-  color: var(--primary);
-  font-weight: bold;
+  font-weight: 700;
 }
+
 #note-content em {
-  color: var(--primary-hover);
   font-style: italic;
 }
+
 #note-content del {
   text-decoration: line-through;
 }
+
 #note-content ins {
   text-decoration: underline;
 }
+
 #note-content mark {
-  background: rgba(194, 167, 110, 0.35);
+  background: #fff8c7;
   padding: 0 0.2em;
 }
 
-/* --- Links --- */
+/* Links */
 #note-content a,
 #note-content a:visited {
   color: var(--primary);
   text-decoration: underline;
+  transition: color 0.3s ease;
 }
+
 #note-content a:hover {
   text-decoration: none;
   color: var(--primary-hover);
 }
 
-/* --- Lists --- */
+/* Lists */
 #note-content ul,
 #note-content ol {
   padding-left: 2rem;
   margin: 1rem 0;
 }
+
 #note-content ul {
-  list-style: circle;
-}
-#note-content ol {
-  list-style: decimal;
-}
-#note-content li {
-  margin: 0.5rem 0 0.2rem;
-  line-height: 1.6;
+  list-style-type: disc;
 }
 
-/* --- Blockquotes --- */
+#note-content ol {
+  list-style-type: decimal;
+}
+
+#note-content li {
+  margin: 0.4rem 0 0.3rem 0;
+}
+
+/* Blockquotes */
 #note-content blockquote {
   border-left: 4px solid var(--primary);
-  margin: 1rem 0;
-  padding: 0.5rem 1rem;
   background: var(--bg);
   color: var(--text);
   font-style: italic;
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(75,108,193,0.1);
 }
+
+/* Nested blockquotes spacing */
 #note-content blockquote blockquote {
   margin-top: 0.5rem;
 }
 
-/* --- Code & Preformatted --- */
+/* Inline code */
 #note-content code {
-  background: rgba(176, 32, 37, 0.12); /* crimson tint */
+  background: rgba(75, 108, 193, 0.12);
   padding: 0.2em 0.4em;
   border-radius: 4px;
   font-family: monospace;
   font-size: 0.95em;
 }
+
+/* Code blocks */
 #note-content pre {
   background: var(--bg);
-  border-left: 3px solid var(--primary);
-  padding: 1rem;
+  border-left: 4px solid var(--primary);
+  padding: 1rem 1.5rem;
   overflow-x: auto;
   font-family: monospace;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: inset 0 0 5px rgba(75, 108, 193, 0.1);
 }
+
 #note-content pre code {
   background: none;
   padding: 0;
   border: none;
+  color: inherit;
 }
 
-/* --- Tables --- */
+/* Tables */
 #note-content table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
+
 #note-content th,
 #note-content td {
   border: 1px solid var(--border);
-  padding: 0.75rem;
+  padding: 0.75rem 1rem;
   text-align: left;
 }
+
 #note-content thead {
   background: var(--bg-alt);
-  font-weight: bold;
+  font-weight: 700;
 }
 
-/* --- Horizontal Rule --- */
+/* Horizontal rules */
 #note-content hr {
-  border: 1px solid var(--border);
+  border: none;
+  border-top: 1px solid var(--border);
   margin: 2rem 0;
 }
 
-/* --- Images --- */
+/* Images */
 #note-content img {
   max-width: 100%;
   height: auto;
@@ -344,63 +410,34 @@ details summary::-webkit-details-marker {
   border-radius: 8px;
 }
 
-/* --- Abbreviations --- */
+/* Abbreviations */
 #note-content abbr[title] {
   text-decoration: underline dotted;
   cursor: help;
 }
 
-/* --- Custom Callouts --- */
+/* Custom callouts (warning, note, tip) */
 #note-content .warning,
 #note-content .note,
 #note-content .tip {
-  border-left: 4px solid var(--border);
+  border-left: 4px solid #f5a623; /* warm accent */
   background: var(--bg);
   padding: 1rem;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   font-style: italic;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(245, 166, 35, 0.2);
 }
 
-/* --- Footnotes --- */
+/* Footnotes */
 #note-content sup {
   font-size: 0.8em;
   vertical-align: super;
 }
+
 #note-content .footnotes {
   font-size: 0.9em;
   margin-top: 2rem;
   border-top: 1px solid var(--primary);
   padding-top: 1rem;
-}
-
-/* ==========================================================
-     Footer Placeholder
-     ========================================================== */
-footer {
-  height: 2rem;
-}
-
-/* ==========================================================
-     Animation (optional flair)
-     ========================================================== */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-details[open] > *:not(summary) {
-  animation: fadeIn 0.3s ease-in;
-}
-
-details summary::-webkit-details-marker {
-  display: none;
-}
-
-details summary::marker {
-  display: none;
 }
