@@ -1,31 +1,28 @@
-/* ----------------- Base font ----------------- */
 * {
   overflow-x: hidden;
 }
 
 html {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
 }
 
-/* ----------------- Theme variables (light mode + blue accents) ----------------- */
 :root {
-  --bg: #f4f4f8;              /* very light grey background */
-  --bg-alt: #ffffff;          /* white panels */
-  --border: #dddddd;          /* light grey border */
-  --primary: #4b6cc1;         /* soft indigo‑blue */
-  --primary-hover: #3550a1;   /* deeper indigo on hover */
-  --text: #1a1a1a;            /* dark text */
+  --bg: #f4f4f8;
+  --bg-alt: #ffffff;
+  --border: #dddddd;
+  --primary: #4b6cc1;
+  --primary-hover: #3550a1;
+  --text: #1a1a1a;
   --radius: 12px;
 }
 
-/* ----------------- Layout wrapper ----------------- */
 .layout {
   display: flex;
   min-height: 100vh;
   background-color: var(--bg);
 }
 
-/* ----------------- Sidebar (left column) ----------------- */
+/* Sidebar */
 .sidebar {
   width: 240px;
   background-color: #1a1a1a;
@@ -61,7 +58,7 @@ html {
   color: #ffffff;
 }
 
-/* ----------------- Main content area ----------------- */
+/* Main content */
 .body__main {
   flex-grow: 1;
   padding: 2rem;
@@ -69,7 +66,7 @@ html {
   color: var(--text);
 }
 
-/* ----------------- Semester section ----------------- */
+/* Semester section */
 .main__semester {
   margin-bottom: 4rem;
 }
@@ -82,14 +79,14 @@ html {
   color: var(--primary);
 }
 
-/* ----------------- Grid of subject cards ----------------- */
+/* Grid of subject cards */
 .semester__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
 
-/* ----------------- Subject card ----------------- */
+/* Subject card */
 .subject__card {
   background-color: var(--bg-alt);
   border-radius: var(--radius);
@@ -110,7 +107,7 @@ html {
   color: var(--primary);
 }
 
-/* ----------------- Summary list ----------------- */
+/* Summary list */
 .card__summaries {
   list-style: none;
   padding: 0;
@@ -136,7 +133,7 @@ html {
   background-color: #d1d1d1;
 }
 
-/* ----------------- Nested card for history section ----------------- */
+/* Nested card */
 .nested__card {
   margin-top: 1.25rem;
   padding: 1rem;
@@ -153,7 +150,7 @@ html {
   color: var(--primary);
 }
 
-/* ----------------- Footer ----------------- */
+/* Footer */
 .body__footer {
   text-align: center;
   padding: 1rem;
@@ -163,22 +160,22 @@ html {
   border-top: 1px solid var(--border);
 }
 
-/* ----------------- Hamburger menu toggle button ----------------- */
+/* Hamburger menu */
 .menu__toggle {
-  display: none;                 /* hidden on desktop */
+  display: none;
   background: none;
   border: none;
   color: #ffffff;
   font-size: 1.8rem;
   cursor: pointer;
   line-height: 1;
-  position: absolute;            /* keep it visible on mobile */
+  position: absolute;
   top: 1rem;
   right: 1.5rem;
   z-index: 2000;
 }
 
-/* ----------------- Responsive Mobile Navigation ----------------- */
+/* Responsive Mobile Navigation */
 @media (max-width: 600px) {
   .layout {
     flex-direction: column;
@@ -198,15 +195,9 @@ html {
 
   .menu__toggle {
     display: block;
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 1.8rem;
-    cursor: pointer;
-    line-height: 1;
     position: static;
     margin: 0;
-    order: 0; /* ensure it's first */
+    order: 0;
   }
 
   .sidebar__title {
@@ -245,10 +236,7 @@ html {
   }
 }
 
-
-
-/* ----------------- Markdown Note Styling ----------------- */
-
+/* Markdown Note Styling */
 #note-content {
   max-width: 800px;
   margin: 2rem auto;
@@ -263,7 +251,6 @@ html {
   line-height: 1.6;
 }
 
-/* Headings */
 #note-content h1,
 #note-content h2,
 #note-content h3,
@@ -289,32 +276,49 @@ html {
   padding-bottom: 0.3rem;
 }
 
-#note-content h3 { font-size: 1.5rem; }
-#note-content h4 { font-size: 1.25rem; }
-#note-content h5 { font-size: 1.1rem; }
+#note-content h3 {
+  font-size: 1.5rem;
+}
+
+#note-content h4 {
+  font-size: 1.25rem;
+}
+
+#note-content h5 {
+  font-size: 1.1rem;
+}
+
 #note-content h6 {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
-/* Paragraphs */
 #note-content p {
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0;
 }
 
-/* Bold */
 #note-content strong {
   font-weight: 700;
 }
 
-/* Inline styles */
-#note-content em    { font-style: italic; }
-#note-content del   { text-decoration: line-through; }
-#note-content ins   { text-decoration: underline; }
-#note-content mark  { background: #fff8c7; padding: 0 0.2em; }
+#note-content em {
+  font-style: italic;
+}
 
-/* Links */
+#note-content del {
+  text-decoration: line-through;
+}
+
+#note-content ins {
+  text-decoration: underline;
+}
+
+#note-content mark {
+  background: #fff8c7;
+  padding: 0 0.2em;
+}
+
 #note-content a,
 #note-content a:visited {
   color: var(--primary);
@@ -328,16 +332,43 @@ html {
 }
 
 /* Lists */
-#note-content ul,
-#note-content ol {
-  padding-left: 2rem;
-  margin: 1rem 0;
+#note-content ul li {
+  position: relative;
+  padding-left: 1.4em;
+  list-style: none;
 }
-#note-content ul { list-style: disc;   }
-#note-content ol { list-style: decimal; }
-#note-content li { margin: 0.4rem 0; }
 
-/* Blockquotes */
+#note-content ul li::before {
+  content: "■";
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-size: 0.8em;
+  color: var(--text);
+}
+
+#note-content ol {
+  counter-reset: custom-counter;
+  padding-left: 1.6em;
+  list-style: none;
+}
+
+#note-content ol li {
+  position: relative;
+  padding-left: 2em;
+  counter-increment: custom-counter;
+}
+
+#note-content ol li::before {
+  content: counter(custom-counter) ".";
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-weight: bold;
+  color: var(--text);
+  font-size: 0.9em;
+}
+
 #note-content blockquote {
   border-left: 4px solid var(--primary);
   background: #eef0ff;
@@ -348,9 +379,10 @@ html {
   border-radius: 6px;
 }
 
-#note-content blockquote blockquote { margin-top: 0.5rem; }
+#note-content blockquote blockquote {
+  margin-top: 0.5rem;
+}
 
-/* Inline code */
 #note-content code {
   background: rgba(75, 108, 193, 0.12);
   padding: 0.2em 0.4em;
@@ -359,7 +391,6 @@ html {
   font-size: 0.95em;
 }
 
-/* Code blocks */
 #note-content pre {
   background: #f0f2ff;
   border-left: 4px solid var(--primary);
@@ -369,6 +400,7 @@ html {
   margin: 1.5rem 0;
   border-radius: 8px;
 }
+
 #note-content pre code {
   background: none;
   padding: 0;
@@ -376,31 +408,30 @@ html {
   color: inherit;
 }
 
-/* Tables */
 #note-content table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
 }
+
 #note-content th,
 #note-content td {
   border: 1px solid var(--border);
   padding: 0.75rem 1rem;
   text-align: left;
 }
+
 #note-content thead {
   background: var(--bg-alt);
   font-weight: 700;
 }
 
-/* HR */
 #note-content hr {
   border: none;
   border-top: 1px solid var(--border);
   margin: 2rem 0;
 }
 
-/* Images */
 #note-content img {
   max-width: 100%;
   height: auto;
@@ -408,9 +439,16 @@ html {
   border-radius: 8px;
 }
 
-/* Footnotes & misc */
-#note-content sup        { font-size: 0.8em; vertical-align: super; }
-#note-content abbr[title]{ text-decoration: underline dotted; cursor: help; }
+#note-content sup {
+  font-size: 0.8em;
+  vertical-align: super;
+}
+
+#note-content abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
 #note-content .footnotes {
   font-size: 0.9em;
   margin-top: 2rem;
