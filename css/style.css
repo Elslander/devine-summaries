@@ -17,7 +17,7 @@ html {
 /* ----------------- Layout wrapper ----------------- */
 .layout {
   display: flex;
-  height: 95vh;
+  height: 100vh;
   overflow-y: hidden;
 }
 
