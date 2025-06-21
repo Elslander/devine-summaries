@@ -258,6 +258,11 @@ html {
     color: #ffffff;
   }
 
+  .summaries__link {
+    font-size: 110%;
+    padding: 0.5rem 1rem;
+  }
+
   .body__main {
     padding-top: 2rem;
     overflow-x: hidden;
