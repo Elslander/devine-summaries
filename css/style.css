@@ -6,6 +6,10 @@ html {
   font-family: "Space Mono", monospace;
 }
 
+body {
+  /* overflow-y: hidden; */
+}
+
 :root {
   --bg: #f4f4f8;
   --bg-alt: #ffffff;
@@ -18,8 +22,9 @@ html {
 
 .layout {
   display: flex;
-  min-height: 95vh;
+  max-height: 100vh;
   background-color: var(--bg);
+  overflow-y: hidden;
 }
 
 /* Sidebar */
