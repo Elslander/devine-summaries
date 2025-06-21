@@ -18,7 +18,7 @@ html {
 
 .layout {
   display: flex;
-  min-height: 100vh;
+  min-height: 95vh;
   background-color: var(--bg);
 }
 
@@ -60,6 +60,8 @@ html {
 
 /* Main content */
 .body__main {
+  height: 95vh;
+
   flex-grow: 1;
   padding: 2rem;
   background-color: var(--bg);
