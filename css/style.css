@@ -183,7 +183,7 @@ html {
 /* Responsive Mobile Navigation */
 @media (max-width: 600px) {
   .layout {
-    height: 100vh;
+    height: 95vh;
     flex-direction: column;
     overflow-y: hidden;
   }
