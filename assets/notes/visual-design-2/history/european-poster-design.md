@@ -18,6 +18,11 @@
   - inventors of collage technique
   - coloured shapes & silhouettes
 
+<img src="./artists/beggarstaffs/artwork-1.png" width="200" />
+<img src="./artists/beggarstaffs/artwork-2.png" width="200" />
+<img src="./artists/beggarstaffs/artwork-3.png" width="200" />
+<img src="./artists/beggarstaffs/artwork-4.png" width="200" />
+
 # Plakatstil
 
 **Poster style**.
@@ -38,6 +43,11 @@ _Germany_
 - Unexpected winner of poster competition Priester matches.
 - Pioneer of future poster design.
 
+<img src="./artists/lucian-bernhard/artwork-1.png" width="200" />
+<img src="./artists/lucian-bernhard/artwork-2.png" width="200" />
+<img src="./artists/lucian-bernhard/artwork-3.png" width="200" />
+<img src="./artists/lucian-bernhard/artwork-4.png" width="200" />
+
 # Sachplakat
 
 **Object poster**.
@@ -49,6 +59,10 @@ _Germany_
   - hyper-realistic
   - no copy
 
+<img src="./artists/sachplakat/artwork-1.png" width="200" />
+<img src="./artists/sachplakat/artwork-2.png" width="200" />
+<img src="./artists/sachplakat/artwork-3.png" width="200" />
+
 # War Propaganda
 
 **Motivation & Recruitment**.
@@ -57,6 +71,16 @@ _Germany_
   - _Allies_: literal imagery
   - _Germany & Co_: symbolic imagery
 - WWII -> symbolic
+
+<img src="./artists/propaganda/artwork-1.png" width="200" />
+<img src="./artists/propaganda/artwork-2.png" width="200" />
+<img src="./artists/propaganda/artwork-4.png" width="200" />
+<img src="./artists/propaganda/artwork-6.png" width="200" />
+<img src="./artists/propaganda/artwork-7.png" width="200" />
+<img src="./artists/propaganda/artwork-8.png" width="200" />
+<img src="./artists/propaganda/artwork-9.png" width="200" />
+<img src="./artists/propaganda/artwork-10.png" width="200" />
+<img src="./artists/propaganda/artwork-11.png" width="200" />
 
 # Art Deco posters
 
@@ -80,3 +104,11 @@ _Ukraine - France_
 - Fascination for machines
 - Simple designs, with geometric shapes and colour fields.
 - Airbrush pioneer
+
+<img src="./artists/am-cassandre/artwork-1.png" width="200" />
+<img src="./artists/am-cassandre/artwork-2.png" width="200" />
+<img src="./artists/am-cassandre/artwork-3.png" width="200" />
+<img src="./artists/am-cassandre/artwork-4.png" width="200" />
+<img src="./artists/am-cassandre/artwork-5.png" width="200" />
+<img src="./artists/am-cassandre/artwork-6.png" width="200" />
+<img src="./artists/am-cassandre/artwork-7.png" width="200" />

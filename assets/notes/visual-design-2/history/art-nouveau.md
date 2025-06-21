@@ -15,8 +15,20 @@
   - _Ando Hiroshige_
   - _Katsushika Hokusai_
 
-# Art Nouveau
+## Kitagawa Utamaro
+<img src="./artists/kitagawa-utamaro/artwork-1.png" width="200" />
+<img src="./artists/kitagawa-utamaro/artwork-2.png" width="200" />
 
+## Ando Hiroshige
+<img src="./artists/ando-hiroshige/artwork-1.png" width="200" />
+<img src="./artists/ando-hiroshige/artwork-2.png" width="200" />
+<img src="./artists/ando-hiroshige/artwork-3.png" width="200" />
+
+## Katsushika Hokusai
+<img src="./artists/katsushika-hokusai/artwork-1.png" width="200" />
+<img src="./artists/katsushika-hokusai/artwork-2.png" width="200" />
+
+# Art Nouveau
 **The first truly modern style**.
 
 - Reaction against academic formal language, Impressionism & Industrialism.
@@ -31,7 +43,6 @@
   - _Alphonse Mucha_
 
 Was called by a different name in different countries:
-
 - Art Nouveau (Belgium, Franse, UK, USA)
 - Jugendstil (Germany)
 - Sezessionstil (Austria)
@@ -40,7 +51,6 @@ Was called by a different name in different countries:
 - Slaoliestijl (The Netherlands)
 
 ## Jules Chéret
-
 _France_
 **MAster og the Belle Epoque poster**.
 
@@ -50,8 +60,10 @@ _France_
 - Playful design
 - Illustration over text
 
-## Aubrey Beardsley
+<img src="./artists/jules-cheret/artwork-1.png" width="200" />
+<img src="./artists/jules-cheret/artwork-2.png" width="200" />
 
+## Aubrey Beardsley
 _UK_
 **Enfant terrible**.
 
@@ -61,8 +73,14 @@ _UK_
 - Influenced by Japanese woodcuts.
 - The grotesque, the decadent and the erotic.
 
-## Henri de Toulouse-Lautrec
+<img src="./artists/aubrey-beardsley/artwork-1.png" width="200" />
+<img src="./artists/aubrey-beardsley/artwork-2.png" width="200" />
+<img src="./artists/aubrey-beardsley/artwork-3.png" width="200" />
+<img src="./artists/aubrey-beardsley/artwork-4.png" width="200" />
+<img src="./artists/aubrey-beardsley/artwork-5.png" width="200" />
+<img src="./artists/aubrey-beardsley/artwork-6.png" width="200" />
 
+## Henri de Toulouse-Lautrec
 _France_
 **Nightlife journalist**.
 
@@ -71,11 +89,21 @@ _France_
 - Simple contours
 - Journalistic swift drawing style
 
-## Alphonse Mucha
+<img src="./artists/henri-tl/artwork-1.png" width="200" />
+<img src="./artists/henri-tl/artwork-2.png" width="200" />
+<img src="./artists/henri-tl/artwork-3.png" width="200" />
+<img src="./artists/henri-tl/artwork-4.png" width="200" />
 
+## Alphonse Mucha
 _Czech Republic_
 **Le Style Mucha**.
 
 - Floral phase -> leading role of Art Nouveau
 - Dominant theme: central female figure surrounded by stylised forms.
 - Forst advertising designer
+
+<img src="./artists/alphonse-mucha/artwork-1.png" width="200" />
+<img src="./artists/alphonse-mucha/artwork-2.png" width="200" />
+<img src="./artists/alphonse-mucha/artwork-3.png" width="200" />
+<img src="./artists/alphonse-mucha/artwork-4.png" width="200" />
+<img src="./artists/alphonse-mucha/artwork-5.png" width="200" />
