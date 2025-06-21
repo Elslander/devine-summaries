@@ -17,7 +17,7 @@ html {
 /* ----------------- Layout wrapper ----------------- */
 .layout {
   display: flex;
-  height: 100vh;
+  height: 95vh;
   overflow-y: hidden;
 }
 
@@ -61,6 +61,10 @@ html {
   flex-grow: 1;
   padding: 2rem;
   background-color: var(--bg);
+}
+
+.summaries__main {
+  overflow-y: scroll;
 }
 
 /* ----------------- Semester section ----------------- */
