@@ -16,17 +16,17 @@
   - _Katsushika Hokusai_
 
 ## Kitagawa Utamaro
-<img src="./artists/kitagawa-utamaro/artwork-1.png" width="200" />
-<img src="./artists/kitagawa-utamaro/artwork-2.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/kitagawa-utamaro/artwork-1.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/kitagawa-utamaro/artwork-2.png" width="200" />
 
 ## Ando Hiroshige
-<img src="./artists/ando-hiroshige/artwork-1.png" width="200" />
-<img src="./artists/ando-hiroshige/artwork-2.png" width="200" />
-<img src="./artists/ando-hiroshige/artwork-3.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/ando-hiroshige/artwork-1.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/ando-hiroshige/artwork-2.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/ando-hiroshige/artwork-3.png" width="200" />
 
 ## Katsushika Hokusai
-<img src="./artists/katsushika-hokusai/artwork-1.png" width="200" />
-<img src="./artists/katsushika-hokusai/artwork-2.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/katsushika-hokusai/artwork-1.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/katsushika-hokusai/artwork-2.png" width="200" />
 
 # Art Nouveau
 **The first truly modern style**.
@@ -60,8 +60,8 @@ _France_
 - Playful design
 - Illustration over text
 
-<img src="./artists/jules-cheret/artwork-1.png" width="200" />
-<img src="./artists/jules-cheret/artwork-2.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/jules-cheret/artwork-1.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/jules-cheret/artwork-2.png" width="200" />
 
 ## Aubrey Beardsley
 _UK_
@@ -73,12 +73,12 @@ _UK_
 - Influenced by Japanese woodcuts.
 - The grotesque, the decadent and the erotic.
 
-<img src="./artists/aubrey-beardsley/artwork-1.png" width="200" />
-<img src="./artists/aubrey-beardsley/artwork-2.png" width="200" />
-<img src="./artists/aubrey-beardsley/artwork-3.png" width="200" />
-<img src="./artists/aubrey-beardsley/artwork-4.png" width="200" />
-<img src="./artists/aubrey-beardsley/artwork-5.png" width="200" />
-<img src="./artists/aubrey-beardsley/artwork-6.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/aubrey-beardsley/artwork-1.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/aubrey-beardsley/artwork-2.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/aubrey-beardsley/artwork-3.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/aubrey-beardsley/artwork-4.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/aubrey-beardsley/artwork-5.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/aubrey-beardsley/artwork-6.png" width="200" />
 
 ## Henri de Toulouse-Lautrec
 _France_
@@ -89,10 +89,10 @@ _France_
 - Simple contours
 - Journalistic swift drawing style
 
-<img src="./artists/henri-tl/artwork-1.png" width="200" />
-<img src="./artists/henri-tl/artwork-2.png" width="200" />
-<img src="./artists/henri-tl/artwork-3.png" width="200" />
-<img src="./artists/henri-tl/artwork-4.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/henri-tl/artwork-1.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/henri-tl/artwork-2.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/henri-tl/artwork-3.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/henri-tl/artwork-4.png" width="200" />
 
 ## Alphonse Mucha
 _Czech Republic_
@@ -102,8 +102,8 @@ _Czech Republic_
 - Dominant theme: central female figure surrounded by stylised forms.
 - Forst advertising designer
 
-<img src="./artists/alphonse-mucha/artwork-1.png" width="200" />
-<img src="./artists/alphonse-mucha/artwork-2.png" width="200" />
-<img src="./artists/alphonse-mucha/artwork-3.png" width="200" />
-<img src="./artists/alphonse-mucha/artwork-4.png" width="200" />
-<img src="./artists/alphonse-mucha/artwork-5.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/alphonse-mucha/artwork-1.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/alphonse-mucha/artwork-2.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/alphonse-mucha/artwork-3.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/alphonse-mucha/artwork-4.png" width="200" />
+<img src="assets/notes/visual-design-2/history/artists/alphonse-mucha/artwork-5.png" width="200" />
