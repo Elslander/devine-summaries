@@ -3,29 +3,29 @@ html {
   font-family: 'Space Mono', monospace;
 }
 
-/* ----------------- Theme variables ----------------- */
+/* ----------------- Theme variables (light mode + blue accents) ----------------- */
 :root {
-  --bg: #f4f4f8;
-  --bg-alt: #fff;
-  --border: #ddd;
-  --primary: #4b6cc1;          /* subtle blue */
-  --primary-hover: #3550a1;    /* darker blue */
-  --text: #1a1a1a;
+  --bg: #f4f4f8;              /* very light grey background */
+  --bg-alt: #ffffff;          /* white panels */
+  --border: #dddddd;          /* light grey border */
+  --primary: #4b6cc1;         /* soft indigo‑blue */
+  --primary-hover: #3550a1;   /* deeper indigo on hover */
+  --text: #1a1a1a;            /* dark text */
   --radius: 12px;
 }
 
 /* ----------------- Layout wrapper ----------------- */
 .layout {
   display: flex;
-  height: 95vh;
-  overflow-y: hidden;
+  min-height: 100vh;
+  background-color: var(--bg);
 }
 
-/* ----------------- Sidebar styles ----------------- */
+/* ----------------- Sidebar (left column) ----------------- */
 .sidebar {
   width: 240px;
   background-color: #1a1a1a;
-  color: white;
+  color: #ffffff;
   padding: 2rem 1.5rem;
   flex-shrink: 0;
   display: flex;
@@ -45,15 +45,16 @@ html {
 }
 
 .menu__link {
-  color: #ddd;
+  color: #dddddd;
   text-decoration: none;
   display: block;
   padding: 0.5rem 0;
   transition: color 0.2s ease;
+  font-weight: 600;
 }
 
 .menu__link:hover {
-  color: white;
+  color: #ffffff;
 }
 
 /* ----------------- Main content area ----------------- */
@@ -61,10 +62,7 @@ html {
   flex-grow: 1;
   padding: 2rem;
   background-color: var(--bg);
-}
-
-.summaries__main {
-  overflow-y: scroll;
+  color: var(--text);
 }
 
 /* ----------------- Semester section ----------------- */
@@ -75,8 +73,9 @@ html {
 .semester__title {
   font-size: 1.75rem;
   margin-bottom: 1.5rem;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #cccccc;
   padding-bottom: 0.5rem;
+  color: var(--primary);
 }
 
 /* ----------------- Grid of subject cards ----------------- */
@@ -104,6 +103,7 @@ html {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: var(--primary);
 }
 
 /* ----------------- Summary list ----------------- */
@@ -120,7 +120,7 @@ html {
 .summaries__link {
   display: inline-block;
   padding: 0.25rem 0.5rem;
-  color: var(--text);
+  color: #1a1a1a;
   background-color: #e6e6e6;
   border-radius: 6px;
   text-decoration: none;
@@ -136,7 +136,7 @@ html {
 .nested__card {
   margin-top: 1.25rem;
   padding: 1rem;
-  background-color: #fefefe;
+  background-color: #fafafa;
   border: 1px solid var(--border);
   border-radius: 10px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -146,6 +146,7 @@ html {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: var(--primary);
 }
 
 /* ----------------- Footer ----------------- */
@@ -153,13 +154,24 @@ html {
   text-align: center;
   padding: 1rem;
   font-size: 0.875rem;
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: var(--bg-alt);
+  color: var(--text);
+  border-top: 1px solid var(--border);
 }
 
 /* ----------------- Hamburger menu toggle button ----------------- */
 .menu__toggle {
-  display: none; /* Hidden by default on large screens */
+  display: none;                 /* hidden on desktop */
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+  position: absolute;            /* keep it visible on mobile */
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 2000;
 }
 
 /* ----------------- Responsive Mobile Navigation ----------------- */
@@ -169,23 +181,35 @@ html {
   }
 
   .sidebar {
+    position: relative;
     width: 100%;
-    height: 56px;
+    height: auto;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem;
-    position: relative;
+    justify-content: flex-start;
+    padding: 1rem 1rem;
+    gap: 0.75rem;
+    overflow-x: hidden;
   }
 
   .menu__toggle {
-    display: inline-block;
+    display: block;
     background: none;
     border: none;
-    color: #fff;
+    color: #ffffff;
     font-size: 1.8rem;
     cursor: pointer;
     line-height: 1;
+    position: static;
+    margin: 0;
+    order: 0; /* ensure it's first */
+  }
+
+  .sidebar__title {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #ffffff;
+    order: 1;
   }
 
   .sidebar__nav {
@@ -198,6 +222,8 @@ html {
     flex-direction: column;
     padding: 1rem 1.5rem;
     gap: 0.5rem;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    z-index: 100;
   }
 
   .sidebar.open .sidebar__nav {
@@ -206,29 +232,31 @@ html {
 
   .sidebar__nav .menu__link {
     padding: 0.75rem 0;
+    color: #ffffff;
   }
 
   .body__main {
     padding-top: 2rem;
+    overflow-x: hidden;
   }
 }
+
+
 
 /* ----------------- Markdown Note Styling ----------------- */
 
 #note-content {
   max-width: 800px;
-  margin: 2rem auto 2rem auto;
+  margin: 2rem auto;
   padding: 1.5rem 2rem;
   background-color: var(--bg-alt);
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(75, 108, 193, 0.15);
   word-wrap: break-word;
   color: var(--text);
   font-size: 1rem;
   line-height: 1.6;
-
-  overflow-y: scroll;
 }
 
 /* Headings */
@@ -242,7 +270,7 @@ html {
   margin-bottom: 1rem;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--text);
+  color: var(--primary);
 }
 
 #note-content h1 {
@@ -257,18 +285,9 @@ html {
   padding-bottom: 0.3rem;
 }
 
-#note-content h3 {
-  font-size: 1.5rem;
-}
-
-#note-content h4 {
-  font-size: 1.25rem;
-}
-
-#note-content h5 {
-  font-size: 1.1rem;
-}
-
+#note-content h3 { font-size: 1.5rem; }
+#note-content h4 { font-size: 1.25rem; }
+#note-content h5 { font-size: 1.1rem; }
 #note-content h6 {
   font-size: 1rem;
   text-transform: uppercase;
@@ -278,30 +297,18 @@ html {
 /* Paragraphs */
 #note-content p {
   margin: 1rem 0 1rem 0;
-  color: var(--text);
 }
 
-/* Text styles */
+/* Bold */
 #note-content strong {
   font-weight: 700;
 }
 
-#note-content em {
-  font-style: italic;
-}
-
-#note-content del {
-  text-decoration: line-through;
-}
-
-#note-content ins {
-  text-decoration: underline;
-}
-
-#note-content mark {
-  background: #fff8c7;
-  padding: 0 0.2em;
-}
+/* Inline styles */
+#note-content em    { font-style: italic; }
+#note-content del   { text-decoration: line-through; }
+#note-content ins   { text-decoration: underline; }
+#note-content mark  { background: #fff8c7; padding: 0 0.2em; }
 
 /* Links */
 #note-content a,
@@ -322,35 +329,22 @@ html {
   padding-left: 2rem;
   margin: 1rem 0;
 }
-
-#note-content ul {
-  list-style-type: disc;
-}
-
-#note-content ol {
-  list-style-type: decimal;
-}
-
-#note-content li {
-  margin: 0.4rem 0 0.3rem 0;
-}
+#note-content ul { list-style: disc;   }
+#note-content ol { list-style: decimal; }
+#note-content li { margin: 0.4rem 0; }
 
 /* Blockquotes */
 #note-content blockquote {
   border-left: 4px solid var(--primary);
-  background: var(--bg);
-  color: var(--text);
+  background: #eef0ff;
+  color: var(--primary);
   font-style: italic;
   padding: 0.75rem 1rem;
   margin: 1.5rem 0;
   border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(75,108,193,0.1);
 }
 
-/* Nested blockquotes spacing */
-#note-content blockquote blockquote {
-  margin-top: 0.5rem;
-}
+#note-content blockquote blockquote { margin-top: 0.5rem; }
 
 /* Inline code */
 #note-content code {
@@ -363,16 +357,14 @@ html {
 
 /* Code blocks */
 #note-content pre {
-  background: var(--bg);
+  background: #f0f2ff;
   border-left: 4px solid var(--primary);
   padding: 1rem 1.5rem;
   overflow-x: auto;
   font-family: monospace;
   margin: 1.5rem 0;
   border-radius: 8px;
-  box-shadow: inset 0 0 5px rgba(75, 108, 193, 0.1);
 }
-
 #note-content pre code {
   background: none;
   padding: 0;
@@ -386,20 +378,18 @@ html {
   border-collapse: collapse;
   margin: 1.5rem 0;
 }
-
 #note-content th,
 #note-content td {
   border: 1px solid var(--border);
   padding: 0.75rem 1rem;
   text-align: left;
 }
-
 #note-content thead {
   background: var(--bg-alt);
   font-weight: 700;
 }
 
-/* Horizontal rules */
+/* HR */
 #note-content hr {
   border: none;
   border-top: 1px solid var(--border);
@@ -414,31 +404,9 @@ html {
   border-radius: 8px;
 }
 
-/* Abbreviations */
-#note-content abbr[title] {
-  text-decoration: underline dotted;
-  cursor: help;
-}
-
-/* Custom callouts (warning, note, tip) */
-#note-content .warning,
-#note-content .note,
-#note-content .tip {
-  border-left: 4px solid #f5a623; /* warm accent */
-  background: var(--bg);
-  padding: 1rem;
-  margin: 1.5rem 0;
-  font-style: italic;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(245, 166, 35, 0.2);
-}
-
-/* Footnotes */
-#note-content sup {
-  font-size: 0.8em;
-  vertical-align: super;
-}
-
+/* Footnotes & misc */
+#note-content sup        { font-size: 0.8em; vertical-align: super; }
+#note-content abbr[title]{ text-decoration: underline dotted; cursor: help; }
 #note-content .footnotes {
   font-size: 0.9em;
   margin-top: 2rem;
