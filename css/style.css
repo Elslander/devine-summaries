@@ -6,10 +6,6 @@ html {
   font-family: "Space Mono", monospace;
 }
 
-body {
-  /* overflow-y: hidden; */
-}
-
 :root {
   --bg: #f4f4f8;
   --bg-alt: #ffffff;

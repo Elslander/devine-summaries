@@ -65,7 +65,7 @@ Soviet Union / Russia
 - Founder of constructivism.
 - Socially engaged.
 - Photomontage and photography.
-- Experimenting with [[typography]], editing and photography.
+- Experimenting with typography, editing and photography.
 
 <img src="assets/notes/visual-design-2/history/artists/aleksander-rod/artwork-1.png" width="180" />
 <img src="assets/notes/visual-design-2/history/artists/aleksander-rod/artwork-2.png" width="180" />
@@ -101,7 +101,7 @@ The Netherlands
 The Netherlands
 - Architect, painter, typographer, art theorist,...
 - 'De Stijl' magazine.
-- Applies 'De Stijl' principles to architecture, sculpture and [[typography]].
+- Applies 'De Stijl' principles to architecture, sculpture and typography.
 - Asymmetrical layouts.
 
 <img src="assets/notes/visual-design-2/history/artists/theo-does/artwork-1.png" width="180" />

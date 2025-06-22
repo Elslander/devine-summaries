@@ -1,5 +1,3 @@
-import { inject } from "@vercel/analytics"
-
 // Wait until DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.querySelector(".sidebar");
