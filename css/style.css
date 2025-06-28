@@ -156,6 +156,11 @@ html {
   color: var(--primary);
 }
 
+.main__footnote {
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
 /* Footer */
 /* .body__footer {
   text-align: center;
