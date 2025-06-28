@@ -22,9 +22,9 @@ Germany
 - Corporate identity and branding. (pioneer)
 - Major influence for European Modernism.
 
-<img src="assets/notes/visual-design-2/history/artists/peter-behrens/artwork-1.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/peter-behrens/artwork-2.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/peter-behrens/artwork-3.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/peter-behrens/artwork-1.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/peter-behrens/artwork-2.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/peter-behrens/artwork-3.png" width="180" />
 
 # Bauhaus at Weimar
 1914 - 1924
@@ -48,7 +48,7 @@ Germany
 - Quest for a universal design style.
 - Breathe a soul into the dead product of a machine.
 
-<img src="assets/notes/visual-design-2/history/artists/walter/artwork-1.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/walter/artwork-1.png" width="180" />
 
 ## Laslo Moholy-Nagy
 Hungary
@@ -58,12 +58,12 @@ Hungary
 - Advocate for the integration of technology and industry in the arts.
 - Typography as a means of communications. (typophoto)
 
-<img src="assets/notes/visual-design-2/history/artists/laszlo/artwork-1.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/laszlo/artwork-2.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/laszlo/artwork-3.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/laszlo/artwork-4.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/laszlo/artwork-5.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/laszlo/artwork-6.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/laszlo/artwork-1.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/laszlo/artwork-2.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/laszlo/artwork-3.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/laszlo/artwork-4.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/laszlo/artwork-5.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/laszlo/artwork-6.png" width="180" />
 
 # Bauhaus at Dessau
 1925 - 1932
@@ -86,12 +86,12 @@ Austria
 - Extreme contrasts in font size and weight in favour of visual hierarchy.
 - Universal alphabet.
 
-<img src="assets/notes/visual-design-2/history/artists/herbert-bayer/artwork-1.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/herbert-bayer/artwork-2.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/herbert-bayer/artwork-3.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/herbert-bayer/artwork-4.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/herbert-bayer/artwork-5.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/herbert-bayer/artwork-6.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/herbert-bayer/artwork-1.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/herbert-bayer/artwork-2.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/herbert-bayer/artwork-3.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/herbert-bayer/artwork-4.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/herbert-bayer/artwork-5.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/herbert-bayer/artwork-6.png" width="180" />
 
 # Bauhaus at Berlin
 1932 - 1933

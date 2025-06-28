@@ -22,12 +22,12 @@ Ukrain -> Soviet Union
 	- modern icon signalling a new era;
 	- 4 versions.
 
-<img src="assets/notes/visual-design-2/history/artists/kasimir-malevich/artwork-1.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/kasimir-malevich/artwork-2.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/kasimir-malevich/artwork-3.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/kasimir-malevich/artwork-4.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/kasimir-malevich/artwork-5.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/kasimir-malevich/artwork-6.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/kasimir-malevich/artwork-1.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/kasimir-malevich/artwork-2.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/kasimir-malevich/artwork-3.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/kasimir-malevich/artwork-4.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/kasimir-malevich/artwork-5.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/kasimir-malevich/artwork-6.png" width="180" />
 
 # Constructivism
 **In service of the revolution**.
@@ -50,14 +50,14 @@ Soviet Union / Russia
 - Photomontage, printing and architecture.
 - Symbolic communication.
 
-<img src="assets/notes/visual-design-2/history/artists/el-lis/artwork-1.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/el-lis/artwork-2.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/el-lis/artwork-3.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/el-lis/artwork-4.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/el-lis/artwork-5.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/el-lis/artwork-6.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/el-lis/artwork-7.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/el-lis/artwork-8.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/el-lis/artwork-1.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/el-lis/artwork-2.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/el-lis/artwork-3.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/el-lis/artwork-4.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/el-lis/artwork-5.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/el-lis/artwork-6.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/el-lis/artwork-7.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/el-lis/artwork-8.png" width="180" />
 
 
 ## Aleksandr Rodchenko
@@ -67,10 +67,10 @@ Soviet Union / Russia
 - Photomontage and photography.
 - Experimenting with typography, editing and photography.
 
-<img src="assets/notes/visual-design-2/history/artists/aleksander-rod/artwork-1.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/aleksander-rod/artwork-2.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/aleksander-rod/artwork-3.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/aleksander-rod/artwork-4.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/aleksander-rod/artwork-1.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/aleksander-rod/artwork-2.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/aleksander-rod/artwork-3.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/aleksander-rod/artwork-4.png" width="180" />
 
 # De Stijl
 **Spiritual harmony and order**.
@@ -92,10 +92,10 @@ The Netherlands
 - Pioneer of abstract, non-figurative art.
 - Pure abstract paintings from horizontal and vertical lines.
 
-<img src="assets/notes/visual-design-2/history/artists/piet-mondriaan/artwork-1.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/piet-mondriaan/artwork-2.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/piet-mondriaan/artwork-3.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/piet-mondriaan/artwork-4.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/piet-mondriaan/artwork-1.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/piet-mondriaan/artwork-2.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/piet-mondriaan/artwork-3.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/piet-mondriaan/artwork-4.png" width="180" />
 
 ## Theo Van Doesburg
 The Netherlands
@@ -104,10 +104,10 @@ The Netherlands
 - Applies 'De Stijl' principles to architecture, sculpture and typography.
 - Asymmetrical layouts.
 
-<img src="assets/notes/visual-design-2/history/artists/theo-does/artwork-1.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/theo-does/artwork-2.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/theo-does/artwork-3.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/theo-does/artwork-4.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/theo-does/artwork-5.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/theo-does/artwork-6.png" width="180" />
-<img src="assets/notes/visual-design-2/history/artists/theo-does/artwork-7.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/theo-does/artwork-1.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/theo-does/artwork-2.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/theo-does/artwork-3.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/theo-does/artwork-4.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/theo-does/artwork-5.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/theo-does/artwork-6.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/theo-does/artwork-7.png" width="180" />
