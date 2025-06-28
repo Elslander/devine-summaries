@@ -166,5 +166,3 @@ public function index() {
 - **Attention**:
   - do not write logic in the view;
   - logic = controller.
-
-# Summary
