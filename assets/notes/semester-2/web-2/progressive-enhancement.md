@@ -1,10 +1,3 @@
-> STEP BY STEP GUIDE [[Progressive Enhancement Checklist]] > _I made this using the exercise from progressive enhancement we did in class. This might not be the way to do it in every scenario, you might have to change things if you use this for the exam._
-
-# Goals
-
-0STEP BY STEP GUIDE [[Progressive Enhancement Checklist]]
-_I made this using the exercise from progressive enhancement we did in class. This might not be the way to do it in every scenario, you might have to change things if you use this for the exam._
-
 # Goals
 
 - Improving the user experience
@@ -13,7 +6,7 @@ _I made this using the exercise from progressive enhancement we did in class. Th
   - navigation
   - minimum viable product (mpv)
 
-> **Progressive Enhancement**
+> **Progressive Enhancement**<br />
 > Progressive enhancement is a strategy for web design that emphasises core webpage content first. This strategy then progressively adds more nuanced and technically rigorous layers of presentation and features on top of the content as the end-user's browser/internet connection allow. The proposed benefits of this strategy are that it allows everyone to access the basic content and functionality of a web page, using any browser or internet connection, while also providing an enhanced version of the page to those with more advanced browser software or greater bandwidth.
 
 # An MnM

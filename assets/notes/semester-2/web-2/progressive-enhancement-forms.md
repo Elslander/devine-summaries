@@ -1,5 +1,3 @@
-> STEP BY STEP GUIDE [[Progressive Enhancement Forms Checklist]] > _I made this using the exercise class. This might not be the way to do it in every scenario, you might have to change things if you use this for the exam._
-
 Validate and CRUD using JavaScript
 
 # Validation
