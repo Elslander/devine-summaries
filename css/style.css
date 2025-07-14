@@ -22,7 +22,7 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   min-height: fit-content;
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
 }
 
 .layout {
@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 .card__title {
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   color: var(--primary);
 }
 
