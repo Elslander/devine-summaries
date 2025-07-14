@@ -21,8 +21,8 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  height: fit-content;
-  overflow-y: hidden;
+  min-height: fit-content;
+  /* overflow-y: hidden; */
 }
 
 .layout {
