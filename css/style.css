@@ -2,6 +2,10 @@
   overflow-x: hidden;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   font-family: "Space Mono", monospace;
 }
