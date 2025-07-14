@@ -1,3 +1,13 @@
+:root {
+  --bg: #f4f4f8;
+  --bg-alt: #ffffff;
+  --border: #dddddd;
+  --primary: #990000;
+  --primary-hover: #5e0000;
+  --text: #1a1a1a;
+  --radius: 12px;
+}
+
 * {
   overflow-x: hidden;
 }
@@ -10,14 +20,8 @@ html {
   font-family: "Space Mono", monospace;
 }
 
-:root {
-  --bg: #f4f4f8;
-  --bg-alt: #ffffff;
-  --border: #dddddd;
-  --primary: #990000;
-  --primary-hover: #5e0000;
-  --text: #1a1a1a;
-  --radius: 12px;
+h1, h2, h3, h4, h5, h6 {
+  overflow-y: hidden;
 }
 
 .layout {
