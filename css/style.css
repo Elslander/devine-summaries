@@ -238,6 +238,9 @@ p {
     /* overflow-y: visible; */
     z-index: 1000;
   }
+  .sidebar > * {
+    z-index: inherit;
+  }
 
   .menu__toggle {
     display: block;
