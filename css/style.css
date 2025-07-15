@@ -25,7 +25,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   min-height: fit-content;
   overflow-y: hidden;
 }
@@ -173,7 +174,8 @@ h6 {
 .sidebar__footnote {
   color: var(--primary);
   text-transform: uppercase;
-  align-self: flex-end;
+  /* align-self: flex-end; */
+  margin-top: auto;
 }
 
 /* Footer */
