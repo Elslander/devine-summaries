@@ -289,7 +289,7 @@ p {
   .sidebar__footnote {
     display: none;
     position: fixed;
-    top: 100%;
+    top: 125px;
     left: 0;
     width: 100%;
     background: #1a1a1a;
