@@ -117,6 +117,7 @@ p {
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1000;
 }
 
 .subject__card:hover {
