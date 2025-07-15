@@ -20,7 +20,12 @@ html {
   font-family: "Space Mono", monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   min-height: fit-content;
   overflow-y: hidden;
 }
@@ -165,9 +170,10 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary);
 }
 
-.main__footnote {
+.sidebar__footnote {
   color: var(--primary);
   text-transform: uppercase;
+  align-self: flex-end;
 }
 
 /* Footer */
