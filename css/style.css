@@ -282,10 +282,28 @@ p {
     max-height: none !important;
   }
 
+  .sidebar__footnote {
+    display: none;
+    position: fixed;
+    top: 112px;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
+    padding: 0.5rem 1rem;
+    color: var(--primary);
+    opacity: 0;
+    pointer-events: none;
+  }
+
   .sidebar.open .sidebar__nav {
     display: flex !important;
     opacity: 1;
     pointer-events: auto;
+  }
+
+  .sidebar.open .sidebar__footnote {
+    display: block;
+    opacity: 1;
   }
 
   .sidebar.open {
