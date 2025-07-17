@@ -2,7 +2,7 @@
 :root {
   --bg: #fdfdfd;
   --bg-alt: #f3f3f3;
-  --bg-header: rgba(243, 243, 243, 0.8);
+  --bg-header: rgba(243, 243, 243, 0.5);
   --text: #222;
   --primary: #4b6cc1;
   --primary-hover: #3f57a0;
