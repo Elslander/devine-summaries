@@ -2,6 +2,7 @@
 :root {
   --bg: #fdfdfd;
   --bg-alt: #f3f3f3;
+  --bg-header: rgba(243, 243, 243, 0.8);
   --text: #222;
   --primary: #4b6cc1;
   --primary-hover: #3f57a0;
@@ -37,8 +38,9 @@ a {
 
 /* Header Stylinh */
 .body__header {
-  background-color: var(--bg-alt);
-  color: var(--primary);
+  background-color: var(--bg-header);
+  backdrop-filter: blur(10px);
+  /* color: var(--primary); */
 
   padding: 1.5rem 2rem;
   border-bottom: 1px solid var(--border);
