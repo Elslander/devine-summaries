@@ -429,9 +429,13 @@ a {
   .header__title:hover, .header__title:active {
     border-bottom: 1px solid var(--border);
   }
+
+  .body__main {
+    padding: 0 1.5rem;
+  }
   
   .year__semester {
-    padding: 0 1.5rem;
+    /* padding: 0 1.5rem; */
   }
 
   .footer__disclaimer {
