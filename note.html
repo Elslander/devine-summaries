@@ -29,6 +29,7 @@
           exam. </p> -->
     </header>
     <main class="body__main">
+      <h2 class="note__title"></h2>
       <div id="note-content">loading...</div>
     </main>
     <footer class="body__footer">
@@ -38,12 +39,21 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-      // document.querySelector(".menu__toggle").addEventListener("click", () => {
-      //   document.querySelector(".header").classList.toggle("open");
-      // });
-
       const params = new URLSearchParams(window.location.search);
+      console.log(params);
       const file = params.get("file");
+
+      const filenameWithExt = file.split('/').pop();
+      const filename = filenameWithExt.replace(/\.md$/, '');
+      const name = filename.replaceAll('-', ' ');
+      console.log(name);
+
+      const $noteTitle = document.querySelector('.note__title');
+      $noteTitle.textContent = name
+        .split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+
 
       const main = document.getElementById("note-content");
 
