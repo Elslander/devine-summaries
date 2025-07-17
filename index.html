@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <title>D. Summaries</title>
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -15,152 +16,153 @@
   </head>
 
   <body>
-    <div class="layout">
-      <aside class="sidebar">
-        <h1 class="sidebar__title"><a href="index.html">Devine Summaries</a></h1>
-        <nav class="sidebar__nav">
-          <ul class="nav__menu">
-            <li class="menu__item">
-              <a class="menu__link" href="index.html">Home</a>
-            </li>
-          </ul>
-        </nav>
-        <p class="sidebar__footnote">These summaries are not perfect, I am not responsable for any mistakes on your
-          exam. </p>
-      </aside>
-      <main class="body__main summaries__main">
-        <section class="main__semester">
-          <h2 class="semester__title">Semester 1</h2>
-          <div class="semester__grid">
-            <article class="subject__card">
-              <h3 class="card__title">Experience Design 1</h3>
-              <ul class="card__summaries"></ul>
-            </article>
-            <article class="subject__card">
-              <h3 class="card__title">Visual Design 1</h3>
-              <ul class="card__summaries"></ul>
-            </article>
-            <article class="subject__card">
-              <h3 class="card__title">Creative Code 1</h3>
-              <ul class="card__summaries"></ul>
-            </article>
-            <article class="subject__card">
-              <h3 class="card__title">Web 1</h3>
-              <ul class="card__summaries"></ul>
-            </article>
-          </div>
-        </section>
-        <section class="main__semester">
-          <h2 class="semester__title">Semester 2</h2>
-          <div class="semester__grid">
-            <article class="subject__card">
-              <h3 class="card__title">Experience Design 2</h3>
-              <ul class="card__summaries"></ul>
-            </article>
-            <article class="subject__card">
-              <h3 class="card__title">Visual Design 2</h3>
+    <header class="body__header">
+      <nav class="header__nav">
+        <ul class="nav__menu">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html">Home</a>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="header__title"><a href="index.html">Devine Summaries</a></h1>
+      <!-- <p class="header__footnote">These summaries are not perfect, I am not responsable for any mistakes on your
+          exam. </p> -->
+    </header>
+    <main class="body__main summaries__main">
+      <section class="main__semester">
+        <h2 class="semester__title">Semester 1</h2>
+        <div class="semester__grid">
+          <article class="subject__card">
+            <h3 class="card__title">Experience Design 1</h3>
+            <ul class="card__summaries"></ul>
+          </article>
+          <article class="subject__card">
+            <h3 class="card__title">Visual Design 1</h3>
+            <ul class="card__summaries"></ul>
+          </article>
+          <article class="subject__card">
+            <h3 class="card__title">Creative Code 1</h3>
+            <ul class="card__summaries"></ul>
+          </article>
+          <article class="subject__card">
+            <h3 class="card__title">Web 1</h3>
+            <ul class="card__summaries"></ul>
+          </article>
+        </div>
+      </section>
+      <section class="main__semester">
+        <h2 class="semester__title">Semester 2</h2>
+        <div class="semester__grid">
+          <article class="subject__card">
+            <h3 class="card__title">Experience Design 2</h3>
+            <ul class="card__summaries"></ul>
+          </article>
+          <article class="subject__card">
+            <h3 class="card__title">Visual Design 2</h3>
+            <ul class="card__summaries">
+              <li>
+                <a href="note.html?file=semester-2/visual-design-2/storytelling.md" class="summaries__link">
+                  Storytelling </a>
+              </li>
+            </ul>
+            <div class="nested__card">
+              <h4 class="card__subtitle">Graphic Design History</h4>
               <ul class="card__summaries">
                 <li>
-                  <a href="note.html?file=semester-2/visual-design-2/storytelling.md" class="summaries__link">
-                    Storytelling </a>
+                  <a href="note.html?file=semester-2/visual-design-2/history/art-nouveau.md" class="summaries__link">
+                    Art Nouveau </a>
+                </li>
+                <li>
+                  <a href="note.html?file=semester-2/visual-design-2/history/european-poster-design.md"
+                    class="summaries__link">European Poster Design </a>
+                </li>
+                <li>
+                  <a href="note.html?file=semester-2/visual-design-2/history/constructivism-de-stijl.md"
+                    class="summaries__link">Constructivism & De Stijl </a>
+                </li>
+                <li>
+                  <a href="note.html?file=semester-2/visual-design-2/history/bauhaus.md" class="summaries__link">
+                    Bauhaus </a>
                 </li>
               </ul>
-              <div class="nested__card">
-                <h4 class="card__subtitle">Graphic Design History</h4>
-                <ul class="card__summaries">
-                  <li>
-                    <a href="note.html?file=semester-2/visual-design-2/history/art-nouveau.md" class="summaries__link">
-                      Art Nouveau </a>
-                  </li>
-                  <li>
-                    <a href="note.html?file=semester-2/visual-design-2/history/european-poster-design.md"
-                      class="summaries__link">European Poster Design </a>
-                  </li>
-                  <li>
-                    <a href="note.html?file=semester-2/visual-design-2/history/constructivism-de-stijl.md"
-                      class="summaries__link">Constructivism & De Stijl </a>
-                  </li>
-                  <li>
-                    <a href="note.html?file=semester-2/visual-design-2/history/bauhaus.md" class="summaries__link">
-                      Bauhaus </a>
-                  </li>
-                </ul>
-              </div>
-            </article>
-            <article class="subject__card">
-              <h3 class="card__title">Creative Code 2</h3>
-              <ul class="card__summaries">
-                <li>
-                  <a href="note.html?file=semester-2/creative-code-2/object-oriented-programming.md"
-                    class="summaries__link">Object Oriented Programming</a>
-                </li>
-              </ul>
-            </article>
-            <article class="subject__card">
-              <h3 class="card__title">Web 2</h3>
-              <ul class="card__summaries">
-                <li>
-                  <a href="note.html?file=semester-2/web-2/server-side-development.md" class="summaries__link">Server
-                    Side Development</a>
-                </li>
-                <li>
-                  <a href="note.html?file=semester-2/web-2/super-globals.md" class="summaries__link">Super Globals</a>
-                </li>
-                <li>
-                  <a href="note.html?file=semester-2/web-2/databases.md" class="summaries__link">Databases</a>
-                </li>
-                <li>
-                  <a href="note.html?file=semester-2/web-2/deployment.md" class="summaries__link">Deployment</a>
-                </li>
-                <li>
-                  <a href="note.html?file=semester-2/web-2/mvc.md" class="summaries__link">Model-View-Controller</a>
-                </li>
-                <li>
-                  <a href="note.html?file=semester-2/web-2/crud.md"
-                    class="summaries__link">Create-Read-Update-Delete</a>
-                </li>
-                <li>
-                  <a href="note.html?file=semester-2/web-2/progressive-enhancement.md"
-                    class="summaries__link">Progressive Enhancement</a>
-                </li>
-                <li>
-                  <a href="note.html?file=semester-2/web-2/progressive-enhancement-forms.md"
-                    class="summaries__link">Progressive Enhancement - Forms</a>
-                </li>
-              </ul>
-            </article>
-          </div>
-        </section>
-        <section class="main__semester">
-          <h2 class="semester__title">Semester 3</h2>
-          <div class="semester__grid">
-            <article class="subject__card">
-              <h3 class="card__title">Experience Design 3</h3>
-              <ul class="card__summaries"></ul>
-            </article>
-            <article class="subject__card">
-              <h3 class="card__title">Visual Design 3</h3>
-              <ul class="card__summaries">
-              </ul>
-            </article>
-            <article class="subject__card">
-              <h3 class="card__title">Motion Design 1</h3>
-              <ul class="card__summaries"></ul>
-            </article>
-            <article class="subject__card">
-              <h3 class="card__title">Creative Code 3</h3>
-              <ul class="card__summaries">
-              </ul>
-            </article>
-            <article class="subject__card">
-              <h3 class="card__title">Web 3</h3>
-              <ul class="card__summaries"></ul>
-            </article>
-          </div>
-        </section>
-      </main>
-    </div>
-    <footer class="body__footer"></footer>
+            </div>
+          </article>
+          <article class="subject__card">
+            <h3 class="card__title">Creative Code 2</h3>
+            <ul class="card__summaries">
+              <li>
+                <a href="note.html?file=semester-2/creative-code-2/object-oriented-programming.md"
+                  class="summaries__link">Object Oriented Programming</a>
+              </li>
+            </ul>
+          </article>
+          <article class="subject__card">
+            <h3 class="card__title">Web 2</h3>
+            <ul class="card__summaries">
+              <li>
+                <a href="note.html?file=semester-2/web-2/server-side-development.md" class="summaries__link">Server Side
+                  Development</a>
+              </li>
+              <li>
+                <a href="note.html?file=semester-2/web-2/super-globals.md" class="summaries__link">Super Globals</a>
+              </li>
+              <li>
+                <a href="note.html?file=semester-2/web-2/databases.md" class="summaries__link">Databases</a>
+              </li>
+              <li>
+                <a href="note.html?file=semester-2/web-2/deployment.md" class="summaries__link">Deployment</a>
+              </li>
+              <li>
+                <a href="note.html?file=semester-2/web-2/mvc.md" class="summaries__link">Model-View-Controller</a>
+              </li>
+              <li>
+                <a href="note.html?file=semester-2/web-2/crud.md" class="summaries__link">Create-Read-Update-Delete</a>
+              </li>
+              <li>
+                <a href="note.html?file=semester-2/web-2/progressive-enhancement.md" class="summaries__link">Progressive
+                  Enhancement</a>
+              </li>
+              <li>
+                <a href="note.html?file=semester-2/web-2/progressive-enhancement-forms.md"
+                  class="summaries__link">Progressive Enhancement - Forms</a>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section class="main__semester">
+        <h2 class="semester__title">Semester 3</h2>
+        <div class="semester__grid">
+          <article class="subject__card">
+            <h3 class="card__title">Experience Design 3</h3>
+            <ul class="card__summaries"></ul>
+          </article>
+          <article class="subject__card">
+            <h3 class="card__title">Visual Design 3</h3>
+            <ul class="card__summaries">
+            </ul>
+          </article>
+          <article class="subject__card">
+            <h3 class="card__title">Motion Design 1</h3>
+            <ul class="card__summaries"></ul>
+          </article>
+          <article class="subject__card">
+            <h3 class="card__title">Creative Code 3</h3>
+            <ul class="card__summaries">
+            </ul>
+          </article>
+          <article class="subject__card">
+            <h3 class="card__title">Web 3</h3>
+            <ul class="card__summaries"></ul>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="body__footer">
+      <p class="footer__disclaimer">These summaries are not perfect, I am not responsable for any mistakes on your exam.
+      </p>
+      <p class="footer__mail"><a class="fa fa-envelope" target="_blank" href="mailto:kjell.elslander@student.howest.be"></a></p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="./js/script.js"></script>
   </body>

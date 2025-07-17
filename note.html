@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <title>D. Summaries - Note</title>
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -15,30 +16,31 @@
   </head>
 
   <body>
-    <div class="layout">
-      <aside class="sidebar">
-        <button class="menu__toggle">☰</button>
-        <h1 class="sidebar__title"><a href="index.html">Devine Summaries</a></h1>
-        <nav class="sidebar__nav">
-          <ul class="nav__menu">
-            <li class="menu__item">
-              <a class="menu__link" href="index.html">Home</a>
-            </li>
-          </ul>
-        </nav>
-        <p class="sidebar__footnote">These summaries are not perfect, I am not responsable for any mistakes on your
-          exam. </p>
-      </aside>
-      <main class="body__main">
-        <div id="note-content">loading...</div>
-      </main>
-    </div>
-    <footer class="body__footer"></footer>
+    <header class="body__header">
+      <nav class="header__nav">
+        <ul class="nav__menu">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html">Home</a>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="header__title"><a href="index.html">Devine Summaries</a></h1>
+      <!-- <p class="header__footnote">These summaries are not perfect, I am not responsable for any mistakes on your
+          exam. </p> -->
+    </header>
+    <main class="body__main">
+      <div id="note-content">loading...</div>
+    </main>
+    <footer class="body__footer">
+      <p class="footer__disclaimer">These summaries are not perfect, I am not responsable for any mistakes on your exam.
+      </p>
+      <p class="footer__mail"><a class="fa fa-envelope" target="_blank" href="https://www.google.com"></a></p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-      document.querySelector(".menu__toggle").addEventListener("click", () => {
-        document.querySelector(".sidebar").classList.toggle("open");
-      });
+      // document.querySelector(".menu__toggle").addEventListener("click", () => {
+      //   document.querySelector(".header").classList.toggle("open");
+      // });
 
       const params = new URLSearchParams(window.location.search);
       const file = params.get("file");
