@@ -74,6 +74,24 @@ a {
   font-weight: bolder;
 }
 
+.logout-icon {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-family: monospace;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  transition: color var(--transition);
+}
+
+.logout-icon:hover,
+.logout-icon:focus {
+  color: var(--primary-hover);
+  outline: none;
+}
+
 /* Summaries Styling */
 .body__main {
   flex-grow: 1;
@@ -441,14 +459,15 @@ a {
     transition: all 200ms ease;
   }
 
-  .header__title:hover, .header__title:active {
+  .header__title:hover,
+  .header__title:active {
     border-bottom: 1px solid var(--border);
   }
 
   .body__main {
     padding: 0 1.5rem;
   }
-  
+
   .year__semester {
     /* padding: 0 1.5rem; */
   }
