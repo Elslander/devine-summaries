@@ -1,4 +1,5 @@
 <img src="./assets/notes/semester-2/experience-design-2/User-flow.png">
+
 # User goal
 User goals are descriptions of end states that users want to reach.
 - **Life goals** (reflective): who the user wants to be.
