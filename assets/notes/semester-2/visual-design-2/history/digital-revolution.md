@@ -13,7 +13,7 @@
   - accelerating and simplifying layout processes
   - new typography possibilities (negative tracking & line spacing)
 - Designers:
-  - Susan Kare
+  - Suzan Kare
   - Emigre Inc.
   - April Greiman
   - David Carson
@@ -25,7 +25,7 @@
   - digital image manipulation
   - preference for futuristic, technological motifs
 
-## Susan Kare
+## Suzan Kare
 
 USA
 
@@ -34,12 +34,12 @@ USA
 - Development of digital interfaces.
 - Simplicity, recognisability and a playful, human touch.
 
-<img src="assets/notes/semester-2/visual-design-2/history/artists/susan-kare/artwork-1.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/susan-kare/artwork-2.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/susan-kare/artwork-3.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/susan-kare/artwork-4.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/susan-kare/artwork-5.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/susan-kare/artwork-6.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/suzan-kare/artwork-1.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/suzan-kare/artwork-2.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/suzan-kare/artwork-3.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/suzan-kare/artwork-4.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/suzan-kare/artwork-5.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/suzan-kare/artwork-6.png" width="180" />
 
 ## Emigre Inc.
 
