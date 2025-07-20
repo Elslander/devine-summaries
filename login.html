@@ -1,60 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login / Signup</title>
+  <style>
+    /* Use your CSS variables */
+    :root {
+      --bg: #fdfdfd;
+      --bg-alt: #f3f3f3;
+      --text: #222;
+      --primary: #4b6cc1;
+      --primary-hover: #3f57a0;
+      --border: #ccc;
+      --radius: 0.5rem;
+      --transition: 0.2s ease;
+      font-family: monospace;
+    }
 
-  <head>
-    <meta charset="UTF-8" />
-    <title>Login / Signup</title>
-  </head>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
 
-  <body>
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      padding: 2rem;
+    }
+
+    .login-container {
+      background: var(--bg-alt);
+      padding: 2rem 3rem;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(75, 108, 193, 0.15);
+      width: 320px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.6rem 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 1rem;
+      transition: border-color var(--transition);
+    }
+
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border-color: var(--primary);
+      outline: none;
+    }
+
+    button {
+      width: 48%;
+      padding: 0.6rem 0;
+      margin: 0.25rem 1%;
+      border: none;
+      border-radius: var(--radius);
+      background-color: var(--primary);
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color var(--transition);
+    }
+
+    button:hover {
+      background-color: var(--primary-hover);
+    }
+
+    #message {
+      margin-top: 1rem;
+      min-height: 1.3rem;
+      font-weight: 600;
+      color: var(--primary-hover);
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
     <h2>Login or Sign Up</h2>
-    <input type="email" id="email" placeholder="Email" />
-    <input type="password" id="password" placeholder="Password" />
-    <button onclick="login()">Login</button>
-    <button onclick="signup()">Sign Up</button>
+    <input type="email" id="email" placeholder="Email" autocomplete="username" />
+    <input type="password" id="password" placeholder="Password" autocomplete="current-password" />
+    <div>
+      <button onclick="login()">Login</button>
+      <button onclick="signup()">Sign Up</button>
+    </div>
     <p id="message"></p>
-    <!-- Firebase SDKs (compat) -->
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
-    <script>
-      const firebaseConfig = {
-        apiKey: "AIzaSyC-Y6WeSNWa6SnP6vYyjLDAwJGnfo1WxS4",
-        authDomain: "d-sums.firebaseapp.com",
-        projectId: "d-sums",
-        storageBucket: "d-sums.firebasestorage.app",
-        messagingSenderId: "211039259595",
-        appId: "1:211039259595:web:6abe2d63f875b53a20844e",
-        measurementId: "G-NCG1110X86"
-      };
+  </div>
 
-      firebase.initializeApp(firebaseConfig);
-      const auth = firebase.auth();
+  <!-- Firebase SDKs (compat) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
 
-      function signup() {
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        auth.createUserWithEmailAndPassword(email, password)
-          .then(() => {
-            document.getElementById('message').textContent = "Signed up successfully! You can now log in.";
-          })
-          .catch(error => {
-            document.getElementById('message').textContent = error.message;
-          });
-      }
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyC-Y6WeSNWa6SnP6vYyjLDAwJGnfo1WxS4",
+      authDomain: "d-sums.firebaseapp.com",
+      projectId: "d-sums",
+      storageBucket: "d-sums.firebasestorage.app",
+      messagingSenderId: "211039259595",
+      appId: "1:211039259595:web:6abe2d63f875b53a20844e",
+      measurementId: "G-NCG1110X86"
+    };
 
-      function login() {
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        auth.signInWithEmailAndPassword(email, password)
-          .then(() => {
-            document.getElementById('message').textContent = "Logged in successfully!";
-            window.location.href = "index.html"; // redirect to protected page
-          })
-          .catch(error => {
-            document.getElementById('message').textContent = error.message;
-          });
-      }
-    </script>
-  </body>
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
 
+    function signup() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      auth.createUserWithEmailAndPassword(email, password)
+        .then(() => {
+          document.getElementById('message').textContent = "Signed up successfully! You can now log in.";
+          document.getElementById('message').style.color = 'var(--primary-hover)';
+        })
+        .catch(error => {
+          document.getElementById('message').textContent = error.message;
+          document.getElementById('message').style.color = 'red';
+        });
+    }
+
+    function login() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      auth.signInWithEmailAndPassword(email, password)
+        .then(() => {
+          document.getElementById('message').textContent = "Logged in successfully!";
+          document.getElementById('message').style.color = 'var(--primary-hover)';
+          window.location.href = "index.html"; // redirect to protected page
+        })
+        .catch(error => {
+          document.getElementById('message').textContent = error.message;
+          document.getElementById('message').style.color = 'red';
+        });
+    }
+  </script>
+</body>
 </html>
