@@ -86,6 +86,28 @@
         background-color: var(--primary-hover);
       }
 
+      /* Forgot password styling */
+      #forgotPasswordLink {
+        display: inline-block;
+        margin: 0.5rem 0 1rem;
+        font-size: 0.95rem;
+        color: var(--primary);
+        text-decoration: none;
+        transition: color var(--transition);
+      }
+
+      #forgotPasswordLink:hover {
+        color: var(--primary-hover);
+        text-decoration: underline;
+      }
+
+      /* Adjust button layout to be stacked full width */
+      button {
+        width: 100%;
+        padding: 0.65rem 0;
+        margin: 0.4rem 0;
+      }
+
       #message {
         margin-top: 1rem;
         min-height: 1.3rem;
@@ -98,15 +120,11 @@
   <body>
     <div class="login-container">
       <h2>Login or Sign Up</h2>
-      <input type="email" id="email" placeholder="Email" autocomplete="username" />
-      <input type="password" id="password" placeholder="Password" autocomplete="current-password" />
-      <p>
-        <a href="#" id="forgotPasswordLink">Forgot Password?</a>
-      </p>
-      <div>
-        <button onclick="login()">Login</button>
-        <button onclick="signup()">Sign Up</button>
-      </div>
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+      <button onclick="login()">Login</button>
+      <button onclick="signup()">Sign Up</button>
       <p id="message"></p>
     </div>
     <!-- Firebase SDKs (compat) -->
