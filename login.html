@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <title>Login / Signup</title>
     <style>
-      /* Use your CSS variables */
       :root {
         --bg: #fdfdfd;
         --bg-alt: #f3f3f3;
@@ -18,7 +16,6 @@
         font-family: monospace;
       }
 
-      /* Reset and base */
       * {
         box-sizing: border-box;
       }
@@ -45,10 +42,16 @@
       }
 
       h2 {
-        margin-bottom: 1.5rem;
+        margin-bottom: 0.3rem;
         color: var(--primary);
         font-weight: bold;
         font-size: 1.8rem;
+      }
+
+      .subtitle {
+        margin-bottom: 1.5rem;
+        color: #666;
+        font-size: 0.95rem;
       }
 
       input[type="email"],
@@ -68,25 +71,6 @@
         outline: none;
       }
 
-      button {
-        width: 48%;
-        padding: 0.6rem 0;
-        margin: 0.25rem 1%;
-        border: none;
-        border-radius: var(--radius);
-        background-color: var(--primary);
-        color: white;
-        font-weight: 600;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color var(--transition);
-      }
-
-      button:hover {
-        background-color: var(--primary-hover);
-      }
-
-      /* Forgot password styling */
       #forgotPasswordLink {
         display: inline-block;
         margin: 0.5rem 0 1rem;
@@ -101,11 +85,38 @@
         text-decoration: underline;
       }
 
-      /* Adjust button layout to be stacked full width */
       button {
         width: 100%;
         padding: 0.65rem 0;
         margin: 0.4rem 0;
+        border-radius: var(--radius);
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color var(--transition), border-color var(--transition), color var(--transition);
+      }
+
+      /* Primary CTA: Login */
+      button:first-of-type {
+        background-color: var(--primary);
+        color: white;
+        border: none;
+      }
+
+      button:first-of-type:hover {
+        background-color: var(--primary-hover);
+      }
+
+      /* Secondary CTA: Sign Up */
+      button:last-of-type {
+        background-color: transparent;
+        border: 2px solid var(--primary);
+        color: var(--primary);
+      }
+
+      button:last-of-type:hover {
+        border-color: var(--primary-hover);
+        color: var(--primary-hover);
       }
 
       #message {
@@ -119,15 +130,21 @@
 
   <body>
     <div class="login-container">
-      <h2>Login or Sign Up to Devine Summaries</h2>
+      <h2>Login or Sign Up</h2>
+      <p class="subtitle">Devine Summaroes</p>
+
       <input type="email" id="email" placeholder="Email" />
       <input type="password" id="password" placeholder="Password" />
+
       <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+
       <button onclick="login()">Login</button>
       <button onclick="signup()">Sign Up</button>
+
       <p id="message"></p>
     </div>
-    <!-- Firebase SDKs (compat) -->
+
+    <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
     <script>
@@ -165,7 +182,7 @@
           .then(() => {
             document.getElementById('message').textContent = "Logged in successfully!";
             document.getElementById('message').style.color = 'var(--primary-hover)';
-            window.location.href = "index.html"; // redirect to protected page
+            window.location.href = "index.html";
           })
           .catch(error => {
             document.getElementById('message').textContent = error.message;
@@ -187,8 +204,6 @@
             alert('Error: ' + error.message);
           });
       });
-
     </script>
   </body>
-
 </html>
