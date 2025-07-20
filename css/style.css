@@ -447,7 +447,7 @@ a {
 /* Media Queries */
 @media (max-width: 600px) {
   .body__header {
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 2rem;
   }
 
