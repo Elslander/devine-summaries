@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
-    <title>Login / Signup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>Devine Summaries - Login/Signup</title>
     <style>
       :root {
         --bg: #fdfdfd;
@@ -131,19 +135,14 @@
   <body>
     <div class="login-container">
       <h2>Login or Sign Up</h2>
-      <p class="subtitle">Devine Summaroes</p>
-
+      <p class="subtitle">Devine Summaries</p>
       <input type="email" id="email" placeholder="Email" />
       <input type="password" id="password" placeholder="Password" />
-
       <a href="#" id="forgotPasswordLink">Forgot Password?</a>
-
       <button onclick="login()">Login</button>
       <button onclick="signup()">Sign Up</button>
-
       <p id="message"></p>
     </div>
-
     <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
@@ -162,16 +161,30 @@
       const auth = firebase.auth();
 
       function signup() {
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const message = document.getElementById('message');
+
+        if (!email || !password) {
+          message.textContent = "Please fill in both email and password to sign up.";
+          message.style.color = 'red';
+          return;
+        }
+
+        if (password.length < 6) {
+          message.textContent = "Password must be at least 6 characters long.";
+          message.style.color = 'red';
+          return;
+        }
+
         auth.createUserWithEmailAndPassword(email, password)
           .then(() => {
-            document.getElementById('message').textContent = "Signed up successfully! You can now log in.";
-            document.getElementById('message').style.color = 'var(--primary-hover)';
+            message.textContent = "Signed up successfully! You can now log in.";
+            message.style.color = 'var(--primary-hover)';
           })
           .catch(error => {
-            document.getElementById('message').textContent = error.message;
-            document.getElementById('message').style.color = 'red';
+            message.textContent = error.message;
+            message.style.color = 'red';
           });
       }
 
@@ -206,4 +219,5 @@
       });
     </script>
   </body>
+
 </html>
