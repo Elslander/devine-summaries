@@ -213,7 +213,7 @@ Check MDN for the following function. The names speak for themselves.
 - Perfect way to set style using JavaScript.
 - All style rules stay in CSS.
 
-> [!Info] Adding another class
+> **Adding another class**
 > If an element already has a class, you need to use
 > _tag_.classList.add("...").
 
