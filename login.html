@@ -211,7 +211,7 @@
         }
         auth.sendPasswordResetEmail(email)
           .then(() => {
-            alert('Password reset email sent! Check your inbox.');
+            alert('A password reset email has been sent to your inbox. If you don’t see it soon, check your spam folder too.');
           })
           .catch(error => {
             alert('Error: ' + error.message);
