@@ -222,13 +222,13 @@ a {
   gap: 0.5rem;
 }
 
-.footer__disclaimer {
+/* .footer__disclaimer {
   margin: 0;
   flex: 1 1 100%;
   color: var(--text);
   font-size: 0.9rem;
   text-align: center;
-}
+} */
 
 .footer__mail {
   color: var(--primary);
@@ -248,7 +248,7 @@ a {
 
 /* New legal links container */
 .footer__legal-links {
-  flex: 1 1 100%;
+  /* flex: 1 1 100%; */
   text-align: center;
   margin-top: 0.5rem;
   font-size: 0.9rem;
