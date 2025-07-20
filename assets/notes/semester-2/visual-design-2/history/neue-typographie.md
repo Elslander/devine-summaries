@@ -24,21 +24,21 @@ Germany -> Switzerland
 - Redesign of Penguin Books.
 - Revival of classic typography in the 1940s.
 
-<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschick/artwork-1.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschick/artwork-2.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschick/artwork-3.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschick/artwork-4.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschick/artwork-5.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschick/artwork-6.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschick/artwork-7.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschick/artwork-8.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschick/artwork-9.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschick/artwork-10.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschick/artwork-11.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschick/artwork-12.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschick/artwork-13.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschick/artwork-14.png" width="180" />
-<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschick/artwork-15.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschich/artwork-1.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschich/artwork-2.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschich/artwork-3.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschich/artwork-4.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschich/artwork-5.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschich/artwork-6.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschich/artwork-7.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschich/artwork-8.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschich/artwork-9.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschich/artwork-10.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschich/artwork-11.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschich/artwork-12.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschich/artwork-13.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschich/artwork-14.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/jan-tschich/artwork-15.png" width="180" />
 
 # Typography in the first half of the 20th century
 
