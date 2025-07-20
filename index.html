@@ -120,10 +120,12 @@
               <h3 class="card__title">Visual Design 2</h3>
               <ul class="card__summaries">
                 <li>
-                  <a href="note.html?file=semester-2/visual-design-2/storytelling.md" class="summaries__link">Storytelling</a>
+                  <a href="note.html?file=semester-2/visual-design-2/storytelling.md"
+                    class="summaries__link">Storytelling</a>
                 </li>
                 <li>
-                  <a href="note.html?file=semester-2/visual-design-2/typography.md" class="summaries__link">Typography</a>
+                  <a href="note.html?file=semester-2/visual-design-2/typography.md"
+                    class="summaries__link">Typography</a>
                 </li>
                 <li>
                   <a href="note.html?file=semester-2/visual-design-2/ui-design.md" class="summaries__link">UI Design</a>
@@ -149,19 +151,24 @@
                       Bauhaus </a>
                   </li>
                   <li>
-                    <a href="note.html?file=semester-2/visual-design-2/history/neue-typographie.md" class="summaries__link">Die Neue Typographie</a>
+                    <a href="note.html?file=semester-2/visual-design-2/history/neue-typographie.md"
+                      class="summaries__link">Die Neue Typographie</a>
                   </li>
                   <li>
-                    <a href="note.html?file=semester-2/visual-design-2/history/swiss-style.md" class="summaries__link">Swiss Style</a>
+                    <a href="note.html?file=semester-2/visual-design-2/history/swiss-style.md"
+                      class="summaries__link">Swiss Style</a>
                   </li>
                   <li>
-                    <a href="note.html?file=semester-2/visual-design-2/history/newyork-school.md" class="summaries__link">The New York School</a>
+                    <a href="note.html?file=semester-2/visual-design-2/history/newyork-school.md"
+                      class="summaries__link">The New York School</a>
                   </li>
                   <li>
-                    <a href="note.html?file=semester-2/visual-design-2/history/postmodern-design.md" class="summaries__link">Postmodern Design</a>
+                    <a href="note.html?file=semester-2/visual-design-2/history/postmodern-design.md"
+                      class="summaries__link">Postmodern Design</a>
                   </li>
                   <li>
-                    <a href="note.html?file=semester-2/visual-design-2/history/digital-revolution.md" class="summaries__link">The Digital Revolution</a>
+                    <a href="note.html?file=semester-2/visual-design-2/history/digital-revolution.md"
+                      class="summaries__link">The Digital Revolution</a>
                   </li>
                 </ul>
               </div>
@@ -301,6 +308,33 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyC-Y6WeSNWa6SnP6vYyjLDAwJGnfo1WxS4",
+        authDomain: "d-sums.firebaseapp.com",
+        projectId: "d-sums",
+        storageBucket: "d-sums.firebasestorage.app",
+        messagingSenderId: "211039259595",
+        appId: "1:211039259595:web:6abe2d63f875b53a20844e",
+        measurementId: "G-NCG1110X86"
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+
+      auth.onAuthStateChanged(user => {
+        if (!user) {
+          window.location.href = "login.html";
+        }
+      });
+
+      document.getElementById('logoutBtn').addEventListener('click', () => {
+        auth.signOut();
+        window.location.href = "login.html";
+      });
+    </script>
   </body>
 
 </html>
