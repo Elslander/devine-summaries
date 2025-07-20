@@ -30,10 +30,12 @@ Russia -> France -> USA
 - One of the first to introduce 1920s European modernism to the USA.
 - Combining text and photography with large amounts of white space.
 
-```img-gallery
-path: Devine-E/Semester 2/Visual Design 2/Graphic Design History/Artists/Alexey-Brodovitch
-type: vertical
-```
+<img src="assets/notes/semester-2/visual-design-2/history/artists/alexey-brodovitch/artwork-1.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/alexey-brodovitch/artwork-2.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/alexey-brodovitch/artwork-3.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/alexey-brodovitch/artwork-4.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/alexey-brodovitch/artwork-5.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/alexey-brodovitch/artwork-6.png" width="180" />
 
 ## Bradbury Thompson
 
@@ -44,10 +46,12 @@ USA
 - The '_mono-alphabet_' that broke with the tradition of separate letterforms for uppercase and lowercase letters.
 - Sense of space & order.
 
-```img-gallery
-path: Devine-E/Semester 2/Visual Design 2/Graphic Design History/Artists/Bradbury-Thompson
-type: vertical
-```
+<img src="assets/notes/semester-2/visual-design-2/history/artists/bradbury-thompson/artwork-1.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/bradbury-thompson/artwork-2.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/bradbury-thompson/artwork-3.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/bradbury-thompson/artwork-4.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/bradbury-thompson/artwork-5.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/bradbury-thompson/artwork-6.png" width="180" />
 
 ## Cipe Pineless
 
@@ -59,10 +63,11 @@ Austria -> USA
 - '_American Figurative Typography trend_' = letters replaced by objects.
 - Introduced visual artists as illustrators in popular magazines.
 
-```img-gallery
-path: Devine-E/Semester 2/Visual Design 2/Graphic Design History/Artists/Cipe-Pineless
-type: vertical
-```
+<img src="assets/notes/semester-2/visual-design-2/history/artists/cipe-pineless/artwork-1.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/cipe-pineless/artwork-2.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/cipe-pineless/artwork-3.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/cipe-pineless/artwork-4.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/cipe-pineless/artwork-5.png" width="180" />
 
 ## Paul Rand
 
@@ -77,10 +82,17 @@ USA
   - advertising design (1941 - 1954);
   - corporate identities (1954 - ...).
 
-```img-gallery
-path: Devine-E/Semester 2/Visual Design 2/Graphic Design History/Artists/Paul-Rand
-type: vertical
-```
+<img src="assets/notes/semester-2/visual-design-2/history/artists/paul-rand/artwork-1.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/paul-rand/artwork-2.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/paul-rand/artwork-3.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/paul-rand/artwork-4.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/paul-rand/artwork-5.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/paul-rand/artwork-6.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/paul-rand/artwork-7.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/paul-rand/artwork-8.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/paul-rand/artwork-9.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/paul-rand/artwork-10.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/paul-rand/artwork-11.png" width="180" />
 
 ## Saul Bass
 
@@ -92,7 +104,9 @@ USA
 - Pioneer for the graphic film industry: film posters and opening titles.
 - Symbols and pictograms.
 
-```img-gallery
-path: Devine-E/Semester 2/Visual Design 2/Graphic Design History/Artists/Saul-Bass
-type: vertical
-```
+<img src="assets/notes/semester-2/visual-design-2/history/artists/saul-bass/artwork-1.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/saul-bass/artwork-2.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/saul-bass/artwork-3.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/saul-bass/artwork-4.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/saul-bass/artwork-5.png" width="180" />
+<img src="assets/notes/semester-2/visual-design-2/history/artists/saul-bass/artwork-6.png" width="180" />
