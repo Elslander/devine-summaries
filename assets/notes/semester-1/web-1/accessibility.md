@@ -38,67 +38,67 @@
 
 1. Provide text alternatives for non-textual content
 
-- alt attribute for images
-- name attributes for inputs
+    - alt attribute for images
+    - name attributes for inputs
 
 2. Provide alternative for time base media
 
-- captions in video
+    - captions in video
 
 3. Adaptable content
 
-- responsive design
-- reading version continues to work
-- tet size is adjustable
-- correct reading order
+    - responsive design
+    - reading version continues to work
+    - tet size is adjustable
+    - correct reading order
 
 4. Distinguishable
 
-- clear distinction between foreground and background
-- color contrast
-- audio control (for more than 3 seconds)
+    - clear distinction between foreground and background
+    - color contrast
+    - audio control (for more than 3 seconds)
 
 ### Operable
 
 5. Keyboard accessible
 6. Providing enough time to view content
 
-- no time limits
-- add pause button
+    - no time limits
+    - add pause button
 
 7. Do not design content in a way that is known to cause seizures
 
-- no more than 3 flashes per second
+    - no more than 3 flashes per second
 
 8. Navigation
 
-- bypass block (skip links)
-- focus order and visibility
-- page titles
+    - bypass block (skip links)
+    - focus order and visibility
+    - page titles
 
 ### Understandable
 
 9. Readanle
 
-- long tags
-- explain abbreviations
+    - long tags
+    - explain abbreviations
 
 10. Predictable
 
-- no unexpected context changes on focus of input
+    - no unexpected context changes on focus of input
 
 11. Input Assistance: preventing and resolving input errors
 
-- always use a clear label
-- identofy errors, provide suggestions and prevent them
+    - always use a clear label
+    - identofy errors, provide suggestions and prevent them
 
 ### Robust
 
 12. Compatibility
 
-- use standard HTML tags
-- buttons
-- form elements
+    - use standard HTML tags
+    - buttons
+    - form elements
 
 ## Testing Accessibility
 
