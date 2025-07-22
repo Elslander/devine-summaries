@@ -37,23 +37,16 @@
 ### Perceivable
 
 - Provide text alternatives for non-textual content
-
   - alt attribute for images
   - name attributes for inputs
-
 - Provide alternative for time base media
-
   - captions in video
-
 - Adaptable content
-
   - responsive design
   - reading version continues to work
   - tet size is adjustable
   - correct reading order
-
 - Distinguishable
-
   - clear distinction between foreground and background
   - color contrast
   - audio control (for more than 3 seconds)
@@ -62,16 +55,11 @@
 
 - Keyboard accessible
 - Providing enough time to view content
-
   - no time limits
   - add pause button
-
 - Do not design content in a way that is known to cause seizures
-
   - no more than 3 flashes per second
-
 - Navigation
-
   - bypass block (skip links)
   - focus order and visibility
   - page titles
@@ -79,23 +67,17 @@
 ### Understandable
 
 - Readanle
-
   - long tags
   - explain abbreviations
-
 - Predictable
-
   - no unexpected context changes on focus of input
-
 - Input Assistance: preventing and resolving input errors
-
   - always use a clear label
   - identofy errors, provide suggestions and prevent them
 
 ### Robust
 
 - aCompatibility
-
   - use standard HTML tags
   - buttons
   - form elements
