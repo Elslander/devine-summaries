@@ -410,6 +410,27 @@ a {
   font-size: 0.9em;
 }
 
+/* UL after OL under H3 */
+#note-content h3 + ol + ul {
+  margin-left: 2em;
+}
+
+/* Nested ULs */
+#note-content ul ul {
+  margin-left: 1.5em;
+}
+
+/* OL inside UL */
+#note-content ul ol {
+  margin-left: 2em;
+}
+
+/* Deeper nested lists (optional) */
+#note-content ul ol ul,
+#note-content ul ul ol {
+  margin-left: 2.5em;
+}
+
 #note-content blockquote {
   border-left: 4px solid var(--primary);
   background: #eef0ff;
