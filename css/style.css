@@ -454,7 +454,7 @@ a {
 }
 
 #note-content pre {
-  background-color: var(--text);
+  background-color: #0d1117;
   /* border-left: 4px solid var(--primary); */
   padding: 1rem 1.5rem;
   overflow-x: auto;
