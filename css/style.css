@@ -454,8 +454,8 @@ a {
 }
 
 #note-content pre {
-  background: #f0f2ff;
-  border-left: 4px solid var(--primary);
+  background: rgba(75, 108, 193, 0.12);
+  /* border-left: 4px solid var(--primary); */
   padding: 1rem 1.5rem;
   overflow-x: auto;
   font-family: monospace;

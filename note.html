@@ -13,6 +13,17 @@
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
+    <!-- Highlight.js CSS theme -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+    <!-- Highlight.js JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js" defer></script>
+    <!-- Initialize Highlight.js -->
+    <script defer>
+      window.addEventListener('DOMContentLoaded', () => {
+        hljs.highlightAll();
+      });
+    </script>
   </head>
 
   <body>
