@@ -81,6 +81,7 @@
           })
           .then((md) => {
             main.innerHTML = marked.parse(md);
+            hljs.highlightAll(); // ← run this AFTER content is injected
           })
           .catch((err) => {
             main.textContent = "Sorry, this note could not be loaded.";
