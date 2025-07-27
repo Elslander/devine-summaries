@@ -1,6 +1,6 @@
 # Get started on your Devine Design
 
-Getting started in 5 steps.
+Getting started in 5 steps (only 3 on the slides).
 
 1. Understand the brief
 2. Plan
@@ -54,7 +54,7 @@ Perfect tool to communicate to different people involved in the project.
 - Surroudings
 - ...
 
-**Don't do the following\***:
+**Don't do the following**:
 
 - design of the board overrules the content
 - the board does not fit the concept of the brief
