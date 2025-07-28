@@ -259,6 +259,8 @@ a {
   font-size: 90%;
   font-weight: bold;
   text-transform: capitalize;
+
+  margin-left: 0.5rem;
 }
 
 /* New legal links container */
