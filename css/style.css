@@ -240,6 +240,7 @@ a {
 
 .footer__mail {
   color: var(--primary);
+  font-family: monospace;
   font-size: 1.2rem;
   flex: 0 0 auto;
 }
