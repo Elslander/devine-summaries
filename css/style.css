@@ -240,7 +240,6 @@ a {
 
 .footer__mail {
   color: var(--primary);
-  font-family: monospace;
   font-size: 1.2rem;
   flex: 0 0 auto;
 }
@@ -253,6 +252,13 @@ a {
 .footer__mail a:hover,
 .footer__mail a:focus {
   color: var(--primary-hover);
+}
+
+.mail__text {
+  font-family: monospace;
+  font-size: 90%;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 /* New legal links container */
