@@ -13,7 +13,6 @@
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
-    <!-- Highlight.js CSS theme -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css" />
   </head>
 
@@ -27,9 +26,6 @@
         </ul>
       </nav>
       <h1 class="header__title"><a href="index.html">Devine Summaries</a></h1>
-      <!-- <button id="logoutBtn" class="logout-icon" title="Logout" aria-label="Logout">
-        <i class="fa fa-right-from-bracket"></i>
-      </button> -->
     </header>
     <main class="body__main">
       <h2 class="note__title"></h2>
@@ -37,14 +33,12 @@
     </main>
     <footer class="body__footer">
       <div class="footer__content">
-        <!-- <p class="footer__disclaimer"> These summaries are not perfect, I am not responsible for any mistakes on your exam. </p> -->
         <p class="footer__mail">
           <a class="fa fa-envelope" target="_blank" href="#" aria-label="Email"></a>
         </p>
         <div class="footer__legal-links" role="contentinfo" aria-label="Legal">
           <a href="./legal/termsOfService.html" target="_blank" rel="noopener">Terms of Service</a> | <a
             href="./legal/privacyPolicy.html" target="_blank" rel="noopener">Privacy Policy</a>
-          <!-- | <a href="legal/refund-policy.html" target="_blank" rel="noopener">Refund Policy</a> -->
         </div>
       </div>
       <p class="footer__copy" style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; text-align: center;"> © 2025.
@@ -80,7 +74,7 @@
           })
           .then((md) => {
             main.innerHTML = marked.parse(md);
-            hljs.highlightAll(); // ← run this AFTER content is injected
+            hljs.highlightAll();
           })
           .catch((err) => {
             main.textContent = "Sorry, this note could not be loaded.";
@@ -88,9 +82,7 @@
           });
       }
     </script>
-    <!-- Highlight.js JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js" defer></script>
-    <!-- Initialize Highlight.js -->
     <script defer>
       window.addEventListener('DOMContentLoaded', () => {
         hljs.highlightAll();
