@@ -216,20 +216,15 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-
-  background-color: var(--bg-alt);
-
   padding: 0.75rem;
-  border: 1px solid var(--border);
-  border-radius: 10px;
 }
 
 .questions__question {
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 300px;
+  flex-basis: 150px;
 
-  background-color: var(--bg);
+  background-color: var(--bg-alt);
   padding: 0.75rem;
   border: 1px solid var(--border);
   border-radius: 10px;
