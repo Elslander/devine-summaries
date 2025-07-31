@@ -213,6 +213,24 @@ a {
   text-align: center;
 }
 
+.questions__link {
+  font-size: 1.2rem;
+  color: var(--bg);
+  background-color: var(--primary);
+
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--primary);
+  margin: 0 auto;
+
+  transform: scale(1);
+
+  transition: all 200ms ease-in-out;
+}
+
+.questions__link:hover {
+  transform: scale(1.2);
+}
+
 .main__questions {
   display: flex;
   flex-wrap: wrap;
