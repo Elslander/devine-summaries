@@ -70,7 +70,7 @@
           const json = JSON.parse(text.substr(47).slice(0, -2)); // Remove Google JSONP wrapper
           const rows = json.table.rows;
 
-          const questionsContainer = document.createElement("div");
+          const questionsContainer = document.querySelector(".main__questions");
 
           rows.forEach(row => {
             const [timestamp, type, subject, details, response] = row.c.map(cell => cell ? cell.v : "");
