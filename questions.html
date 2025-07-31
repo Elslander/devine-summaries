@@ -30,14 +30,8 @@
       <h1 class="header__title"><a href="index.html">Devine Summaries</a></h1>
     </header>
     <main class="body__main">
-      <div class="main__questions">
-        <article class="questions__question">
-          <h3 class="question__title">This is the questions?</h3>
-          <p class="question__reply">This is the reply to the question.</p>
-          <div class="question__subject">
-            <p class="subject__experience">Experience Design</p>
-          </div>
-        </article>
+      <div class="main__questions" id="questionsContainer">
+        <!-- Questions will be inserted here dynamically -->
       </div>
     </main>
     <footer class="body__footer">
@@ -54,6 +48,47 @@
       <p class="footer__copy" style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; text-align: center;"> © 2025.
       </p>
     </footer>
+    <!-- Script to fetch questions -->
+    <script>
+      const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSyjGCsB09GU_aelhCtO7CNApwFzAe3cuolV1MEz9b9mGIxU2whVYFpT1rD7h12ia7W0Th6CecTnMhU/pub?gid=0&single=true&output=csv";
+      const container = document.getElementById("questionsContainer");
+
+      fetch(sheetURL)
+        .then(response => response.text())
+        .then(csv => {
+          const rows = csv.split("\n").map(row => row.split(","));
+          const headers = rows[0]; // First row is headers
+
+          // Get column indexes
+          const typeIndex = headers.indexOf("Question or Feedback");
+          const subjectIndex = headers.indexOf("What subject");
+          const questionIndex = headers.indexOf("What is the question or feedback");
+          const answerIndex = headers.indexOf("Answer");
+
+          // Loop through rows (skip headers)
+          rows.slice(1).forEach(row => {
+            const type = row[typeIndex]?.trim();
+            const subject = row[subjectIndex]?.trim();
+            const question = row[questionIndex]?.trim();
+            const answer = row[answerIndex]?.trim();
+
+            // Only show if it's a Question (not Feedback)
+            if (type === "Question") {
+              const article = document.createElement("article");
+              article.classList.add("questions__question");
+              article.innerHTML = `
+              <h3 class="question__title">${question}</h3>
+              <p class="question__reply">${answer || "No answer yet."}</p>
+              <div class="question__subject">
+                <p class="subject__${subject.toLowerCase().replace(/\s+/g, "-")}">${subject}</p>
+              </div>
+            `;
+              container.appendChild(article);
+            }
+          });
+        })
+        .catch(error => console.error("Error loading questions:", error));
+    </script>
   </body>
 
 </html>
