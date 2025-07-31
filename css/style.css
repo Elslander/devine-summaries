@@ -69,6 +69,10 @@ a {
   transform: scale(110%);
 }
 
+.menu__item--active {
+  border-bottom: 2px solid var(--primary);
+}
+
 .header__title {
   font-size: 1.5rem;
   font-weight: bolder;
