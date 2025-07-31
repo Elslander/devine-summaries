@@ -54,6 +54,15 @@
       const gid = "0"; // First sheet/tab
       const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json&gid=${gid}`;
 
+      function formatDate(googleDateString) {
+        const match = googleDateString.match(/Date\((\d+),(\d+),(\d+),(\d+),(\d+),(\d+)\)/);
+        if (!match) return googleDateString; // fallback if parsing fails
+        const [, year, month, day] = match.map(Number);
+        const dd = String(day).padStart(2, '0');
+        const mm = String(month + 1).padStart(2, '0'); // month is 0-based
+        return `${dd}-${mm}-${year}`;
+      }
+
       async function fetchQuestions() {
         try {
           const response = await fetch(url);
@@ -67,15 +76,17 @@
             const [timestamp, type, subject, details, response] = row.c.map(cell => cell ? cell.v : "");
 
             if (type === "Question") {
+              const formattedDate = formatDate(timestamp);
+
               const article = document.createElement("article");
               article.classList.add("questions__question");
 
               article.innerHTML = `
             <h3 class="question__title">${details}</h3>
             <p class="question__reply">${response || "No reply yet."}</p>
-            <p class="question__date">${timestamp}</p>
-            <div class="question__subject">
-              <p class="subject__${subject.toLowerCase().replace(/\s+/g, '-')}">${subject}</p>
+            <div class="question__info">
+              <p class="info__date">${formattedDate}</p>
+              <p class="info__${subject.toLowerCase().replace(/\s+/g, '-')}">${subject}</p>
             </div>
           `;
               questionsContainer.appendChild(article);
