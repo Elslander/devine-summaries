@@ -50,56 +50,45 @@
     </footer>
     <!-- Script to fetch questions -->
     <script>
-      const sheetID = "1eGvmfGhlgX8uwDqkIpMWLJG6P7BGKiIoeP6uouGaH_E";
-      const gid = "0"; // if your questions are in the first sheet/tab
-
+      const sheetID = "1eGvmfGhlgX8uwDqkIpMWLJG6P7BGKiIoeP6uouGaH_E"; // Your sheet ID
+      const gid = "0"; // First sheet/tab
       const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json&gid=${gid}`;
 
-
-      const container = document.getElementById("questionsContainer");
-
-      fetch(url)
-        .then(res => res.text())
-        .then(data => {
-          // Remove the extra chars at start and end
-          const jsonStr = data.substring(47, data.length - 2);
-          const json = JSON.parse(jsonStr);
+      async function fetchQuestions() {
+        try {
+          const response = await fetch(url);
+          const text = await response.text();
+          const json = JSON.parse(text.substr(47).slice(0, -2)); // Remove Google JSONP wrapper
           const rows = json.table.rows;
-          const cols = json.table.cols;
 
-          // Find the index of the relevant columns by matching labels:
-          const headers = cols.map(c => c.label);
-          const typeIndex = headers.indexOf("Type");
-          const subjectIndex = headers.indexOf("Subject");
-          const detailsIndex = headers.indexOf("Details");
-          const responseIndex = headers.indexOf("Response");
+          const questionsContainer = document.createElement("div");
 
           rows.forEach(row => {
-            const c = row.c;
-
-            const type = c[typeIndex]?.v || "";
-            const subject = c[subjectIndex]?.v || "";
-            const details = c[detailsIndex]?.v || "";
-            const response = c[responseIndex]?.v || "";
+            const [timestamp, type, subject, details, response] = row.c.map(cell => cell ? cell.v : "");
 
             if (type === "Question") {
               const article = document.createElement("article");
               article.classList.add("questions__question");
+
               article.innerHTML = `
             <h3 class="question__title">${details}</h3>
-            <p class="question__reply">${response || "No answer yet."}</p>
+            <p class="question__reply">${response || "No reply yet."}</p>
+            <p class="question__date">${timestamp}</p>
             <div class="question__subject">
-              <p class="subject__${subject.toLowerCase().replace(/\s+/g, "-")}">${subject}</p>
+              <p class="subject__${subject.toLowerCase().replace(/\s+/g, '-')}">${subject}</p>
             </div>
           `;
-              container.appendChild(article);
+              questionsContainer.appendChild(article);
             }
           });
-        })
-        .catch(err => {
-          console.error("Error fetching sheet data:", err);
-          container.innerHTML = "<p>Sorry, unable to load questions at the moment.</p>";
-        });
+
+          document.querySelector("main").appendChild(questionsContainer);
+        } catch (error) {
+          console.error("Error fetching sheet data:", error);
+        }
+      }
+
+      fetchQuestions();
     </script>
   </body>
 
