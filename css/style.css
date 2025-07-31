@@ -218,8 +218,9 @@ a {
   color: var(--bg);
   background-color: var(--primary);
 
-  padding: 0.5rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   border: 2px solid var(--primary);
+  border-radius: 10px;
   margin: 0 auto;
 
   transform: scale(1);
@@ -228,7 +229,7 @@ a {
 }
 
 .questions__link:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .main__questions {
