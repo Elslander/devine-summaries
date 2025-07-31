@@ -1,94 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <title>D. Summaries - Note</title>
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>D. Summaries - Note</title>
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </head>
 
-<body>
-  <header class="body__header">
-    <nav class="header__nav">
-      <ul class="nav__menu">
-        <li class="menu__item">
-          <a class="menu__link" href="index.html">Home</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="questions.html">Questions</a>
-        </li>
-      </ul>
-    </nav>
-    <h1 class="header__title"><a href="index.html">Devine Summaries</a></h1>
-  </header>
-  <main class="body__main">
-    <div class="main__questions" id="questionsContainer">
-      <!-- Questions will be inserted here dynamically -->
-    </div>
-  </main>
-  <footer class="body__footer">
-    <div class="footer__content">
-      <p class="footer__mail">
-        <a class="fa fa-envelope" target="_blank" href="https://forms.gle/jRXSg9gpJssDYm9M7"><span
-            class="mail__text">Question or Feedback?</span></a>
-      </p>
-      <div class="footer__legal-links" role="contentinfo" aria-label="Legal">
-        <a href="./legal/termsOfService.html" target="_blank" rel="noopener">Terms of Service</a> | <a
-          href="./legal/privacyPolicy.html" target="_blank" rel="noopener">Privacy Policy</a>
+  <body>
+    <header class="body__header">
+      <nav class="header__nav">
+        <ul class="nav__menu">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html">Home</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="questions.html">Questions</a>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="header__title"><a href="index.html">Devine Summaries</a></h1>
+    </header>
+    <main class="body__main">
+      <div class="main__questions" id="questionsContainer">
+        <!-- Questions will be inserted here dynamically -->
       </div>
-    </div>
-    <p class="footer__copy" style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; text-align: center;"> © 2025.
-    </p>
-  </footer>
+    </main>
+    <footer class="body__footer">
+      <div class="footer__content">
+        <p class="footer__mail">
+          <a class="fa fa-envelope" target="_blank" href="https://forms.gle/jRXSg9gpJssDYm9M7"><span
+              class="mail__text">Question or Feedback?</span></a>
+        </p>
+        <div class="footer__legal-links" role="contentinfo" aria-label="Legal">
+          <a href="./legal/termsOfService.html" target="_blank" rel="noopener">Terms of Service</a> | <a
+            href="./legal/privacyPolicy.html" target="_blank" rel="noopener">Privacy Policy</a>
+        </div>
+      </div>
+      <p class="footer__copy" style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; text-align: center;"> © 2025.
+      </p>
+    </footer>
+    <!-- Script to fetch questions -->
+    <script>
+      const sheetID = "2PACX-1vSyjGCsB09GU_aelhCtO7CNApwFzAe3cuolV1MEz9b9mGIxU2whVYFpT1rD7h12ia7W0Th6CecTnMhU";
+      // You can specify the gid (sheet tab) if needed, 0 is usually default
+      const gid = "0";
 
-  <!-- Script to fetch questions -->
-  <script>
-    const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSyjGCsB09GU_aelhCtO7CNApwFzAe3cuolV1MEz9b9mGIxU2whVYFpT1rD7h12ia7W0Th6CecTnMhU/pub?gid=0&single=true&output=csv";
-    const container = document.getElementById("questionsContainer");
+      const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json&gid=${gid}`;
 
-    fetch(sheetURL)
-      .then(response => response.text())
-      .then(csv => {
-        const rows = csv.split("\n").map(row => row.split(","));
-        const headers = rows[0];
+      const container = document.getElementById("questionsContainer");
 
-        // Get correct indexes for your headers
-        const typeIndex = headers.indexOf("Type");
-        const subjectIndex = headers.indexOf("Subject");
-        const detailsIndex = headers.indexOf("Details");
-        const responseIndex = headers.indexOf("Response");
+      fetch(url)
+        .then(res => res.text())
+        .then(data => {
+          // Remove the extra chars at start and end
+          const jsonStr = data.substring(47, data.length - 2);
+          const json = JSON.parse(jsonStr);
+          const rows = json.table.rows;
+          const cols = json.table.cols;
 
-        rows.slice(1).forEach(row => {
-          const type = row[typeIndex]?.trim();
-          const subject = row[subjectIndex]?.trim();
-          const details = row[detailsIndex]?.trim();
-          const answer = row[responseIndex]?.trim();
+          // Find the index of the relevant columns by matching labels:
+          const headers = cols.map(c => c.label);
+          const typeIndex = headers.indexOf("Type");
+          const subjectIndex = headers.indexOf("Subject");
+          const detailsIndex = headers.indexOf("Details");
+          const responseIndex = headers.indexOf("Response");
 
-          // Only display rows where Type is "Question"
-          if (type === "Question") {
-            const article = document.createElement("article");
-            article.classList.add("questions__question");
-            article.innerHTML = `
-              <h3 class="question__title">${details}</h3>
-              <p class="question__reply">${answer || "No answer yet."}</p>
-              <div class="question__subject">
-                <p class="subject__${subject.toLowerCase().replace(/\s+/g, "-")}">${subject}</p>
-              </div>
-            `;
-            container.appendChild(article);
-          }
+          rows.forEach(row => {
+            const c = row.c;
+
+            const type = c[typeIndex]?.v || "";
+            const subject = c[subjectIndex]?.v || "";
+            const details = c[detailsIndex]?.v || "";
+            const response = c[responseIndex]?.v || "";
+
+            if (type === "Question") {
+              const article = document.createElement("article");
+              article.classList.add("questions__question");
+              article.innerHTML = `
+            <h3 class="question__title">${details}</h3>
+            <p class="question__reply">${response || "No answer yet."}</p>
+            <div class="question__subject">
+              <p class="subject__${subject.toLowerCase().replace(/\s+/g, "-")}">${subject}</p>
+            </div>
+          `;
+              container.appendChild(article);
+            }
+          });
+        })
+        .catch(err => {
+          console.error("Error fetching sheet data:", err);
+          container.innerHTML = "<p>Sorry, unable to load questions at the moment.</p>";
         });
-      })
-      .catch(error => console.error("Error loading questions:", error));
-  </script>
-</body>
+    </script>
+  </body>
 
 </html>
