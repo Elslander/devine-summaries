@@ -192,6 +192,7 @@ a {
 }
 
 .summaries__link {
+  display: block;
   width: 100%;
   margin: 0.4rem 0.5rem;
 }
