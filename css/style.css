@@ -175,7 +175,7 @@ a {
 }
 
 .card__summaries > li {
-  padding: 0.4rem 0.5rem;
+  /* padding: 0.4rem 0.5rem; */
   border: 1px solid var(--border);
   border-radius: 5px;
 
@@ -189,6 +189,11 @@ a {
   border: 1px solid var(--primary);
   position: relative;
   left: 0.15rem;
+}
+
+.summaries__link {
+  width: 100%;
+  margin: 0.4rem 0.5rem;
 }
 
 .nested__card {
