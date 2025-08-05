@@ -1,4 +1,4 @@
-# Other GUIs
+# Other GUIs (Summary)
 
 ## The rise of other competitive GUIs
 
