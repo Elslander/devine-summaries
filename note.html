@@ -23,9 +23,9 @@
           <li class="menu__item">
             <a class="menu__link" href="index.html">Home</a>
           </li>
-          <li class="menu__item">
+          <!-- <li class="menu__item">
             <a class="menu__link" href="questions.html">Questions</a>
-          </li>
+          </li> -->
         </ul>
       </nav>
       <h1 class="header__title"><a href="index.html">Devine Summaries</a></h1>
@@ -36,9 +36,9 @@
     </main>
     <footer class="body__footer">
       <div class="footer__content">
-        <p class="footer__mail">
+        <!-- <p class="footer__mail">
           <a class="fa fa-envelope" target="_blank" href="https://forms.gle/jRXSg9gpJssDYm9M7"><span class="mail__text">Question or Feedback?</span></a>
-        </p>
+        </p> -->
         <div class="footer__legal-links" role="contentinfo" aria-label="Legal">
           <a href="./legal/termsOfService.html" target="_blank" rel="noopener">Terms of Service</a> | <a
             href="./legal/privacyPolicy.html" target="_blank" rel="noopener">Privacy Policy</a>
@@ -48,43 +48,7 @@
       </p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script>
-      const params = new URLSearchParams(window.location.search);
-      console.log(params);
-      const file = params.get("file");
-
-      const filenameWithExt = file.split('/').pop();
-      const filename = filenameWithExt.replace(/\.md$/, '');
-      const name = filename.replaceAll('-', ' ');
-      console.log(name);
-
-      const $noteTitle = document.querySelector('.note__title');
-      $noteTitle.textContent = name
-        .split(' ')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
-
-
-      const main = document.getElementById("note-content");
-
-      if (!file) {
-        main.textContent = "No note specified.";
-      } else {
-        fetch(`assets/notes/${file}`)
-          .then((res) => {
-            if (!res.ok) throw new Error("Note not found");
-            return res.text();
-          })
-          .then((md) => {
-            main.innerHTML = marked.parse(md);
-            hljs.highlightAll();
-          })
-          .catch((err) => {
-            main.textContent = "Sorry, this note could not be loaded.";
-            console.error(err);
-          });
-      }
-    </script>
+    <script src="./js/noteReader.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js" defer></script>
     <script defer>
       window.addEventListener('DOMContentLoaded', () => {

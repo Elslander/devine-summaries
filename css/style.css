@@ -339,6 +339,7 @@ a {
 }
 
 .footer__content {
+  /* text-align: center; */
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -382,6 +383,7 @@ a {
 .footer__legal-links {
   /* flex: 1 1 100%; */
   text-align: center;
+  width: 100%;
   margin-top: 0.5rem;
   font-size: 0.9rem;
 }
