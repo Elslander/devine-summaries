@@ -1,18 +1,19 @@
 /* Global Variables and General styling */
 :root {
-  --bg: #fdfdfd;
-  --bg-alt: #f3f3f3;
-  --bg-header: rgba(243, 243, 243, 0.5);
-  --text: #222;
-  --primary: #4b6cc1;
-  --primary-hover: #3f57a0;
-  --border: #ccc;
+  --bg: #121212;
+  --bg-alt: #1e1e1e;
+  --bg-header: rgba(30, 30, 30, 0.5);
+  --text: #e0e0e0;
+  --primary: #3399ff;
+  --primary-hover: #4b6cc1;
+  --border: gray;
   --radius: 0.5rem;
   --transition: 0.2s ease;
 }
 
 * {
   box-sizing: border-box;
+  color: var(--text);
 }
 
 ::-webkit-scrollbar {
@@ -22,6 +23,7 @@
 html {
   font-family: monospace;
   font-size: 110%;
+  background-color: var(--bg);
 }
 
 body {
@@ -43,7 +45,7 @@ a {
   /* color: var(--primary); */
 
   padding: 1.5rem 2rem;
-  border-bottom: 1px solid var(--border);
+  /* border-bottom: 1px solid var(--border); */
   margin-bottom: 3rem;
 
   position: sticky;
@@ -147,8 +149,9 @@ a {
   background-color: var(--bg-alt);
 
   padding: 0.75rem;
-  border: 1px solid var(--border);
-  border-radius: 10px;
+  /* border: 1px solid var(--border); */
+  /* border-radius: 10px; */
+  box-shadow: 0 0 1px var(--border);
 
   position: relative;
   top: 0;
@@ -165,7 +168,8 @@ a {
 .question__title {
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  text-decoration: underline;
+  margin: 0.5rem 0 1.5rem 0;
 }
 
 .card__summaries {
@@ -175,9 +179,14 @@ a {
 }
 
 .card__summaries > li {
+  /* font-weight: normal; */
+  background-color: transparent;
   /* padding: 0.4rem 0.5rem; */
-  border: 1px solid var(--border);
-  border-radius: 5px;
+  padding-left: 1.2rem;
+  /* border: 1px solid var(--border); */
+  /* border-left: 1.5px solid var(--border); */
+  /* border-radius: 5px; */
+  margin-bottom: 0.25rem;
 
   position: relative;
   left: 0;
@@ -185,10 +194,29 @@ a {
   transition: all 200ms ease-in-out;
 }
 
+.card__summaries > li::before {
+  font-size: 1.5rem;
+  font-weight: 100;
+  content: "➜"; /* or "→" */
+  position: absolute;
+  top: 2.5px;
+  left: 0;
+  color: var(--border);
+  transition: color 200ms ease-in-out;
+}
+
 .card__summaries > li:hover {
-  border: 1px solid var(--primary);
+  /* font-weight: bold; */
+  /* background-color: var(--primary-hover); */
+  /* border: 1px solid var(--primary); */
+  /* border-left: 3px solid var(--primary); */
   position: relative;
-  left: 0.15rem;
+  /* left: 0.15rem; */
+}
+
+.card__summaries > li:hover::before {
+  color: var(--primary);
+  font-weight: bold;
 }
 
 .summaries__link {
@@ -201,15 +229,17 @@ a {
   background-color: var(--bg);
 
   padding: 0.75rem;
-  border: 1px solid var(--border);
-  border-radius: 10px;
+  /* border: 1px solid var(--border); */
+  /* border-radius: 10px; */
+  /* box-shadow: 0 0 1px var(--border); */
   margin-top: 1rem;
 }
 
 .card__subtitle {
   font-size: 1.1rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  text-decoration: underline;
+  margin: 0.5rem 0 1.5rem 0;
 }
 
 /* Note Title Styling */
@@ -408,9 +438,9 @@ a {
   margin: 0 auto;
   padding: 1.5rem 2rem;
   background-color: var(--bg-alt);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: 0 2px 8px rgba(75, 108, 193, 0.15);
+  /* border-radius: var(--radius); */
+  /* border: 1px solid var(--border); */
+  box-shadow: 0 0 1px var(--border);
   word-wrap: break-word;
   color: var(--text);
   font-size: 1rem;
@@ -559,7 +589,7 @@ a {
 
 #note-content blockquote {
   border-left: 4px solid var(--primary);
-  background: #eef0ff;
+  background: var(--bg);
   color: var(--primary);
   font-style: italic;
   padding: 0.75rem 1rem;
@@ -580,8 +610,10 @@ a {
 }
 
 #note-content pre {
-  background: rgba(75, 108, 193, 0.12);
+  /* background: rgba(225, 225, 225, 0.12); */
+  background-color: var(--bg);
   /* border-left: 4px solid var(--primary); */
+  /* color: var(--bg); */
   padding: 1rem 1.5rem;
   overflow-x: auto;
   font-family: monospace;
