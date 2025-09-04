@@ -59,3 +59,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+// Get the toggle checkbox and root element
+const checkbox = document.getElementById('theme-toggle-checkbox');
+const root = document.documentElement;
+
+// Load saved theme from localStorage (if any)
+const savedTheme = localStorage.getItem('theme') || 'dark';
+root.setAttribute('data-theme', savedTheme);
+checkbox.checked = savedTheme === 'light';
+
+// Update theme when user toggles
+checkbox.addEventListener('change', () => {
+  const theme = checkbox.checked ? 'light' : 'dark';
+  root.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme); // Save choice
+});

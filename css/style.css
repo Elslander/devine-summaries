@@ -5,9 +5,21 @@
   --bg-header: rgba(30, 30, 30, 0.5);
   --text: #e0e0e0;
   --accent: #4b6cc1;
-  --accent-secondary: #c17a4b;
+  --accent-secondary: #f27b2b;
   --border: gray;
+  --shadow: black;
   --transition: 0.2s ease;
+}
+
+[data-theme="light"] {
+  --bg: #e4e4e4;
+  --bg-alt: #f4f4f4;
+  --bg-header: rgba(255, 255, 255, 0.5);
+  --text: #1a1a1a;
+  --accent: #4b6cc1;
+  --accent-secondary: #f27b2b;
+  --border: #ccc;
+  --shadow: lightgrey;
 }
 
 * {
@@ -50,6 +62,11 @@ a {
   align-items: center;
 }
 
+.header__nav {
+  display: flex;
+  gap: 1rem;
+}
+
 .nav__menu {
   display: flex;
   gap: 1.5rem;
@@ -66,6 +83,58 @@ a {
 
 .menu__item--active {
   border-bottom: 2px solid var(--accent);
+}
+
+/* Toggle Container */
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+/* Hide the default checkbox */
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider (track + knob) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-alt);
+  border-radius: 12px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5); /* inset shadow */
+  transition: background-color var(--transition), box-shadow var(--transition);
+}
+
+/* The knob */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  transition: transform var(--transition), background-color var(--transition);
+}
+
+/* Checked state */
+.theme-toggle input:checked + .slider {
+  background-color: var(--bg-alt);
+}
+
+.theme-toggle input:checked + .slider::before {
+  transform: translateX(26px);
+  background-color: var(--accent-secondary);
 }
 
 .header__title {
@@ -131,13 +200,13 @@ a {
 .subject__card {
   flex-grow: 1;
   flex-basis: 300px;
-  background-color: var(--bg-alt);
+  /* background-color: var(--bg-alt); */
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 4px 10px black;
+  box-shadow: 0 4px 10px var(--shadow);
   position: relative;
   top: 0;
-  transition: all 200ms ease-in-out;
+  transition: top 200ms ease-in-out;
 }
 
 .subject__card:hover {
@@ -163,8 +232,13 @@ a {
   background-color: transparent;
   padding-left: 1.2rem;
   margin-bottom: 0.25rem;
+
   position: relative;
+  left: 0;
+
   transition: all 200ms ease-in-out;
+  cursor: pointer; /* shows it's clickable */
+  border-radius: 6px; /* soft edges for hover effect */
 }
 
 .card__summaries > li::before {
@@ -173,13 +247,19 @@ a {
   content: "➜";
   position: absolute;
   top: 2.5px;
-  left: 0;
+  left: 0.25rem;
   color: var(--border);
   transition: color 200ms ease-in-out;
 }
 
+/* Hover effects */
+.card__summaries > li:hover {
+  background-color: rgba(75, 108, 193, 0.2); /* subtle blue highlight */
+  transform: translateX(4px); /* slight movement to feel interactive */
+}
+
 .card__summaries > li:hover::before {
-  color: var(--accent-secondary);
+  color: var(--accent-secondary); /* keep arrow highlight */
   font-weight: bold;
 }
 

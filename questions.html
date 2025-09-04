@@ -20,12 +20,16 @@
       <nav class="header__nav">
         <ul class="nav__menu">
           <li class="menu__item">
-            <a class="menu__link" href="index.html">Home</a>
+            <a class="menu__link menu__item--active" href="index.html">Home</a>
           </li>
-          <li class="menu__item">
-            <a class="menu__link menu__item--active" href="questions.html">Questions</a>
-          </li>
+          <!-- <li class="menu__item">
+            <a class="menu__link" href="questions.html">Questions</a>
+          </li> -->
         </ul>
+        <label class="theme-toggle">
+          <input type="checkbox" id="theme-toggle-checkbox">
+          <span class="slider"></span>
+        </label>
       </nav>
       <h1 class="header__title"><a href="index.html">Devine Summaries</a></h1>
     </header>
@@ -47,6 +51,7 @@
       <p class="footer__copy" style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; text-align: center;"> © 2025.
       </p>
     </footer>
+    <script src="./js/script.js"></script>
     <script src="./js/question.js"></script>
   </body>
 
