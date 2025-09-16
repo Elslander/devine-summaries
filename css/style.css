@@ -489,7 +489,7 @@ a {
 
 #note-content h2 {
   font-size: 2rem;
-  border-bottom: 2px solid var(--accent);
+  /* border-bottom: 2px solid var(--accent); */
   padding-bottom: 0.3rem;
 }
 
