@@ -1,4 +1,4 @@
-# Tyopgraphy
+# Typography
 
 > **Jan Tschichold**
 > Perfect typography is more science than an art.
