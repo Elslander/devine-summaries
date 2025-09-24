@@ -38,24 +38,4 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     { threshold: 0.1 }
   );
-
-  document.querySelectorAll(".subject__card").forEach((card) => {
-    card.classList.add("card__fade-in");
-    observer.observe(card);
-  });
-
-  // Add ripple effect to all .summaries__link buttons
-  document.querySelectorAll(".summaries__link").forEach((link) => {
-    link.addEventListener("click", function (e) {
-      const ripple = document.createElement("span");
-      ripple.className = "ripple";
-      ripple.style.left = e.offsetX + "px";
-      ripple.style.top = e.offsetY + "px";
-      this.appendChild(ripple);
-
-      setTimeout(() => {
-        ripple.remove();
-      }, 600);
-    });
-  });
 });
