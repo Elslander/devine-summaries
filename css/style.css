@@ -1,25 +1,14 @@
 /* Global Variables and General styling */
 :root {
-  --bg: #121212;
-  --bg-alt: #212121;
-  --bg-header: rgba(30, 30, 30, 0.5);
-  --text: #e0e0e0;
+  --bg: light-dark(#e4e4e4, #121212);
+  --bg-alt: light-dark(#f4f4f4, #212121);
+  --bg-header: light-dark(rgba(255, 255, 255, 0.5), rgba(30, 30, 30, 0.5));
+  --text: light-dark(#1a1a1a, #e0e0e0);
   --accent: #4b6cc1;
   --accent-secondary: #f27b2b;
   --border: gray;
-  --shadow: black;
+  --shadow: light-dark(#d4d4d4, #000000);
   --transition: 0.2s ease;
-}
-
-[data-theme="light"] {
-  --bg: #e4e4e4;
-  --bg-alt: #f4f4f4;
-  --bg-header: rgba(255, 255, 255, 0.5);
-  --text: #1a1a1a;
-  --accent: #4b6cc1;
-  --accent-secondary: #f27b2b;
-  --border: #ccc;
-  --shadow: lightgrey;
 }
 
 * {
