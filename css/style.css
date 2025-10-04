@@ -210,6 +210,10 @@ a {
   background-color: var(--bg);
   padding: var(--space-s);
   border-radius: 10px;
+  /* margin-block-start: var(--space-s); */
+}
+
+.card__summaries + .nested__card {
   margin-block-start: var(--space-s);
 }
 
@@ -626,7 +630,7 @@ a {
 }
 
 /* Media Queries */
-@media (max-width: 600px) {
+@media (max-width: 40em) {
   .body__header {
     justify-content: space-between;
     margin-block-end: var(--space-l);
@@ -657,5 +661,11 @@ a {
   .footer__legal-links a {
     margin: 0 var(--space-2xs);
     display: inline-block;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  #note-content {
+    max-width: 60vw;
   }
 }
