@@ -70,7 +70,7 @@ Germany -> Switzerland
 -_Edward Johnston_. UK
 
 - Lineal subcategory: Humanist.
-- Original name: The London Underground. (Sarah likes this ==EXAM QUESTION==)
+- Original name: The London Underground.
 - Print -> signalisation.
 - Influence of Capitalis Monumentalis and traditional serif fonts.
 - Characteristics:

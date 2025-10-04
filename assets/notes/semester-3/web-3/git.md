@@ -118,8 +118,8 @@ git commit -m "My commit message"
 You local repo consists of three "trees" maintained by git:
 
 1. **Working directory**: holds the actual files.
-1. **Index**: acts as a staging area.
-1. **HEAD**: points to the last commit you've made.
+2. **Index**: acts as a staging area.
+3. **HEAD**: points to the last commit you've made.
 
 ### Add
 

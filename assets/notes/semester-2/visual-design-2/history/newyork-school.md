@@ -96,7 +96,6 @@ USA
 
 ## Saul Bass
 
-**_Sarah Likes this one!_**
 USA
 
 - Graphic designer and film maker.
